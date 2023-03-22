@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 function Header({ currentPage, handlePageChange }) {
   const [activeButton, setActiveButton] = useState('');
-
   return (
     <header className="header-container">
-      <Link to="/" className="logo-button">
-        <img src="/logo.png" alt="Logo" />
-      </Link>
+      <h1>TrentonKirchner</h1>
       <ul className="nav nav-tabs">
         <li className="nav-item">
-          <Link
-            to="/"
+          <a
+            href="#home"
             onClick={() => {
               handlePageChange('Home');
               setActiveButton('home');
@@ -20,11 +16,11 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'Home' ? 'nav-link active' : `nav-link ${activeButton === 'home' ? 'active-white' : ''}`}
           >
             Home
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link
-            to="/about"
+          <a
+            href="#about"
             onClick={() => {
               handlePageChange('About');
               setActiveButton('about');
@@ -32,11 +28,11 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'About' ? 'nav-link active' : `nav-link ${activeButton === 'about' ? 'active-white' : ''}`}
           >
             About
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link
-            to="/services"
+          <a
+            href="#services"
             onClick={() => {
               handlePageChange('Services');
               setActiveButton('services');
@@ -44,11 +40,11 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'Services' ? 'nav-link active' : `nav-link ${activeButton === 'services' ? 'active-white' : ''}`}
           >
             Services
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link
-            to="/gallery"
+          <a
+            href="#gallery"
             onClick={() => {
               handlePageChange('Gallery');
               setActiveButton('gallery');
@@ -56,11 +52,11 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'Gallery' ? 'nav-link active' : `nav-link ${activeButton === 'gallery' ? 'active-white' : ''}`}
           >
             Gallery
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link
-            to="/pricing"
+          <a
+            href="#pricing"
             onClick={() => {
               handlePageChange('Pricing');
               setActiveButton('pricing');
@@ -68,11 +64,11 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'Pricing' ? 'nav-link active' : `nav-link ${activeButton === 'pricing' ? 'active-white' : ''}`}
           >
             Pricing
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             onClick={() => {
               handlePageChange('Contact');
               setActiveButton('contact');
@@ -80,7 +76,7 @@ function Header({ currentPage, handlePageChange }) {
             className={currentPage === 'Contact' ? 'nav-link active' : `nav-link ${activeButton === 'contact' ? 'active-white' : ''}`}
           >
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
     </header>
