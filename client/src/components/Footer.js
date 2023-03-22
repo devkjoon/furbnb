@@ -1,23 +1,46 @@
 import React from 'react';
-import './assets/Contact.css';
-import githubLogo from './assets/github-logo.png';
-import linkedinLogo from './assets/linkedin-logo.png';
-import twitterLogo from './assets/twitter-logo.png';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="social-links">
-        <a href="https://github.com/kirchnerdev22" target="_blank" rel="noopener noreferrer">
-          <img src={githubLogo} alt="GitHub logo"  />
-        </a>
-        <a href="https://www.linkedin.com/in/trenton-kirchner-91b38b174/" target="_blank" rel="noopener noreferrer">
-          <img src={linkedinLogo} alt="LinkedIn logo"  />
-        </a>
-        <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer">
-          <img src={twitterLogo} alt="Twitter logo" />
-        </a>
-      </div>
+    <footer>
+      {/* Contact Us section */}
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Phone: 555-1234</li>
+        <li>Email: info@example.com</li>
+        <li>Address: 123 Main St, Anytown USA</li>
+      </ul>
+
+      {/* Social Sites section */}
+      <h3>Social Sites</h3>
+      <ul>
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Instagram</li>
+        <li>LinkedIn</li>
+      </ul>
+
+      {/* FAQs and Policies section */}
+      <h3>FAQs and Policies</h3>
+      <ul>
+        <li>FAQ</li>
+        <li>Privacy Policy</li>
+        <li>Terms and Conditions</li>
+      </ul>
+
+      {/* Locations section */}
+      <h3>Locations</h3>
+      <ul>
+        <li>Main Store: 123 Main St, Anytown USA</li>
+        <li>Branch Store: 456 Second St, Othertown USA</li>
+      </ul>
+
+      {/* About Us section */}
+      <h3>About Us</h3>
+      <ul>
+        <li>Available Jobs: <a href="/jobs">Click Here</a></li>
+        <li>Meet Our Staff: <a href="/staff">Click Here</a></li>
+      </ul>
     </footer>
   );
 }
