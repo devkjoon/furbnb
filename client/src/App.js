@@ -32,6 +32,7 @@ const App = () => {
                 </Routes>
             <Footer/>
             </BrowserRouter>
+            
         </div>);
 }
 

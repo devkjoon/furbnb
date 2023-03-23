@@ -167,7 +167,6 @@ button:hover{
 
 #main-cont{
   width: 100vw;
-  height: 85vh;
   position: relative;
 }
 
@@ -388,8 +387,6 @@ color: white
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -400,7 +397,6 @@ color: white
   background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
   bottom: 0px;
 }
 
