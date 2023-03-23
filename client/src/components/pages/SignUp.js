@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 function SignUpPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle sign up logic
+    if (password === confirmPassword) {
+      // handle sign up logic
+    } else {
+      alert('Passwords do not match!');
+    }
   };
 
   return (
@@ -29,6 +34,15 @@ function SignUpPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
         </div>
