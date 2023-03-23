@@ -11,6 +11,8 @@ import Services from "./components/pages/Services"
 import Gallery from "./components/pages/Gallery"
 import SignInPage from "./components/pages/SignInPage"
 import SignUp from "./components/pages/SignUp"
+import Pricing from "./components/pages/Pricing"
+
 
 const App = () => {
 
@@ -27,6 +29,7 @@ const App = () => {
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/login" element={<SignInPage />} />
                     <Route path="/signup" element={<SignUp />} />
+                    <Route path="/pricing" element={<Pricing />} />
                 </Routes>
             <Footer/>
             </BrowserRouter>

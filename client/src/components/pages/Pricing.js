@@ -6,8 +6,11 @@ export default function PetDayCarePricing() {
       name: 'Basic',
       price: {
         monthly: 50,
-        biannually: 275,
         annually: 500,
+      },
+      checkout: {
+        monthly: "https://buy.stripe.com/test_aEU9AOdLh8zpdX2cMM",
+        annually: "https://buy.stripe.com/test_7sI28mdLh4j98CI001",
       },
       services: ['Grooming', 'Boarding'],
     },
@@ -15,8 +18,11 @@ export default function PetDayCarePricing() {
       name: 'Standard',
       price: {
         monthly: 75,
-        biannually: 425,
         annually: 800,
+      },
+      checkout: {
+        monthly: "https://buy.stripe.com/test_14k14i36D8zp1ag146",
+        annually: "https://buy.stripe.com/test_dR628mdLhaHxbOU4gj",
       },
       services: ['Grooming', 'Boarding', 'Training'],
     },
@@ -24,8 +30,11 @@ export default function PetDayCarePricing() {
       name: 'Premium',
       price: {
         monthly: 100,
-        biannually: 575,
         annually: 1100,
+      },
+      checkout: {
+        monthly: "https://buy.stripe.com/test_9AQfZc5eL5ndf16eUY",
+        annually: "https://buy.stripe.com/test_8wM3cqePlbLB6uA7sx",
       },
       services: ['Grooming', 'Boarding', 'Training', 'Veterinary Services'],
     },
@@ -44,7 +53,7 @@ export default function PetDayCarePricing() {
               ))}
             </ul>
             <p>
-              Monthly: ${tier.price.monthly} | Bi-annually: ${tier.price.biannually} | Annually: ${tier.price.annually}
+              Monthly: ${tier.price.monthly} <a href={tier.checkout.monthly}>Start Now</a> | Annually: ${tier.price.annually} <a href={tier.checkout.annually}>Start Now</a>
             </p>
           </li>
         ))}
