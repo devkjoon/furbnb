@@ -6,8 +6,13 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/Home"
 import About from "./components/pages/About"
 import Contact from "./components/pages/Contact"
-import Gallery from "./components/pages/Gallery"
 import Pricing from "./components/pages/Pricing"
+import Services from "./components/pages/Services"
+import Gallery from "./components/pages/Gallery"
+import SignInPage from "./components/pages/SignInPage"
+import SignUp from "./components/pages/SignUp"
+import Pricing from "./components/pages/Pricing"
+
 
 const App = () => {
 
@@ -19,7 +24,11 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/services" element={<Services />} />
                     <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/login" element={<SignInPage />} />
+                    <Route path="/signup" element={<SignUp />} />
                     <Route path="/pricing" element={<Pricing />} />
                 </Routes>
             <Footer/>
