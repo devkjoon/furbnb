@@ -26,38 +26,38 @@ function Header({ currentPage, handlePageChange }) {
       </div>
       <div id="pages-bar">
         <div id="logo-div">
-          <img className="bone-logo" src="../src/assets/images/big-boner.png" alt="logo" />
+          <img className="bone-logo" src="../assets/images/paw.png" alt="logo" />
           <h2>furbnb</h2>
         </div>
         <div id="pages-list">
           <ul className="nav nav-tabs">
             <li className="nav-item">
-              <Link to="/" className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Home')}>
+              <Link to="/" className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('About')}>
+              <Link to="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/services" className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Services')}>
+              <Link to="/services" className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'}>
                 Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/gallery" className={currentPage === 'Gallery' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Gallery')}>
+              <Link to="/gallery" className={currentPage === 'Gallery' ? 'nav-link active' : 'nav-link'}>
                 Gallery
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/pricing" className={currentPage === 'Pricing' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Pricing')}>
+              <Link to="/pricing" className={currentPage === 'Pricing' ? 'nav-link active' : 'nav-link'}>
                 Pricing
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('Contact')}>
+              <Link to="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
                 Contact
               </Link>
             </li>
