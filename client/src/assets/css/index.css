@@ -162,7 +162,7 @@ button:hover{
   color: #00be4f;
   text-decoration: underline;
   text-decoration-thickness: 3px;
-  text-underline-offset: 46px;
+  text-underline-offset: 40px;
 }
 
 #main-cont{
@@ -185,11 +185,8 @@ button:hover{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 30%;
   margin: auto;
 }
 
@@ -199,7 +196,7 @@ button:hover{
   font-weight: 700;
   text-align: center;
   font-size: 60px;
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -388,15 +385,32 @@ color: white
 
 .footer {
   width: 100%;
+  position: relative;
 }
 
 .footer-gradient-bar{
   width: 100vw;
-  height: 55px;
   font-size: 10px;
   background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
-  display: flex;
+  display: inline-block;
   justify-content: space-evenly;
-  bottom: 0px;
+  color: white;
+}
+
+.footer-cont{
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.footer-cont h3{
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.footer-cont li{
+  font-size: 15px
 }
 

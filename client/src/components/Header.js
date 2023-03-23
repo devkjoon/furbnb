@@ -1,5 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import PhoneIcon from "../assets/images/352510_local_phone_icon.png"
+import EmailIcon from "../assets/images/1564528_fly_messager_send_communication_email_icon.png"
+import FacebookIcon from "../assets/images/5296500_fb_social media_facebook_facebook logo_social network_icon.png"
+import TwitterIcon from "../assets/images/5296514_bird_tweet_twitter_twitter logo_icon.png"
+import InstaIcon from "../assets/images/5296765_camera_instagram_instagram logo_icon.png"
+import YTIcon from "../assets/images/5305164_play_video_youtube_youtube logo_icon.png"
+import Logo from "../assets/images/big-boner.png"
 import '../assets/css/index.css';
 
 function Header({ currentPage, handlePageChange }) {
@@ -9,24 +16,24 @@ function Header({ currentPage, handlePageChange }) {
       <div id="gradient-bar">
         <div id="contact-div">
           <div id="phone-info">
-            <img src="../src/assets/images/352510_local_phone_icon.png" alt="phone icon" />
+            <img src={PhoneIcon} alt="phone icon" />
             <p>+1-615-420-6969</p>
           </div>
           <div id="email-info">
-            <img src="../src/assets/images/1564528_fly_messager_send_communication_email_icon.png" alt="email icon" />
+            <img src={EmailIcon} alt="email icon" />
             <p>furbnbcare@gmail.com</p>
           </div>
         </div>
         <div id="social-bar">
-          <a href="placeholder"><img src="../src/assets/images/5296500_fb_social media_facebook_facebook logo_social network_icon.png" alt="facebook icon" /></a>
-          <a href="placeholder"><img src="../src/assets/images/5296514_bird_tweet_twitter_twitter logo_icon.png" alt="twitter icon" /></a>
-          <a href="placeholder"><img src="../src/assets/images/5296765_camera_instagram_instagram logo_icon.png" alt="instagram icon" /></a>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test"><img src="../src/assets/images/5305164_play_video_youtube_youtube logo_icon.png" alt="youtube icon" /></a>
+          <a href="placeholder"><img src={FacebookIcon} alt="facebook icon" /></a>
+          <a href="placeholder"><img src={TwitterIcon} alt="twitter icon" /></a>
+          <a href="placeholder"><img src={InstaIcon} alt="instagram icon" /></a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test"><img src={YTIcon} alt="youtube icon" /></a>
         </div>
       </div>
       <div id="pages-bar">
         <div id="logo-div">
-          <img className="bone-logo" src="../assets/images/paw.png" alt="logo" />
+          <img className="bone-logo" src={Logo} alt="logo" />
           <h2>furbnb</h2>
         </div>
         <div id="pages-list">
