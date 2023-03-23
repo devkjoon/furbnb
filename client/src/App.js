@@ -3,15 +3,15 @@ import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from './components/Header';
 import Footer from "./components/Footer";
-import Home from "./components/pages/Home"
-import About from "./components/pages/About"
-import Contact from "./components/pages/Contact"
-import Pricing from "./components/pages/Pricing"
-import Services from "./components/pages/Services"
-import Gallery from "./components/pages/Gallery"
-import SignInPage from "./components/pages/SignInPage"
-import SignUp from "./components/pages/SignUp"
-import PetList from "./components/pages/PetList"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import Pricing from "./pages/Pricing"
+import Services from "./pages/Services"
+import Gallery from "./pages/Gallery"
+import SignInPage from "./pages/SignInPage"
+import SignUp from "./pages/SignUp"
+import PetList from "./pages/PetList"
 
 
 const App = () => {
