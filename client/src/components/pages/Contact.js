@@ -10,10 +10,10 @@ export default function ContactPage() {
           <a href="https://www.facebook.com/yourpetdaycare/">Facebook</a>
         </li>
         <li>
-          <a href="https://www.instagram.com/yourpetdaycare/">Instagram</a>
+          <a href="https://www.instagram.com/furbnb_pets/">Instagram</a>
         </li>
         <li>
-          <a href="https://twitter.com/yourpetdaycare/">Twitter</a>
+          <a href="https://twitter.com/furbnb">Twitter</a>
         </li>
         <li>
           <a href="https://www.yelp.com/biz/your-pet-daycare">Yelp</a>
