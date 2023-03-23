@@ -61,6 +61,11 @@ function Header({ currentPage, handlePageChange }) {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/petlist" className={currentPage === 'PetList' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('PetList')}>
+                PetList
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
