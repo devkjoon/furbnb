@@ -1,8 +1,10 @@
 import React from 'react';
+import '../assets/css/index.css';
+
 
 function Footer() {
   return (
-    <footer>
+    <footer className='footer-gradient-bar footer'>
       {/* Contact Us section */}
       <h3>Contact Us</h3>
       <ul>
