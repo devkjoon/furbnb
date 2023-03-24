@@ -544,52 +544,6 @@ color: white
   color: white
 }
 
-
-
-
-
-
-
-
-
-.footer {
-  width: 100%;
-  position: relative;
-}
-
-.footer-gradient-bar{
-  width: 100vw;
-  font-size: 10px;
-  background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
-  display: inline-block;
-  justify-content: space-evenly;
-  color: white;
-}
-
-.footer-cont{
-  width: 80vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: auto;
-}
-
-.footer-cont h3{
-  text-decoration: underline;
-  font-size: 20px;
-}
-
-.footer-cont li{
-  font-size: 15px
-}
-
-/* Styling for the entire page */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-}
-
 /* Styling for the pet profile card */
 .pet-card {
   background-color: #fff;
@@ -645,3 +599,50 @@ body {
 .pet-detail-value {
   margin-top: 5px;
 }
+
+
+
+
+
+
+
+
+
+.footer {
+  width: 100%;
+  position: relative;
+}
+
+.footer-gradient-bar{
+  width: 100vw;
+  font-size: 10px;
+  background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
+  display: inline-block;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.footer-cont{
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.footer-cont h3{
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.footer-cont li{
+  font-size: 15px
+}
+/* Styling for the entire page */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+} */
+
+
