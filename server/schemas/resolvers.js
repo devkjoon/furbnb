@@ -1,46 +1,97 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+const { User, Pet } = require('../models');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return await User.find().populate('pets');
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+
+    user: async (parent, { id }) => {
+      return await User.findById(id).populate('pets');
     },
-    me: async (parent, args, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
-      }
-      throw new AuthenticationError('You need to be logged in!');
+
+    pets: async () => {
+      return await Pet.find().populate('owner');
+    },
+
+    pet: async (parent, { id }) => {
+      return await Pet.findById(id).populate('owner');
     },
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
-      const token = signToken(user);
-      return { token, user };
+    createUser: async (parent, { username, email, password }) => {
+      const user = new User({ username, email, password });
+      await user.save();
+
+      return user;
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
 
-      if (!user) {
-        throw new AuthenticationError('No user found with this email address');
-      }
+    createPet: async (parent, { name, species, breed, age, ownerId }) => {
+      const pet = new Pet({ name, species, breed, age, owner: ownerId });
+      await pet.save();
 
-      const correctPw = await user.isCorrectPassword(password);
+      await User.findByIdAndUpdate(ownerId, { $push: { pets: pet._id } });
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
+      return pet;
+    },
 
-      const token = signToken(user);
+    updateUser: async (parent, { id, username, email, password }) => {
+      const user = await User.findByIdAndUpdate(
+        id,
+        { username, email, password },
+        { new: true }
+      ).populate('pets');
 
-      return { token, user };
+      return user;
+    },
+
+    updatePet: async (parent, { id, name, species, breed, age, ownerId }) => {
+      const pet = await Pet.findByIdAndUpdate(
+        id,
+        { name, species, breed, age, owner: ownerId },
+        { new: true }
+      ).populate('owner');
+
+      return pet;
+    },
+
+    deleteUser: async (parent, { id }) => {
+      const user = await User.findByIdAndDelete(id);
+
+      return user;
+    },
+
+    deletePet: async (parent, { id }) => {
+      const pet = await Pet.findByIdAndDelete(id);
+
+      await User.findByIdAndUpdate(pet.owner, {
+        $pull: { pets: pet._id },
+      });
+
+      return pet;
+    },
+
+    addPet: async (
+      parent,
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule }
+    ) => {
+      const pet = await Pet.create({
+        name,
+        species,
+        breed,
+        gender,
+        age,
+        weight,
+        allergies,
+        medications,
+        feedingSchedule,
+      });
+
+      return pet;
     },
   },
 };
+
 module.exports = resolvers;
