@@ -25,7 +25,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-server.applyMiddleware({ app });
+async function startServer() {
+  await server.start();
+  server.applyMiddleware({ app });
 
 db.once('open', () => {
   app.listen(PORT, () => {
@@ -33,3 +35,6 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
+}
+
+startServer();

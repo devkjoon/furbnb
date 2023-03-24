@@ -11,7 +11,6 @@ import Services from "./pages/Services"
 import Gallery from "./pages/Gallery"
 import SignInPage from "./pages/SignInPage"
 import SignUp from "./pages/SignUp"
-import PetList from "./pages/PetList"
 
 
 const App = () => {
@@ -30,7 +29,6 @@ const App = () => {
                     <Route path="/login" element={<SignInPage />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/petlist" element={<PetList />} />
                 </Routes>
             <Footer/>
             </BrowserRouter>
