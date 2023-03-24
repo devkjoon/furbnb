@@ -34,21 +34,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* Main Div Styling */
 #root{
   height: 100%;
   width: 100%;
   display: inline-block;
 }
-
+/* Removing li Underlines */
 li {
   list-style: none;
 }
-
+/* Pointer Cursor When Hovering Over Every Button */
 button:hover{
   cursor: pointer;
 }
-
+/* Styling For Small Gradient Bar In Header */
 #gradient-bar{
   width: 100vw;
   height: 35px;
@@ -56,7 +56,7 @@ button:hover{
   display: flex;
   justify-content: space-evenly;
 }
-
+/* Styling For Phone and Email Div In Header */
 #contact-div{
   display: flex;
   color: white;
@@ -65,47 +65,47 @@ button:hover{
   width: 400px;
   font-family: "Rubik", sans-serif;
 }
-
+/* Styling For Contact Div Images */
 #contact-div img{
   margin: 15px 0 0 0 ;
   margin-right: 5px;
 }
-
+/* Styling For Header Phone Information */
 #phone-info{
   display: flex;
 }
-
+/* Styling For Header Email Information*/
 #email-info{
   display: flex;
 }
-
+/* Pointer Cursor When Hovering Over Contact Information */
 #contact-div div:hover{
   cursor: pointer;
 }
-
+/* Pointer Cursor When Hovering Over Social Icons */
 #social-bar img:hover{
   cursor: pointer;
 }
-
+/* Styling For Contact Logos */
 #contact-div img{
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-
+/* Styling For Social Media Bar */
 #social-bar{
   display: flex;
   width: 300px;
   justify-content: space-evenly;
   margin-top: 8px
 }
-
+/* Styling For Social Media Icons */
 #social-bar img{
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-
+/* Styling For Pages Tabs Bar */
 #pages-bar{
   width: 90vw;
   display: flex;
@@ -113,7 +113,7 @@ button:hover{
   height: 100px;
   margin: auto;
 }
-
+/* Styling For Logo Div */
 #logo-div{
   display: flex;
   justify-content: center;
@@ -121,34 +121,34 @@ button:hover{
   width: 160px;
   justify-content: space-between;
 }
-
+/* Pointer Cursor When Hovering Over Logo */
 #logo-div:hover{
   cursor: pointer;
 }
-
+/* Styling For Bone Logo */
 .bone-logo{
   width: 40px;
   height: 40px;
 }
-
+/* Styling For furbnb Text */
 #logo-div h2{
   font-size: 38px;
   font-family: "Nunito", sans-serif;
   
 }
-
+/* Styling For Pages Tabs List Container*/
 #pages-list{
   width: 40vw;
   padding: 38px
 }
-
+/* Styling For Pages Tabs Ul */
 #pages-list ul{
   display: flex;
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
 }
-
+/* Styling For Pages Tabs */
 #pages-list ul li a{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
@@ -157,19 +157,19 @@ button:hover{
   color: black;
   font-family: "Rubik", sans-serif;
 }
-
+/* Decoration For Hovering Over Page Tab */
 #pages-list ul li:hover a{
   color: #00be4f;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 40px;
 }
-
+/* Styling For Main Home Page Container */
 #main-cont{
   width: 100vw;
   position: relative;
 }
-
+/* Styling For Aussie Puppies Container */
 #splash-text-cont{
   width: 100vw;
   height: 80vh;
@@ -178,7 +178,7 @@ button:hover{
   background-position: -10%;
   background-repeat: no-repeat;
 }
-
+/* Styling For Divs Within Splash Text Cont */
 #splash-text-cont div{
   width: 80%;
   display: flex;
@@ -189,7 +189,7 @@ button:hover{
   top: 30%;
   margin: auto;
 }
-
+/* Styling For Header In Splash Text Cont */
 #splash-text-cont h1{
   color: white;
   font-family: sans-serif;
@@ -199,7 +199,7 @@ button:hover{
   width: 60%;
   margin: auto;
 }
-
+/* Styling For Learn More Button In Splash Text Cont */
 #splash-text-cont button{
   width: 200px;
   height: 50px;
@@ -211,12 +211,12 @@ button:hover{
   font-family: "Rubik", sans-serif;
   margin-top: 50px;
 }
-
+/* Changes Color Of Button When Hovered Over */
 #splash-text-cont button:hover{
   background-image: linear-gradient(to left bottom, white, white);
   color: #08c249;
 }
-
+/* Styling For Info Cards Div */
 #cards-div{
   width: 60vw;
   margin: auto;
@@ -224,7 +224,7 @@ button:hover{
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
+/* Styling For Info Card */
 .card{
   width: 250px;
   height: 250px;
@@ -235,7 +235,7 @@ button:hover{
   text-align: center;
   margin-bottom: 80px;
 }
-
+/* Styling For Card Icon */
 .card-icon-div{
   width: 80px;
   height: 80px;
@@ -247,7 +247,7 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon Image 1 */
 #card-icon1{
   background-image: url("../images/home.png");
   background-size: cover;
@@ -259,7 +259,7 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon Image 2 */
 #card-icon2{
   background-image: url("../images/dog-with-belt-walking-with-a-man.png");
   background-size: cover;
@@ -271,7 +271,7 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon Image 3 */
 #card-icon3{
   background-image: url("../images/crown.png");
   background-size: cover;
@@ -283,12 +283,13 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Changes Background Color And Text Color Of Card */
 .card:hover{
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   color: white;
 
 }
+/* Styling For Changing Details Of Cards When Card Is Hovered Over */
 .card:hover p{
 color: white
 }
@@ -302,19 +303,19 @@ color: white
   color: #04d54e
 }
 
-
+/* Styling For Card Header */
 .card h4{
   margin: 50px 0 0 0;
   font-family: "Rubik", sans-serif;
 }
-
+/* Styling For Card Text */
 .card p{
   width: 80%;
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
   color: rgb(104, 104, 104)
 }
-
+/* Styling For Card Arrow Button */
 .card-button{
   width: 40px;
   height: 40px;
@@ -329,13 +330,13 @@ color: white
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Arrow Icon */
 .card-button span{
   position: relative;
   left: 1px;
   top: 2px;
 }
-
+/* Styling For Information Blocks Container */
 #landing-info-div{
   width: 100vw;
   display: inline-block;
@@ -345,20 +346,20 @@ color: white
   background-position: 20%;
   margin-bottom: 100px;
 }
-
+/* Styling For Individual Information Blocks */
 .landing-info{
   width: 70vw;
   margin: auto;
   display: flex;
   flex-direction: row;
 }
-
+/* Styling For Information Blocks Text Section */
 .landing-info-text-div{
   width: 50%;
   display: inline-block;
   text-align: center;
 }
-
+/* Styling For Information Blocks Header */
 .landing-info-text-div h3{
   font-size: 40px;
   margin-top: 100px;
@@ -366,30 +367,30 @@ color: white
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+/* Styling For Information Blocks Text */
 .landing-info-text-div p{
   font-size: 20px;
   max-width: 80%;
   margin: auto;
 }
-
+/* Styling For Information Blocks Image Container */
 .landing-info-image-div{
   width: 50%;
   display: inline-block;
 }
-
+/* Styling For Information Blocks Image */
 .landing-info-image-div img{
   height: 100%;
   width: 100%;
 }
-
+/* Styling For About Us Container */
 .about-cont{
   width: 100vw;
   margin: auto;
   background-color: rgb(240, 240, 240);
   padding: 50px 0
 }
-
+/* Styling For About Us Div */
 .about-us-div{
   display: flex;
   justify-content: space-evenly;
@@ -397,25 +398,25 @@ color: white
   width: 70%;
   margin: auto;
 }
-
+/* Styling For About Us Block Sections */
 .about-us-div div{
   width: 50%;
   height: 400px;
 }
-
+/* Styling For About Us h2s */
 .about-cont h2{
   font-family: "Nunito", sans-serif;
   font-size: 30px;
   margin: 25px 0 0 50px;
 }
-
+/* Styling For About Us h3s */
 .about-cont h3{
   font-family: "Nunito", sans-serif;
   font-size: 55px;
   margin: 0 0 0 50px;
   color:#00be4f
 }
-
+/* Styling For About Us h5 */
 .about-cont h5{
   font-family: "Nunito", sans-serif;
   color: rgb(88, 88, 88);
@@ -423,28 +424,28 @@ color: white
   margin: 25px 0 0 50px;
   max-width: 80%;
 }
-
+/* Styling For About Us Text */
 .about-cont p{
   font-family: "Rubik", sans-serif;
   color: grey;
   max-width: 90%;
   margin: 20px 0 0 50px;
 }
-
+/* Styling For Black Text Span */
 .black-span{
   color: black;
   margin: 10px;
 }
-
+/* Styling For Blue Text Span */
 .blue-span{
   color: #0092bb;
 }
-
+/* Styling For About Us Images */
 .about-us-div div img{
   width: 100%;
   height: 100%;
 }
-
+/* Styling For Why Choose Us Container */
 .why-choose-div{
   display: flex;
   justify-content: space-evenly;
@@ -452,42 +453,42 @@ color: white
   width: 70%;
   margin: auto;
 }
-
+/* Styling For Why Choose Us Blocks */
 .why-choose-div div{
   width: 50%;
   height: 400px;
 }
-
+/* Styling For Why Choose Us Images */
 .why-choose-div img{
   width: 100%;
   height: 100%;
 }
-
+/* Styling For Team Info Div */
 .team-div{
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   margin: 50px 0 100px 0;
 }
-
+/* Styling For Team Text Div */
 .team-div div{
   width: 100vw;
   text-align: center;
 }
-
+/* Styling For Team h2 */
 .team-div div h2{
   font-family: "Nunito", sans-serif;
   font-size: 35px;
   margin-bottom: 0;
 }
-
+/* Styling For Team h3 */
 .team-div div h3{
   color: #00be4f;
   font-family: "Nunito", sans-serif;
   font-size: 55px;
   margin-top: 0;
 }
-
+/* Styling For Team Cards Container */
 .team-cards-cont{
   width: 100vw;
   display: flex;
@@ -496,7 +497,7 @@ color: white
   justify-content: space-evenly;
   margin: 25px 0 25px 0;
 }
-
+/* Styling For Team Card */
 .team-cards-cont .team-card{
   width: 250px;
   height: 350px;
@@ -505,41 +506,41 @@ color: white
   align-items: center;
   margin: 10px;
 }
-
+/* Styling For Team Card Image */
 .team-card img{
   width: 250px;
   height: 75%;
   border-radius: 5px 5px 0 0;
 }
-
+/* Styling For Team Card Information Section */
 .team-card .team-card-info{
   width: 250px;
   height: 25%;
   background-image: linear-gradient(to left, rgb(219, 219, 219), rgb(219, 219, 219));
   border-radius: 0 0 5px 5px;
 }
-
+/* Styling For Team Card Name */
 .team-card-info h5{
   font-family: "Nunito", sans-serif;
   font-size: 20px;
  margin: 10px auto;
  color: black;
 }
-
+/* Styling For Team Card Position Title */
 .team-card-info p{
   margin: 10px auto;
   font-family: "Nunito", sans-serif;
   color: rgb(73, 73, 73)
 }
-
+/* Changes Card Info Section To Green Gradient */
 .team-card:hover .team-card-info{
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
 }
-
+/* Changes Card Info Section Header Color */
 .team-card:hover .team-card-info h5{
   color: white
 }
-
+/* Changes Card Info Section Text Color */
 .team-card:hover .team-card-info p{
   color: white
 }
