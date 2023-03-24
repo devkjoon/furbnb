@@ -1,7 +1,7 @@
 import React from 'react';
-import dog1 from '../../assets/images/about-1.jpg';
-import cat from '../../assets/images/pexels-fabricio-trujillo-62640.jpg';
-import corgi from '../../assets/images/corgi-bath.jpg';
+import dog1 from '../assets/images/about-1.jpg';
+import cat from '../assets/images/pexels-fabricio-trujillo-62640.jpg';
+import corgi from '../assets/images/corgi-bath.jpg';
 // import '../assets/css/index.css';
 
 
