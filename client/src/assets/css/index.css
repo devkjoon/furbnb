@@ -411,6 +411,57 @@ color: white
 }
 
 .footer-cont li{
-  font-size: 15px
+  font-size: 15px;
 }
 
+.services {
+  text-align: center;
+  margin: 50px;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #e5ecf4;
+}
+
+.service-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 1rem;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-name {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5;
+}

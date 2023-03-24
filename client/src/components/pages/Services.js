@@ -23,13 +23,13 @@ export default function PetDayCareServices() {
   ];
 
   return (
-    <div>
-      <h1>Pet Day Care Services</h1>
-      <ul>
+    <div className="services">
+      <h1 className='services-title'>Pet Day Care Services</h1>
+      <ul className='services-list'>
         {services.map((service) => (
-          <li key={service.name}>
-            <h2>{service.name}</h2>
-            <p>{service.description}</p>
+          <li className='service-item' key={service.name}>
+            <h2 className='service-name'>{service.name}</h2>
+            <p className='service-description'>{service.description}</p>
           </li>
         ))}
       </ul>
