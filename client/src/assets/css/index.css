@@ -383,6 +383,175 @@ color: white
   width: 100%;
 }
 
+.about-cont{
+  width: 100vw;
+  margin: auto;
+  background-color: rgb(240, 240, 240);
+  padding: 50px 0
+}
+
+.about-us-div{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.about-us-div div{
+  width: 50%;
+  height: 400px;
+}
+
+.about-cont h2{
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  margin: 25px 0 0 50px;
+}
+
+.about-cont h3{
+  font-family: "Nunito", sans-serif;
+  font-size: 55px;
+  margin: 0 0 0 50px;
+  color:#00be4f
+}
+
+.about-cont h5{
+  font-family: "Nunito", sans-serif;
+  color: rgb(88, 88, 88);
+  font-size: 20px;
+  margin: 25px 0 0 50px;
+  max-width: 80%;
+}
+
+.about-cont p{
+  font-family: "Rubik", sans-serif;
+  color: grey;
+  max-width: 90%;
+  margin: 20px 0 0 50px;
+}
+
+.black-span{
+  color: black;
+  margin: 10px;
+}
+
+.blue-span{
+  color: #0092bb;
+}
+
+.about-us-div div img{
+  width: 100%;
+  height: 100%;
+}
+
+.why-choose-div{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.why-choose-div div{
+  width: 50%;
+  height: 400px;
+}
+
+.why-choose-div img{
+  width: 100%;
+  height: 100%;
+}
+
+.team-div{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0 100px 0;
+}
+
+.team-div div{
+  width: 100vw;
+  text-align: center;
+}
+
+.team-div div h2{
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.team-div div h3{
+  color: #00be4f;
+  font-family: "Nunito", sans-serif;
+  font-size: 55px;
+  margin-top: 0;
+}
+
+.team-cards-cont{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0 25px 0;
+}
+
+.team-cards-cont .team-card{
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.team-card img{
+  width: 250px;
+  height: 75%;
+  border-radius: 5px 5px 0 0;
+}
+
+.team-card .team-card-info{
+  width: 250px;
+  height: 25%;
+  background-image: linear-gradient(to left, rgb(219, 219, 219), rgb(219, 219, 219));
+  border-radius: 0 0 5px 5px;
+}
+
+.team-card-info h5{
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+ margin: 10px auto;
+ color: black;
+}
+
+.team-card-info p{
+  margin: 10px auto;
+  font-family: "Nunito", sans-serif;
+  color: rgb(73, 73, 73)
+}
+
+.team-card:hover .team-card-info{
+  background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+}
+
+.team-card:hover .team-card-info h5{
+  color: white
+}
+
+.team-card:hover .team-card-info p{
+  color: white
+}
+
+
+
+
+
+
+
+
+
 .footer {
   width: 100%;
   position: relative;
