@@ -197,9 +197,7 @@ const PetList = () => {
           <input
             type="text"
             value={newPetFeedingSchedule}
-            onChange={(event) =>
-              setNewPetFeedingSchedule(event.target.value)
-            }
+            onChange={(event) => setNewPetFeedingSchedule(event.target.value)}
           />
         </label>
         <br />
