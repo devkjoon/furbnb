@@ -6,7 +6,7 @@ import AlexandriaPic from "../assets/images/Alexandria-pfp.PNG"
 import JoonPic from "../assets/images/Joon-pfp.PNG"
 import TrentPic from "../assets/images/Trent-pfp.PNG"
 import CoulsonPic from "../assets/images/liam-pfp.jpg"
-// import '../assets/css/index.css';
+import '../assets/css/index.css';
 
 
 export default function AboutPage() {
