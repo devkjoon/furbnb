@@ -24,7 +24,7 @@ export default function PetGallery() {
   ];
 
   return (
-    <div>
+    <div className="gallery-cont">
       <h1>Pet Gallery</h1>
       <ul>
         {pets.map((pet) => (
