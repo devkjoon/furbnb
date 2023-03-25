@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import PhoneIcon from "../assets/images/352510_local_phone_icon.png"
-import EmailIcon from "../assets/images/1564528_fly_messager_send_communication_email_icon.png"
-import FacebookIcon from "../assets/images/5296500_fb_social media_facebook_facebook logo_social network_icon.png"
-import TwitterIcon from "../assets/images/5296514_bird_tweet_twitter_twitter logo_icon.png"
-import InstaIcon from "../assets/images/5296765_camera_instagram_instagram logo_icon.png"
-import YTIcon from "../assets/images/5305164_play_video_youtube_youtube logo_icon.png"
-import Logo from "../assets/images/big-boner.png"
-import '../assets/css/index.css';
+import PhoneIcon from "../assets/images/352510_local_phone_icon.png";
+import EmailIcon from "../assets/images/1564528_fly_messager_send_communication_email_icon.png";
+import FacebookIcon from "../assets/images/5296500_fb_social media_facebook_facebook logo_social network_icon.png";
+import TwitterIcon from "../assets/images/5296514_bird_tweet_twitter_twitter logo_icon.png";
+import InstaIcon from "../assets/images/5296765_camera_instagram_instagram logo_icon.png";
+import YTIcon from "../assets/images/5305164_play_video_youtube_youtube logo_icon.png";
+import Logo from "../assets/images/big-boner.png";
+import "../assets/css/index.css";
 
 function Header({ currentPage, handlePageChange }) {
-
   return (
     <header className="header-container">
       <div id="gradient-bar">
@@ -25,10 +24,18 @@ function Header({ currentPage, handlePageChange }) {
           </div>
         </div>
         <div id="social-bar">
-          <a href="placeholder"><img src={FacebookIcon} alt="facebook icon" /></a>
-          <a href="placeholder"><img src={TwitterIcon} alt="twitter icon" /></a>
-          <a href="placeholder"><img src={InstaIcon} alt="instagram icon" /></a>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test"><img src={YTIcon} alt="youtube icon" /></a>
+          <a href="placeholder">
+            <img src={FacebookIcon} alt="facebook icon" />
+          </a>
+          <a href="placeholder">
+            <img src={TwitterIcon} alt="twitter icon" />
+          </a>
+          <a href="placeholder">
+            <img src={InstaIcon} alt="instagram icon" />
+          </a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test">
+            <img src={YTIcon} alt="youtube icon" />
+          </a>
         </div>
       </div>
       <div id="pages-bar">
@@ -39,37 +46,73 @@ function Header({ currentPage, handlePageChange }) {
         <div id="pages-list">
           <ul className="nav nav-tabs">
             <li className="nav-item">
-              <Link to="/" className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/"
+                className={
+                  currentPage === "Home" ? "nav-link active" : "nav-link"
+                }
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/about"
+                className={
+                  currentPage === "About" ? "nav-link active" : "nav-link"
+                }
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/services" className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/services"
+                className={
+                  currentPage === "Services" ? "nav-link active" : "nav-link"
+                }
+              >
                 Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/gallery" className={currentPage === 'Gallery' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/gallery"
+                className={
+                  currentPage === "Gallery" ? "nav-link active" : "nav-link"
+                }
+              >
                 Gallery
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/pricing" className={currentPage === 'Pricing' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/pricing"
+                className={
+                  currentPage === "Pricing" ? "nav-link active" : "nav-link"
+                }
+              >
                 Pricing
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
+              <Link
+                to="/contact"
+                className={
+                  currentPage === "Contact" ? "nav-link active" : "nav-link"
+                }
+              >
                 Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/petlist" className={currentPage === 'PetList' ? 'nav-link active' : 'nav-link'} onClick={() => handlePageChange('PetList')}>
+              <Link
+                to="/petlist"
+                className={
+                  currentPage === "PetList" ? "nav-link active" : "nav-link"
+                }
+                onClick={() => handlePageChange("PetList")}
+              >
                 PetList
               </Link>
             </li>
