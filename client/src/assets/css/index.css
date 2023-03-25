@@ -604,6 +604,144 @@ button:hover {
   margin-top: 5px;
 }
 
+/* Styling For Main Gallery Container */
+.gallery-cont{
+  width: 100vw;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  padding-top: 20px;
+}
+/* Styling For Gallery Container h1 */
+.gallery-cont h1{
+  text-align: center;
+  color: #00be4f;
+  font-size: 55px;
+  font-family: "Nunito", sans-serif;
+  margin: 20px 0 0 0;
+}
+/* Styling For Gallery Container h3 */
+.gallery-cont h3{
+  text-align: center;
+  margin: 10px 0 55px 0;
+  font-family: "Nunito", sans-serif;
+  color:rgb(97, 97, 97);
+  font-size: 25px;
+}
+/* Styling For Gallery */
+.gallery{
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+/* Styling For Individual Gallery Cards */
+.gallery-card{
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  position: relative;
+  flex-shrink: 1;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+/* Styling For Gallery Card Image */
+.gallery-card img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+/* Styling For Gallery Card Information*/
+.gallery-card-info{
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  top: 100%;
+  -webkit-transition: top 1s;
+}
+/* Styling For Pet Name*/
+.gallery-card h2{
+  font-family: "Rubik", sans-serif;
+  font-size: 50px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+/* Styling For Pet Age */
+.gallery-card p{
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  color: #00be4f;
+  font-size: 30px;
+  margin: 0;
+}
+/* Styling For Pet Age Spans*/
+.gallery-card span{
+  margin: 0;
+}
+/* Styling For Favorite Activities Text*/
+.gallery-card h5{
+  margin: 10px 0 0 45px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  color: rgb(90, 90, 90)
+}
+/* Styling For Activities Margin*/
+.activities{
+  margin-left: 50px;
+}
+/* Styling For Activities Items */
+.activities li{
+  font-family: "Rubik", sans-serif;
+  color: rgb(112, 112, 112);
+}
+/* Makes Pointer Cursor When Hovering Over Card*/
+.gallery-card:hover{
+  cursor: pointer;
+}
+/* Makes Info Section Slide Up When Hovered Over */
+.gallery-card:hover .gallery-card-info{
+  top: 54%;
+  -webkit-transition: top 1s;
+}
+/* Styling For Submission Info*/
+.gallery-submit-info{
+  margin: 0 0 75px 0;
+}
+/* Styling For Submission Info h4*/
+.gallery-submit-info h4{
+  margin: 0;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+}
+/* Styling For Submission Info h3*/
+.gallery-submit-info h3{
+  color:#00be4f;
+  font-size: 55px;
+  margin-bottom: 0;
+}
+/* Styling For Submission Info Text*/
+.gallery-submit-info p{
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  margin: 10px 0;
+}
+/* Styling For Submission Info Anchor Text*/
+.gallery-submit-info a p{
+  color:#0092bb;
+  font-size: 40px;
+  text-decoration: underline;
+}
+/* Changes Anchor Text From Blue To Green */
+.gallery-submit-info a p:hover{
+  color:#00be4f;
+  cursor: pointer;
+}
+
 
 
 

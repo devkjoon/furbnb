@@ -38,7 +38,7 @@ function Home() {
           <p>
             Forget the step master, if your dog is an absolute cardio freak,
             we've got you! We offer twice daily walks for your energetic
-            gremlin. (Usain Bolt not available on Sundays){" "}
+            gremlin. (Usain Bolt not available on Sundays)
           </p>
           <button className="card-button">
             <span className="material-symbols-outlined card-button-span">
