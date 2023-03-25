@@ -1,7 +1,14 @@
+<<<<<<< HEAD:client/src/components/pages/Home.js
 import React from "react";
 import dog1 from "../../assets/images/about-1.jpg";
 import cat from "../../assets/images/pexels-fabricio-trujillo-62640.jpg";
 import corgi from "../../assets/images/corgi-bath.jpg";
+=======
+import React from 'react';
+import dog1 from '../assets/images/about-1.jpg';
+import cat from '../assets/images/pexels-fabricio-trujillo-62640.jpg';
+import corgi from '../assets/images/corgi-bath.jpg';
+>>>>>>> 9b733e6e09d31bcba42b8c08a85411a445238754:client/src/pages/Home.js
 // import '../assets/css/index.css';
 
 function Home() {

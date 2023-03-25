@@ -40,7 +40,7 @@ code {
   width: 100%;
   display: inline-block;
 }
-
+/* Removing li Underlines */
 li {
   list-style: none;
 }
@@ -386,6 +386,231 @@ button:hover {
   height: 100%;
   width: 100%;
 }
+/* Styling For About Us Container */
+.about-cont{
+  width: 100vw;
+  margin: auto;
+  background-color: rgb(240, 240, 240);
+  padding: 50px 0
+}
+/* Styling For About Us Div */
+.about-us-div{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+/* Styling For About Us Block Sections */
+.about-us-div div{
+  width: 50%;
+  height: 400px;
+}
+/* Styling For About Us h2s */
+.about-cont h2{
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  margin: 25px 0 0 50px;
+}
+/* Styling For About Us h3s */
+.about-cont h3{
+  font-family: "Nunito", sans-serif;
+  font-size: 55px;
+  margin: 0 0 0 50px;
+  color:#00be4f
+}
+/* Styling For About Us h5 */
+.about-cont h5{
+  font-family: "Nunito", sans-serif;
+  color: rgb(88, 88, 88);
+  font-size: 20px;
+  margin: 25px 0 0 50px;
+  max-width: 80%;
+}
+/* Styling For About Us Text */
+.about-cont p{
+  font-family: "Rubik", sans-serif;
+  color: grey;
+  max-width: 90%;
+  margin: 20px 0 0 50px;
+}
+/* Styling For Black Text Span */
+.black-span{
+  color: black;
+  margin: 10px;
+}
+/* Styling For Blue Text Span */
+.blue-span{
+  color: #0092bb;
+}
+/* Styling For About Us Images */
+.about-us-div div img{
+  width: 100%;
+  height: 100%;
+}
+/* Styling For Why Choose Us Container */
+.why-choose-div{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+/* Styling For Why Choose Us Blocks */
+.why-choose-div div{
+  width: 50%;
+  height: 400px;
+}
+/* Styling For Why Choose Us Images */
+.why-choose-div img{
+  width: 100%;
+  height: 100%;
+}
+/* Styling For Team Info Div */
+.team-div{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0 100px 0;
+}
+/* Styling For Team Text Div */
+.team-div div{
+  width: 100vw;
+  text-align: center;
+}
+/* Styling For Team h2 */
+.team-div div h2{
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+/* Styling For Team h3 */
+.team-div div h3{
+  color: #00be4f;
+  font-family: "Nunito", sans-serif;
+  font-size: 55px;
+  margin-top: 0;
+}
+/* Styling For Team Cards Container */
+.team-cards-cont{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0 25px 0;
+}
+/* Styling For Team Card */
+.team-cards-cont .team-card{
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+/* Styling For Team Card Image */
+.team-card img{
+  width: 250px;
+  height: 75%;
+  border-radius: 5px 5px 0 0;
+}
+/* Styling For Team Card Information Section */
+.team-card .team-card-info{
+  width: 250px;
+  height: 25%;
+  background-image: linear-gradient(to left, rgb(219, 219, 219), rgb(219, 219, 219));
+  border-radius: 0 0 5px 5px;
+}
+/* Styling For Team Card Name */
+.team-card-info h5{
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+ margin: 10px auto;
+ color: black;
+}
+/* Styling For Team Card Position Title */
+.team-card-info p{
+  margin: 10px auto;
+  font-family: "Nunito", sans-serif;
+  color: rgb(73, 73, 73)
+}
+/* Changes Card Info Section To Green Gradient */
+.team-card:hover .team-card-info{
+  background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+}
+/* Changes Card Info Section Header Color */
+.team-card:hover .team-card-info h5{
+  color: white
+}
+/* Changes Card Info Section Text Color */
+.team-card:hover .team-card-info p{
+  color: white
+}
+
+/* Styling for the pet profile card */
+.pet-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  overflow: hidden;
+}
+
+/* Styling for the pet image */
+.pet-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Styling for the pet name */
+.pet-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* Styling for the pet description */
+.pet-description {
+  font-size: 16px;
+  margin: 10px;
+}
+
+/* Styling for the pet details */
+.pet-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+/* Styling for the pet detail item */
+.pet-detail-item {
+  flex-basis: calc(50% - 10px);
+  margin: 5px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Styling for the pet detail item label */
+.pet-detail-label {
+  font-weight: bold;
+}
+
+/* Styling for the pet detail item value */
+.pet-detail-value {
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
 
 .footer {
   width: 100%;
@@ -417,6 +642,13 @@ button:hover {
 .footer-cont li {
   font-size: 15px;
 }
+/* Styling for the entire page */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+} */
+
 
 .services {
   text-align: center;
