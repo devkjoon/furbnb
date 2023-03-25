@@ -1,6 +1,5 @@
-import React from 'react';
+import React from "react";
 // import '../assets/css/index.css';
-
 
 export default function ContactPage() {
   return (

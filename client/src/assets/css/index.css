@@ -3,14 +3,14 @@
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 html,
-body{
+body {
   width: 100%;
   height: 100%;
 }
@@ -26,7 +26,7 @@ body {
   background-color: rgb(252, 252, 252);
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none
 }
 
@@ -34,8 +34,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* Main Div Styling */
-#root{
+
+#root {
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -44,20 +44,20 @@ code {
 li {
   list-style: none;
 }
-/* Pointer Cursor When Hovering Over Every Button */
-button:hover{
+
+button:hover {
   cursor: pointer;
 }
-/* Styling For Small Gradient Bar In Header */
-#gradient-bar{
+
+#gradient-bar {
   width: 100vw;
   height: 35px;
   background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
   display: flex;
   justify-content: space-evenly;
 }
-/* Styling For Phone and Email Div In Header */
-#contact-div{
+
+#contact-div {
   display: flex;
   color: white;
   align-items: center;
@@ -65,112 +65,112 @@ button:hover{
   width: 400px;
   font-family: "Rubik", sans-serif;
 }
-/* Styling For Contact Div Images */
-#contact-div img{
-  margin: 15px 0 0 0 ;
+
+#contact-div img {
+  margin: 15px 0 0 0;
   margin-right: 5px;
 }
-/* Styling For Header Phone Information */
-#phone-info{
+
+#phone-info {
   display: flex;
 }
-/* Styling For Header Email Information*/
-#email-info{
+
+#email-info {
   display: flex;
 }
-/* Pointer Cursor When Hovering Over Contact Information */
-#contact-div div:hover{
+
+#contact-div div:hover {
   cursor: pointer;
 }
-/* Pointer Cursor When Hovering Over Social Icons */
-#social-bar img:hover{
+
+#social-bar img:hover {
   cursor: pointer;
 }
-/* Styling For Contact Logos */
-#contact-div img{
+
+#contact-div img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-/* Styling For Social Media Bar */
-#social-bar{
+
+#social-bar {
   display: flex;
   width: 300px;
   justify-content: space-evenly;
   margin-top: 8px
 }
-/* Styling For Social Media Icons */
-#social-bar img{
+
+#social-bar img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-/* Styling For Pages Tabs Bar */
-#pages-bar{
+
+#pages-bar {
   width: 90vw;
   display: flex;
   justify-content: space-evenly;
   height: 100px;
   margin: auto;
 }
-/* Styling For Logo Div */
-#logo-div{
+
+#logo-div {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 160px;
   justify-content: space-between;
 }
-/* Pointer Cursor When Hovering Over Logo */
-#logo-div:hover{
+
+#logo-div:hover {
   cursor: pointer;
 }
-/* Styling For Bone Logo */
-.bone-logo{
+
+.bone-logo {
   width: 40px;
   height: 40px;
 }
-/* Styling For furbnb Text */
-#logo-div h2{
+
+#logo-div h2 {
   font-size: 38px;
   font-family: "Nunito", sans-serif;
-  
+
 }
-/* Styling For Pages Tabs List Container*/
-#pages-list{
+
+#pages-list {
   width: 40vw;
   padding: 38px
 }
-/* Styling For Pages Tabs Ul */
-#pages-list ul{
+
+#pages-list ul {
   display: flex;
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
 }
-/* Styling For Pages Tabs */
-#pages-list ul li a{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+#pages-list ul li a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   color: black;
   font-family: "Rubik", sans-serif;
 }
-/* Decoration For Hovering Over Page Tab */
-#pages-list ul li:hover a{
+
+#pages-list ul li:hover a {
   color: #00be4f;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 40px;
 }
-/* Styling For Main Home Page Container */
-#main-cont{
+
+#main-cont {
   width: 100vw;
   position: relative;
 }
-/* Styling For Aussie Puppies Container */
-#splash-text-cont{
+
+#splash-text-cont {
   width: 100vw;
   height: 80vh;
   background-image: url("../images/jametlene-reskp-fliwkBbS7oM-unsplash.jpg");
@@ -178,8 +178,8 @@ button:hover{
   background-position: -10%;
   background-repeat: no-repeat;
 }
-/* Styling For Divs Within Splash Text Cont */
-#splash-text-cont div{
+
+#splash-text-cont div {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -189,8 +189,8 @@ button:hover{
   top: 30%;
   margin: auto;
 }
-/* Styling For Header In Splash Text Cont */
-#splash-text-cont h1{
+
+#splash-text-cont h1 {
   color: white;
   font-family: sans-serif;
   font-weight: 700;
@@ -199,8 +199,8 @@ button:hover{
   width: 60%;
   margin: auto;
 }
-/* Styling For Learn More Button In Splash Text Cont */
-#splash-text-cont button{
+
+#splash-text-cont button {
   width: 200px;
   height: 50px;
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
@@ -211,21 +211,21 @@ button:hover{
   font-family: "Rubik", sans-serif;
   margin-top: 50px;
 }
-/* Changes Color Of Button When Hovered Over */
-#splash-text-cont button:hover{
+
+#splash-text-cont button:hover {
   background-image: linear-gradient(to left bottom, white, white);
   color: #08c249;
 }
-/* Styling For Info Cards Div */
-#cards-div{
+
+#cards-div {
   width: 60vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-/* Styling For Info Card */
-.card{
+
+.card {
   width: 250px;
   height: 250px;
   background-color: white;
@@ -235,8 +235,8 @@ button:hover{
   text-align: center;
   margin-bottom: 80px;
 }
-/* Styling For Card Icon */
-.card-icon-div{
+
+.card-icon-div {
   width: 80px;
   height: 80px;
   background-color: rgb(245, 245, 245);
@@ -247,8 +247,8 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* Styling For Card Icon Image 1 */
-#card-icon1{
+
+#card-icon1 {
   background-image: url("../images/home.png");
   background-size: cover;
   width: 40px;
@@ -259,8 +259,8 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* Styling For Card Icon Image 2 */
-#card-icon2{
+
+#card-icon2 {
   background-image: url("../images/dog-with-belt-walking-with-a-man.png");
   background-size: cover;
   width: 40px;
@@ -271,8 +271,8 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* Styling For Card Icon Image 3 */
-#card-icon3{
+
+#card-icon3 {
   background-image: url("../images/crown.png");
   background-size: cover;
   width: 40px;
@@ -283,40 +283,43 @@ button:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* Changes Background Color And Text Color Of Card */
-.card:hover{
+
+.card:hover {
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   color: white;
 
 }
-/* Styling For Changing Details Of Cards When Card Is Hovered Over */
-.card:hover p{
-color: white
+
+.card:hover p {
+  color: white
 }
+
 .card:hover .card-icon-div {
   background-color: white;
 }
-.card:hover .card-button{
+
+.card:hover .card-button {
   background-image: linear-gradient(to left, white, white);
 }
-.card:hover .card-button-span{
+
+.card:hover .card-button-span {
   color: #04d54e
 }
 
-/* Styling For Card Header */
-.card h4{
+
+.card h4 {
   margin: 50px 0 0 0;
   font-family: "Rubik", sans-serif;
 }
-/* Styling For Card Text */
-.card p{
+
+.card p {
   width: 80%;
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
   color: rgb(104, 104, 104)
 }
-/* Styling For Card Arrow Button */
-.card-button{
+
+.card-button {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -330,14 +333,14 @@ color: white
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* Styling For Card Arrow Icon */
-.card-button span{
+
+.card-button span {
   position: relative;
   left: 1px;
   top: 2px;
 }
-/* Styling For Information Blocks Container */
-#landing-info-div{
+
+#landing-info-div {
   width: 100vw;
   display: inline-block;
   padding: 0;
@@ -346,40 +349,40 @@ color: white
   background-position: 20%;
   margin-bottom: 100px;
 }
-/* Styling For Individual Information Blocks */
-.landing-info{
+
+.landing-info {
   width: 70vw;
   margin: auto;
   display: flex;
   flex-direction: row;
 }
-/* Styling For Information Blocks Text Section */
-.landing-info-text-div{
+
+.landing-info-text-div {
   width: 50%;
   display: inline-block;
   text-align: center;
 }
-/* Styling For Information Blocks Header */
-.landing-info-text-div h3{
+
+.landing-info-text-div h3 {
   font-size: 40px;
   margin-top: 100px;
   background: linear-gradient(to left, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* Styling For Information Blocks Text */
-.landing-info-text-div p{
+
+.landing-info-text-div p {
   font-size: 20px;
   max-width: 80%;
   margin: auto;
 }
-/* Styling For Information Blocks Image Container */
-.landing-info-image-div{
+
+.landing-info-image-div {
   width: 50%;
   display: inline-block;
 }
-/* Styling For Information Blocks Image */
-.landing-info-image-div img{
+
+.landing-info-image-div img {
   height: 100%;
   width: 100%;
 }
@@ -614,7 +617,7 @@ color: white
   position: relative;
 }
 
-.footer-gradient-bar{
+.footer-gradient-bar {
   width: 100vw;
   font-size: 10px;
   background-image: linear-gradient(to left, #00c42a, #00be77, #00b3a8, #00a4bf, #0092bb);
@@ -623,7 +626,7 @@ color: white
   color: white;
 }
 
-.footer-cont{
+.footer-cont {
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
@@ -631,13 +634,13 @@ color: white
   margin: auto;
 }
 
-.footer-cont h3{
+.footer-cont h3 {
   text-decoration: underline;
   font-size: 20px;
 }
 
-.footer-cont li{
-  font-size: 15px
+.footer-cont li {
+  font-size: 15px;
 }
 /* Styling for the entire page */
 /* body {
@@ -647,3 +650,54 @@ color: white
 } */
 
 
+.services {
+  text-align: center;
+  margin: 50px;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #e5ecf4;
+}
+
+.service-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 1rem;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-name {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.5;
+}

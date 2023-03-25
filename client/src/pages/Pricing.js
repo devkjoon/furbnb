@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 // import '../assets/css/index.css';
-
 
 export default function PetDayCarePricing() {
   const tiers = [
     {
-      name: 'Basic',
+      name: "Basic",
       price: {
         monthly: 50,
         annually: 500,
@@ -14,10 +13,10 @@ export default function PetDayCarePricing() {
         monthly: "https://buy.stripe.com/test_aEU9AOdLh8zpdX2cMM",
         annually: "https://buy.stripe.com/test_7sI28mdLh4j98CI001",
       },
-      services: ['Grooming', 'Boarding'],
+      services: ["Grooming", "Boarding"],
     },
     {
-      name: 'Standard',
+      name: "Standard",
       price: {
         monthly: 75,
         annually: 800,
@@ -26,10 +25,10 @@ export default function PetDayCarePricing() {
         monthly: "https://buy.stripe.com/test_14k14i36D8zp1ag146",
         annually: "https://buy.stripe.com/test_dR628mdLhaHxbOU4gj",
       },
-      services: ['Grooming', 'Boarding', 'Training'],
+      services: ["Grooming", "Boarding", "Training"],
     },
     {
-      name: 'Premium',
+      name: "Premium",
       price: {
         monthly: 100,
         annually: 1100,
@@ -38,7 +37,7 @@ export default function PetDayCarePricing() {
         monthly: "https://buy.stripe.com/test_9AQfZc5eL5ndf16eUY",
         annually: "https://buy.stripe.com/test_8wM3cqePlbLB6uA7sx",
       },
-      services: ['Grooming', 'Boarding', 'Training', 'Veterinary Services'],
+      services: ["Grooming", "Boarding", "Training", "Veterinary Services"],
     },
   ];
 
@@ -55,7 +54,10 @@ export default function PetDayCarePricing() {
               ))}
             </ul>
             <p>
-              Monthly: ${tier.price.monthly} <a href={tier.checkout.monthly}>Start Now</a> | Annually: ${tier.price.annually} <a href={tier.checkout.annually}>Start Now</a>
+              Monthly: ${tier.price.monthly}{" "}
+              <a href={tier.checkout.monthly}>Start Now</a> | Annually: $
+              {tier.price.annually}{" "}
+              <a href={tier.checkout.annually}>Start Now</a>
             </p>
           </li>
         ))}
