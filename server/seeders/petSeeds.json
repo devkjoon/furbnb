@@ -33,7 +33,7 @@
   }
   },
   {
-    "_id": "3",
+    "_id": 3,
     "name": "Max",
     "species": "Dog",
     "breed": "German Shepherd",
