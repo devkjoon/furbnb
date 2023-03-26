@@ -1,5 +1,4 @@
-import React from "react";
-// import PageContainer from "./components/PageContainer";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,13 +10,19 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
-import PetList from "./components/pages/PetList";
+import AddPetForm from './components/pages/AddPetForm';
 
-const App = () => {
+function App() {
+  const [currentPage, setCurrentPage] = useState("");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,13 +32,12 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<SignInPage />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/petlist" element={<PetList />} />
+          <Route path="/add-pet" element={<AddPetForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;
