@@ -44,6 +44,9 @@ function App() {
     setCurrentPage(page);
   };
 
+import PetList from "./components/pages/PetList";
+import Profile from "./pages/Profile"
+
   return (
     <ApolloProvider client = { client }>
     <div className="App">
@@ -59,6 +62,9 @@ function App() {
           <Route path="/login" element={<SignInPage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/petlist" element={<AddPetForm />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/petlist" element={<PetList />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </BrowserRouter>

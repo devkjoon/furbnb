@@ -741,11 +741,160 @@ button:hover {
   color:#00be4f;
   cursor: pointer;
 }
-
-
-
-
-
+/* Styling For Profile Page Container */
+.profile-cont{
+  width: 100vw;
+  background-color: rgb(245, 245, 245);
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+/* Styling For Profile Page Div */
+.profile-div{
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+}
+/* Styling For User Information Aside */
+.profile-div aside{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid grey;
+  background-color: white;
+  padding: 25px 5px;
+  height:auto
+}
+/* Styling For User Image */
+.profile-div aside img{
+  width: 70%;
+  border-radius: 100%;
+}
+/* Styling For User Name */
+.profile-div aside h5{
+  font-size: 25px;
+  margin: 5px;
+  font-family: "Nunito", sans-serif;
+  color:#00be4f
+}
+/* Styling For User Image */
+.profile-div aside p{
+  margin: 5px;
+  font-family: "Rubik", sans-serif;
+}
+/* Styling For Emergency Contact Text */
+.profile-div aside h6{
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px;
+  padding-top: 10px;
+  border-top: 1px solid grey;
+  color:#0092bb;
+  font-family: "Nunito", sans-serif;
+}
+/* Styling For Emergency Contact ul */
+.profile-div ul{
+  padding: 0;
+}
+/* Styling For Emergency Contact Info */
+.profile-div li{
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Rubik", sans-serif;
+}
+/* Styling For Profile Info Div */
+.profile-info{
+  width: 75%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+/* Styling For Pet Information Header */
+.profile-info h1{
+  color:#00be4f;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 25px;
+}
+/* Styling For Profile Cards Container */
+.profile-cards-cont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 25px;
+  flex: 1;
+}
+/* Styling For Individual Pet Card */
+.profile-card{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 15px 0;
+  margin: 25px 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+/* Styling For Pet Card Image */
+.profile-card img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+/* Styling For Pet Card Name */
+.profile-card h4{
+  width: 90%;
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+  padding-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+  color:#0092bb;
+  border-bottom: 1px solid grey;
+}
+/* Styling For Pet Card Information */
+.profile-card-info{
+  height: 60%;
+  width: 100%;
+}
+/* Styling For Pet Card Information Text */
+.profile-card-info p{
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  margin: 10px 0;
+}
+/* Styling For Pet Card Extra Info */
+.profile-card-extra-info{
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+  padding: 0;
+  top: 100%;
+  -webkit-transition: top 1s; 
+}
+/* Styling For Extra Info ul */
+.profile-card-extra-info ul{
+  margin: 0;
+}
+/* Styling For Extra Info Text */
+.profile-card-extra-info li{
+  text-align: left;
+  margin: 5px 10px;
+  color: white
+}
+/* Changes Position Of Extra Info To Show On Card */
+.profile-card:hover .profile-card-extra-info{
+  top: 63%;
+  -webkit-transition: top 1s; 
+}
 
 
 
@@ -838,4 +987,129 @@ button:hover {
   font-size: 1.2rem;
   margin: 0;
   line-height: 1.5;
+}
+
+.pricing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-title {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.pricing-tier {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.tier-title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.tier-services {
+  margin-bottom: 10px;
+}
+
+.tier-service {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.tier-pricing a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tier-pricing a:hover {
+  background-color: #0069d9;
+}
+
+@media (max-width: 767px) {
+  .pricing-tier {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .tier-title {
+    font-size: 1.2rem;
+  }
+
+  .tier-service {
+    font-size: 1rem;
+  }
+
+  .tier-pricing {
+    font-size: 1rem;
+  }
+
+  .tier-pricing a {
+    font-size: 1rem;
+  }
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-social {
+  margin-bottom: 20px;
+}
+
+.contact-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.contact-social li {
+  margin-right: 10px;
+}
+
+.contact-social a:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
