@@ -1,6 +1,5 @@
 [
   {
-    "_id": "1",
     "name": "Buddy",
     "species": "Dog",
     "breed": "Golden Retriever",
@@ -10,14 +9,10 @@
     "allergies": "None",
     "medications": "None",
     "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
-    "owner": {
-      "id":1,
-      "name":"Trenton"
-  }
+    "owner": "Trenton"
 
   },
   {
-    "_id": "2",
     "name": "Whiskers",
     "species": "Cat",
     "breed": "Siamese",
@@ -27,13 +22,9 @@
     "allergies": "None",
     "medications": "None",
     "feedingSchedule": "Morning: 1/4 cup kibble, Evening: 1/4 cup kibble",
-    "owner": {
-      "id":2,
-      "name":"Liam"
-  }
+    "owner": "Liam"
   },
   {
-    "_id": 3,
     "name": "Max",
     "species": "Dog",
     "breed": "German Shepherd",
@@ -43,13 +34,9 @@
     "allergies": "None",
     "medications": "None",
     "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
-    "owner": {
-      "id":1,
-      "name":"Trenton"
-  }
+    "owner": "Trenton"
   },
   {
-    "_id": "4",
     "name": "Fluffy",
     "species": "Cat",
     "breed": "Persian",
@@ -59,13 +46,9 @@
     "allergies": "None",
     "medications": "None",
     "feedingSchedule": "Morning: 1/4 cup kibble, Evening: 1/4 cup kibble",
-    "owner": {
-      "id":2,
-      "name":"Liam"
-  }
+    "owner": "Liam"
   },
   {
-    "_id": "5",
     "name": "Rex",
     "species": "Dog",
     "breed": "Labrador Retriever",
@@ -75,9 +58,6 @@
     "allergies": "None",
     "medications": "None",
     "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
-    "owner": {
-      "id":5,
-      "name":"Kelly"
-  }
+    "owner":"Kelly"
   }
 ]

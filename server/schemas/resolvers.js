@@ -25,9 +25,9 @@ const resolvers = {
   },
 
   Mutation: {
-    createUser: async (parent, { username, email, password }) => {
+    createUser: async (parent, { name, email, password }) => {
       // Creates a new user
-      const user = new User({ username, email, password });
+      const user = new User({ name, email, password });
       await user.save();
 
       return user;
@@ -44,11 +44,11 @@ const resolvers = {
       return pet;
     },
 
-    updateUser: async (parent, { id, username, email, password }) => {
+    updateUser: async (parent, { id, name, email, password }) => {
       // Updates a user's information by their ID
       const user = await User.findByIdAndUpdate(
         id,
-        { username, email, password },
+        { name, email, password },
         { new: true }
       ).populate('pets');
 

@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 // Define a new mongoose schema for User model
 const userSchema = new Schema({
-  username: {
+  name: {
     type: String,
     required: true,
     unique: true, // username should be unique

@@ -111,7 +111,7 @@ function Header({ currentPage, handlePageChange }) {
                 className={
                   currentPage === "PetList" ? "nav-link active" : "nav-link"
                 }
-                onClick={() => handlePageChange("PetList")}
+                onClick={() => handlePageChange("Pet List")}
               >
                 PetList
               </Link>
