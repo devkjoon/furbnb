@@ -12,15 +12,31 @@ import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
 import AddPetForm from './components/pages/AddPetForm';
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { setContext } from '@apollo/client/link/context';
 
 let httpLink = createHttpLink({
   uri:'/graphql'
 })
 
+// still need to set this up but you'll pull this from local storage
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 let client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 })
+
+
 function App() {
   const [currentPage, setCurrentPage] = useState("");
 
