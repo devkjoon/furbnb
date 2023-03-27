@@ -55,9 +55,9 @@ export default function PetDayCarePricing() {
             </ul>
             <p className="tier-pricing">
               Monthly: ${tier.price.monthly}{" "}
-              <a href={tier.checkout.monthly}>Start Now</a> | Annually: $
+              <a href={tier.checkout.monthly} target="_blank">Start Now</a> | Annually: $
               {tier.price.annually}{" "}
-              <a href={tier.checkout.annually}>Start Now</a>
+              <a href={tier.checkout.annually} target="_blank">Start Now</a>
             </p>
           </li>
         ))}
