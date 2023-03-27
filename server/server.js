@@ -2,14 +2,14 @@ const express = require('express');
 const { authMiddleware } = require('./utils/auth');
 const { Pet } = require('./models');
 require('dotenv').config({ path: '../.env' });
-const db = require('./config/connection');
+const db = require('./config/db');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
+  typeDefs, // GraphQL type definitions
+  resolvers, // GraphQL resolvers
+  context: authMiddleware, // Custom middleware function for authentication
 });
 
 const app = express();
@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+// Serving the index.html file of the client application
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });

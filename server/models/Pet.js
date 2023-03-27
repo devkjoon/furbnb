@@ -34,6 +34,9 @@ const petSchema = new Schema({
   feedingSchedule: {
     type: String,
   },
+  owner: {
+    type: String,
+  },
 });
 
 const Pet = model('Pet', petSchema);
