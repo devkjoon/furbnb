@@ -839,3 +839,76 @@ button:hover {
   margin: 0;
   line-height: 1.5;
 }
+
+.pricing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-title {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.pricing-tier {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.tier-title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.tier-services {
+  margin-bottom: 10px;
+}
+
+.tier-service {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.tier-pricing a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tier-pricing a:hover {
+  background-color: #0069d9;
+}
+
+@media (max-width: 767px) {
+  .pricing-tier {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .tier-title {
+    font-size: 1.2rem;
+  }
+
+  .tier-service {
+    font-size: 1rem;
+  }
+
+  .tier-pricing {
+    font-size: 1rem;
+  }
+
+  .tier-pricing a {
+    font-size: 1rem;
+  }
+}
