@@ -12,6 +12,7 @@ import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
 import PetList from "./components/pages/PetList";
+import Profile from "./pages/Profile"
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/petlist" element={<PetList />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </BrowserRouter>

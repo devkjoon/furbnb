@@ -116,6 +116,16 @@ function Header({ currentPage, handlePageChange }) {
                 PetList
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/profile"
+                className={
+                  currentPage === "Profile" ? "nav-link active" : "nav-link"
+                }
+              >
+                Profile
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
