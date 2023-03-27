@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_PET } from '../utils/mutations';
+import { ADD_PET } from '../../utils/mutations.js';
 
 
 const AddPetForm = ({ history }) => {
@@ -23,7 +23,7 @@ const AddPetForm = ({ history }) => {
 
         try {
             const { data } = await addPet({
-                variables: { ...petFormData },
+                variables: { ...petFormData, age:parseInt(petFormData.age), weight:parseInt(petFormData.weight)},
             });
 
             // Reset form values
