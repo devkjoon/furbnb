@@ -10,10 +10,10 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
-import Profile from "./pages/Profile"
 import AddPetForm from './components/pages/AddPetForm';
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
+import Profile from "./pages/Profile"
 
 let httpLink = createHttpLink({
   uri:'/graphql'
@@ -44,6 +44,7 @@ function App() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
 
 
   return (

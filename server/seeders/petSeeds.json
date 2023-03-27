@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Buddy",
+    "species": "Dog",
+    "breed": "Golden Retriever",
+    "gender": "Male",
+    "age": "3 years",
+    "weight": "70 lbs",
+    "allergies": "None",
+    "medications": "None",
+    "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
+    "owner": "Trenton"
+
+  },
+  {
+    "name": "Whiskers",
+    "species": "Cat",
+    "breed": "Siamese",
+    "gender": "Female",
+    "age": "1 year",
+    "weight": "8 lbs",
+    "allergies": "None",
+    "medications": "None",
+    "feedingSchedule": "Morning: 1/4 cup kibble, Evening: 1/4 cup kibble",
+    "owner": "Liam"
+  },
+  {
+    "name": "Max",
+    "species": "Dog",
+    "breed": "German Shepherd",
+    "gender": "Male",
+    "age": "5 years",
+    "weight": "90 lbs",
+    "allergies": "None",
+    "medications": "None",
+    "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
+    "owner": "Trenton"
+  },
+  {
+    "name": "Fluffy",
+    "species": "Cat",
+    "breed": "Persian",
+    "gender": "Male",
+    "age": "2 years",
+    "weight": "12 lbs",
+    "allergies": "None",
+    "medications": "None",
+    "feedingSchedule": "Morning: 1/4 cup kibble, Evening: 1/4 cup kibble",
+    "owner": "Liam"
+  },
+  {
+    "name": "Rex",
+    "species": "Dog",
+    "breed": "Labrador Retriever",
+    "gender": "Male",
+    "age": "4 years",
+    "weight": "80 lbs",
+    "allergies": "None",
+    "medications": "None",
+    "feedingSchedule": "Morning: 1 cup kibble, Evening: 1 cup kibble",
+    "owner":"Kelly"
+  }
+]
