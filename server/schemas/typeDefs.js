@@ -42,8 +42,8 @@ const typeDefs = gql`
       species: String!,
       breed: String!,
       gender: String!,
-      age: String!,
-      weight: String!,
+      age: Int!,
+      weight: Int!,
       allergies: String,
       medications: String,
       feedingSchedule: String

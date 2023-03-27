@@ -1,5 +1,4 @@
-import React from "react";
-// import PageContainer from "./components/PageContainer";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,14 +10,48 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
+import AddPetForm from './components/pages/AddPetForm';
+import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { setContext } from '@apollo/client/link/context';
+
+let httpLink = createHttpLink({
+  uri:'/graphql'
+})
+
+// still need to set this up but you'll pull this from local storage
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+let client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+})
+
+
+function App() {
+  const [currentPage, setCurrentPage] = useState("");
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
 import PetList from "./components/pages/PetList";
 import Profile from "./pages/Profile"
 
-const App = () => {
   return (
+    <ApolloProvider client = { client }>
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,6 +61,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<SignInPage />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/petlist" element={<AddPetForm />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/petlist" element={<PetList />} />
           <Route path="/profile" element={<Profile />} />
@@ -35,7 +69,8 @@ const App = () => {
         <Footer />
       </BrowserRouter>
     </div>
+    </ApolloProvider>
   );
-};
+}
 
 export default App;

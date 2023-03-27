@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_PET } from '../../utils/mutations';
+import { ADD_PET } from '../../utils/mutations.js';
+
 
 const AddPetForm = ({ history }) => {
     const [petFormData, setPetFormData] = useState({
@@ -21,18 +22,8 @@ const AddPetForm = ({ history }) => {
         event.preventDefault();
 
         try {
-            await addPet({
-                variables: {
-                    name: petFormData.name,
-                    species: petFormData.species,
-                    breed: petFormData.breed,
-                    age: parseInt(petFormData.age),
-                    gender: petFormData.gender,
-                    weight: parseInt(petFormData.weight),
-                    allergies: petFormData.allergies,
-                    medications: petFormData.medications,
-                    feedingSchedule: petFormData.feedingSchedule,
-                },
+            const { data } = await addPet({
+                variables: { ...petFormData, age:parseInt(petFormData.age), weight:parseInt(petFormData.weight)},
             });
 
             // Reset form values
@@ -129,6 +120,14 @@ const AddPetForm = ({ history }) => {
                 />
             </div>
             <div className="form-group">
+                <label htmlFor="medications">Medications:</label>
+                <textarea
+                    name="medications"
+                    value={petFormData.medications}
+                    onChange={handleChange}
+                />
+            </div>
+            <div className="form-group">
                 <label htmlFor="feedingSchedule">Feeding Schedule:</label>
                 <input
                     type="text"
@@ -137,16 +136,8 @@ const AddPetForm = ({ history }) => {
                     onChange={handleChange}
                 />
             </div>
-
-            <div className="form-group">
-                <label htmlFor="medications">Medications:</label>
-                <textarea
-                    name="medications"
-                    value={petFormData.medications}
-                    onChange={handleChange}
-                />
-            </div>
-            <button type="submit">Add Pet</button>
+            <button type="submit">Submit</button>
+            {error && <div>{error.message}</div>}
         </form>
     );
 };
