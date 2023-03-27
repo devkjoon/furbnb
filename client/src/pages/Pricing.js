@@ -42,18 +42,18 @@ export default function PetDayCarePricing() {
   ];
 
   return (
-    <div>
-      <h1>Pet Day Care Pricing</h1>
+    <div className="pricing-container">
+      <h1 className="pricing-title">Pet Day Care Pricing</h1>
       <ul>
         {tiers.map((tier) => (
-          <li key={tier.name}>
-            <h2>{tier.name}</h2>
-            <ul>
+          <li className="pricing-tier" key={tier.name}>
+            <h2 className="tier-title">{tier.name}</h2>
+            <ul className="tier-services">
               {tier.services.map((service) => (
-                <li key={service}>{service}</li>
+                <li className="tier-service" key={service}>{service}</li>
               ))}
             </ul>
-            <p>
+            <p className="tier-pricing">
               Monthly: ${tier.price.monthly}{" "}
               <a href={tier.checkout.monthly}>Start Now</a> | Annually: $
               {tier.price.annually}{" "}
