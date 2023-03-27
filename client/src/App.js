@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
+import Profile from "./pages/Profile"
 import AddPetForm from './components/pages/AddPetForm';
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
@@ -44,8 +45,6 @@ function App() {
     setCurrentPage(page);
   };
 
-import PetList from "./components/pages/PetList";
-import Profile from "./pages/Profile"
 
   return (
     <ApolloProvider client = { client }>
@@ -63,7 +62,6 @@ import Profile from "./pages/Profile"
           <Route path="/signup" element={<SignUp />} />
           <Route path="/petlist" element={<AddPetForm />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/petlist" element={<PetList />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
