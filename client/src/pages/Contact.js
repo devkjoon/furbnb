@@ -27,7 +27,7 @@ export default function ContactPage() {
       <div className="contact-info">
       <ul>
         <li>Phone: 555-555-5555</li>
-        <li>Email: <a href="mailto:info@yourpetdaycare.com">info@yourpetdaycare.com</a></li>
+        <li>Email: <a href="mailto:furbnbcare@gmail.com">furbnbcare@gmail.com</a></li>
         <li>Address: 123 Main St, Anytown USA</li>
       </ul>
       </div>
