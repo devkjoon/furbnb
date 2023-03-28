@@ -107,6 +107,16 @@ function Header({ currentPage, handlePageChange }) {
             </li>
             <li className="nav-item">
               <Link
+                to="/createuserform"
+                className={
+                  currentPage === "CreateUserform" ? "nav-link active" : "nav-link"
+                }
+              >
+                Create User
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/petlist"
                 className={
                   currentPage === "PetList" ? "nav-link active" : "nav-link"
