@@ -803,6 +803,25 @@ button:hover {
   margin: 10px 0;
   font-family: "Rubik", sans-serif;
 }
+/* Styling for Add Pet Button */
+.profile-div a{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  color:#00be4f;
+  position: relative;
+  top: 15px;
+  text-decoration: none;
+  border: 1px solid #00be4f;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+/* Changes Background Color And Text Color Of Add Pet Button */
+.profile-div a:hover{
+  cursor: pointer;
+  background-image: linear-gradient(to left, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+  color: white;
+}
+
 /* Styling For Profile Info Div */
 .profile-info{
   width: 75%;
