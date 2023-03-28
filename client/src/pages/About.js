@@ -46,7 +46,7 @@ export default function AboutPage() {
               <img src={LiamPic} alt="Liam Profile"/>
               <div className="team-card-info">
                 <h5>Liam Allen</h5>
-                <p>Retard</p>
+                <p>Antisocial</p>
               </div>
             </div>
             <div className="team-card">

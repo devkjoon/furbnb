@@ -73,7 +73,7 @@ export default function PetGallery() {
         <h3>Submit<span class="black-span">Your</span><span class="blue-span">Pet</span></h3>
         <p>Want to see your pet in our gallery?</p>
         <p>Submit your images by contacting us</p>
-        <a href="contact"><p>Here</p></a>
+        <a href="/contact"><p>Here</p></a>
       </div>
     </div>
   );
