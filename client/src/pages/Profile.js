@@ -21,6 +21,7 @@ export default function UserProfile(){
             <li>1234 Nowheresville Rd, Somewhere USA</li>
             <li>615-420-6969</li>
           </ul>
+          <a href="/addPet">Add <span className="blue-span">Pet</span></a>
       </aside>
       <div className="profile-info">
         <h1>Pet <span class="blue-span">Information</span></h1>

@@ -9,17 +9,17 @@ function Footer() {
           <h3>Contact Us</h3>
           <ul>
             <li>Phone: 555-1234</li>
-            <li>Email: furbnbcare@gmail.com</li>
+            <li><a href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
             <li>Address: 123 Main St, Anytown USA</li>
           </ul>
         </div>
         <div>
           <h3>Social Sites</h3>
           <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>LinkedIn</li>
+            <li> <a href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
+            <li> <a href="https://twitter.com/furbnb">Twitter</a></li>
+            <li> <a href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
+            <li> <a href="">LinkedIn</a></li>
           </ul>
         </div>
         <div>
@@ -44,7 +44,7 @@ function Footer() {
               Available Jobs: <a href="/jobs">Click Here</a>
             </li>
             <li>
-              Meet Our Staff: <a href="/staff">Click Here</a>
+              Meet Our Staff: <a href="/about">Click Here</a>
             </li>
           </ul>
         </div>

@@ -1,4 +1,7 @@
 import React from "react";
+import petBoarding1 from "../assets/images/pet-boarding1.jpg"
+import petBoarding2 from "../assets/images/pet-boarding2.jpg"
+import petBoarding3 from "../assets/images/pet-boarding3.jpg"
 // import '../assets/css/index.css';
 
 export default function PetDayCarePricing() {
@@ -14,6 +17,7 @@ export default function PetDayCarePricing() {
         annually: "https://buy.stripe.com/test_7sI28mdLh4j98CI001",
       },
       services: ["Grooming", "Boarding"],
+      images: petBoarding1,
     },
     {
       name: "Standard",
@@ -26,6 +30,7 @@ export default function PetDayCarePricing() {
         annually: "https://buy.stripe.com/test_dR628mdLhaHxbOU4gj",
       },
       services: ["Grooming", "Boarding", "Training"],
+      images: petBoarding2,
     },
     {
       name: "Premium",
@@ -38,6 +43,7 @@ export default function PetDayCarePricing() {
         annually: "https://buy.stripe.com/test_8wM3cqePlbLB6uA7sx",
       },
       services: ["Grooming", "Boarding", "Training", "Veterinary Services"],
+      images: petBoarding3,
     },
   ];
 
@@ -47,17 +53,24 @@ export default function PetDayCarePricing() {
       <ul>
         {tiers.map((tier) => (
           <li className="pricing-tier" key={tier.name}>
-            <h2 className="tier-title">{tier.name}</h2>
-            <ul className="tier-services">
-              {tier.services.map((service) => (
-                <li className="tier-service" key={service}>{service}</li>
-              ))}
-            </ul>
+            <div className="pricing-section">
+              <div>
+                <h2 className="tier-title">{tier.name}</h2>
+                <ul className="tier-services">
+                  {tier.services.map((service) => (
+                    <li className="tier-service" key={service}>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+                <img src={tier.images} alt="" />
+            </div>
             <p className="tier-pricing">
               Monthly: ${tier.price.monthly}{" "}
-              <a href={tier.checkout.monthly} target="_blank">Start Now</a> | Annually: $
+              <a href={tier.checkout.monthly}>Start Now</a> | Annually: $
               {tier.price.annually}{" "}
-              <a href={tier.checkout.annually} target="_blank">Start Now</a>
+              <a href={tier.checkout.annually}>Start Now</a>
             </p>
           </li>
         ))}
