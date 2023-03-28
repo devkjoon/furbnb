@@ -24,13 +24,13 @@ function Header({ currentPage, handlePageChange }) {
           </div>
         </div>
         <div id="social-bar">
-          <a href="placeholder">
+          <a href="https://www.facebook.com/profile.php?id=100090071724908" target="_blank">
             <img src={FacebookIcon} alt="facebook icon" />
           </a>
-          <a href="placeholder">
+          <a href="https://twitter.com/furbnb" target="_blank">
             <img src={TwitterIcon} alt="twitter icon" />
           </a>
-          <a href="placeholder">
+          <a href="https://www.instagram.com/furbnb_pets/" target="_blank">
             <img src={InstaIcon} alt="instagram icon" />
           </a>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test">
