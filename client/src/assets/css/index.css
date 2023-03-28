@@ -44,11 +44,11 @@ code {
 li {
   list-style: none;
 }
-
+/* Changes Cursor To Pointer */
 button:hover {
   cursor: pointer;
 }
-
+/* Styling For Gradient Bar In Header */
 #gradient-bar {
   width: 100vw;
   height: 35px;
@@ -56,7 +56,7 @@ button:hover {
   display: flex;
   justify-content: space-evenly;
 }
-
+/* Styling For Contact Info Div In Header */
 #contact-div {
   display: flex;
   color: white;
@@ -65,47 +65,47 @@ button:hover {
   width: 400px;
   font-family: "Rubik", sans-serif;
 }
-
+/* Styling For Contact Info Icons */
 #contact-div img {
   margin: 15px 0 0 0;
   margin-right: 5px;
 }
-
+/* Styling For Phone Info */
 #phone-info {
   display: flex;
 }
-
+/* Styling For Email Info */
 #email-info {
   display: flex;
 }
-
+/* Changes Cursor To Pointer When Over Contact Info */
 #contact-div div:hover {
   cursor: pointer;
 }
-
+/* Chnages Cursor To Pointer When Over Social Media Icons */
 #social-bar img:hover {
   cursor: pointer;
 }
-
+/* Styling For Contact Icons */
 #contact-div img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-
+/* Styling For Social Media Bars */
 #social-bar {
   display: flex;
   width: 300px;
   justify-content: space-evenly;
   margin-top: 8px
 }
-
+/* Styling For Social Media Icons */
 #social-bar img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
-
+/* Styling For Pages Bar */
 #pages-bar {
   width: 90vw;
   display: flex;
@@ -113,7 +113,7 @@ button:hover {
   height: 100px;
   margin: auto;
 }
-
+/* Styling For Logo Div */
 #logo-div {
   display: flex;
   justify-content: center;
@@ -121,34 +121,34 @@ button:hover {
   width: 160px;
   justify-content: space-between;
 }
-
+/* Changes Cursor To Pointer When Hovering Over Logo */
 #logo-div:hover {
   cursor: pointer;
 }
-
+/* Styling For Bone Logo Image */
 .bone-logo {
   width: 40px;
   height: 40px;
 }
-
+/* Styling For furbnb Logo Text */
 #logo-div h2 {
   font-size: 38px;
   font-family: "Nunito", sans-serif;
 
 }
-
+/* Styling For Pages List */
 #pages-list {
-  width: 40vw;
+  width: 50vw;
   padding: 38px
 }
-
+/* Styling For Pages List Ul */
 #pages-list ul {
   display: flex;
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
 }
-
+/* Styling For Pages List Test */
 #pages-list ul li a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
@@ -157,19 +157,19 @@ button:hover {
   color: black;
   font-family: "Rubik", sans-serif;
 }
-
+/* Changes Color Of Page Tab */
 #pages-list ul li:hover a {
   color: #00be4f;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 40px;
 }
-
+/* Styling For Main Page Container */
 #main-cont {
   width: 100vw;
   position: relative;
 }
-
+/* Styling For Mini Aussie Image Container */
 #splash-text-cont {
   width: 100vw;
   height: 80vh;
@@ -178,7 +178,7 @@ button:hover {
   background-position: -10%;
   background-repeat: no-repeat;
 }
-
+/* Styling For Splash Text Div */
 #splash-text-cont div {
   width: 80%;
   display: flex;
@@ -189,7 +189,7 @@ button:hover {
   top: 30%;
   margin: auto;
 }
-
+/* Styling For Splash Text Header */
 #splash-text-cont h1 {
   color: white;
   font-family: sans-serif;
@@ -199,7 +199,7 @@ button:hover {
   width: 60%;
   margin: auto;
 }
-
+/* Styling For Learn More Button */
 #splash-text-cont button {
   width: 200px;
   height: 50px;
@@ -211,12 +211,12 @@ button:hover {
   font-family: "Rubik", sans-serif;
   margin-top: 50px;
 }
-
+/* Changes Color Of Learn More Button */
 #splash-text-cont button:hover {
   background-image: linear-gradient(to left bottom, white, white);
   color: #08c249;
 }
-
+/* Styling For Info Cards Div */
 #cards-div {
   width: 60vw;
   margin: auto;
@@ -224,7 +224,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
+/* Styling For Individual Info Cards */
 .card {
   width: 250px;
   height: 250px;
@@ -235,7 +235,7 @@ button:hover {
   text-align: center;
   margin-bottom: 80px;
 }
-
+/* Styling For Card Icon Container */
 .card-icon-div {
   width: 80px;
   height: 80px;
@@ -247,7 +247,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon 1 */
 #card-icon1 {
   background-image: url("../images/home.png");
   background-size: cover;
@@ -259,7 +259,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon 2 */
 #card-icon2 {
   background-image: url("../images/dog-with-belt-walking-with-a-man.png");
   background-size: cover;
@@ -271,7 +271,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Icon 3 */
 #card-icon3 {
   background-image: url("../images/crown.png");
   background-size: cover;
@@ -283,42 +283,42 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Changes Color Of Card When Hovering */
 .card:hover {
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   color: white;
 
 }
-
+/* Changes Color Of Text When Hovered Over */
 .card:hover p {
   color: white
 }
-
+/* Changes Color Of Icon Background When Hovered Over  */
 .card:hover .card-icon-div {
   background-color: white;
 }
-
+/* Changes Background Color Of Card Button When Hovered Over */
 .card:hover .card-button {
   background-image: linear-gradient(to left, white, white);
 }
-
+/* Changes Color Of Card Button Icon When Hovered Over */
 .card:hover .card-button-span {
   color: #04d54e
 }
 
-
+/* Styling For Card h4 */
 .card h4 {
   margin: 50px 0 0 0;
   font-family: "Rubik", sans-serif;
 }
-
+/* Styling For Card Text */
 .card p {
   width: 80%;
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
   color: rgb(104, 104, 104)
 }
-
+/* Styling For Card Button */
 .card-button {
   width: 40px;
   height: 40px;
@@ -333,13 +333,13 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/* Styling For Card Button Icon */
 .card-button span {
   position: relative;
   left: 1px;
   top: 2px;
 }
-
+/* Styling For Landing Page Information Container */
 #landing-info-div {
   width: 100vw;
   display: inline-block;
@@ -349,39 +349,38 @@ button:hover {
   background-position: 20%;
   margin-bottom: 100px;
 }
-
+/* Styling For Landing Page Information Block */
 .landing-info {
   width: 70vw;
   margin: auto;
   display: flex;
   flex-direction: row;
 }
-
+/* Styling For Landing Page Info Block Text Section */
 .landing-info-text-div {
   width: 50%;
   display: inline-block;
   text-align: center;
 }
-
+/* Styling For Landing Page Info Text h3 */
 .landing-info-text-div h3 {
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 100px;
-  background: linear-gradient(to left, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #00be4f;
+  font-family: "Nunito", sans-serif;
 }
-
+/* Styling For Landing Page Info Text */
 .landing-info-text-div p {
   font-size: 20px;
   max-width: 80%;
   margin: auto;
 }
-
+/* Styling For Landing Page Info Image Div */
 .landing-info-image-div {
   width: 50%;
   display: inline-block;
 }
-
+/* Styling For Landing Page Info Image */
 .landing-info-image-div img {
   height: 100%;
   width: 100%;
@@ -804,6 +803,25 @@ button:hover {
   margin: 10px 0;
   font-family: "Rubik", sans-serif;
 }
+/* Styling for Add Pet Button */
+.profile-div a{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  color:#00be4f;
+  position: relative;
+  top: 15px;
+  text-decoration: none;
+  border: 1px solid #00be4f;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+/* Changes Background Color And Text Color Of Add Pet Button */
+.profile-div a:hover{
+  cursor: pointer;
+  background-image: linear-gradient(to left, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+  color: white;
+}
+
 /* Styling For Profile Info Div */
 .profile-info{
   width: 75%;
@@ -898,12 +916,12 @@ button:hover {
 
 
 
-
+/* Styling For Footer */
 .footer {
   width: 100%;
   position: relative;
 }
-
+/* Styling For Footer Gradient */
 .footer-gradient-bar {
   width: 100vw;
   font-size: 10px;
@@ -912,7 +930,7 @@ button:hover {
   justify-content: space-evenly;
   color: white;
 }
-
+/* Styling For Footer Container */
 .footer-cont {
   width: 80vw;
   display: flex;
@@ -920,14 +938,21 @@ button:hover {
   justify-content: space-evenly;
   margin: auto;
 }
-
+/* Styling For Footer h3*/
 .footer-cont h3 {
   text-decoration: underline;
   font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
 }
-
+/* Styling For Footer ul */
+.footer-cont ul{
+  padding: 0;
+}
+/* Styling For Footer Text*/
 .footer-cont li {
   font-size: 15px;
+  margin: 0;
 }
 /* Styling for the entire page */
 /* body {
@@ -993,6 +1018,11 @@ button:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+  background: url(../images/pet-boarding-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .pricing-title {
@@ -1002,10 +1032,22 @@ button:hover {
 }
 
 .pricing-tier {
+  color: white;
   margin-bottom: 20px;
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
+}
+
+.pricing-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing-section img {
+  width: 250px;
 }
 
 .tier-title {
@@ -1025,7 +1067,7 @@ button:hover {
 
 .tier-pricing a {
   color: #fff;
-  background-color: #007bff;
+  background-color: #00b2a8;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -1062,37 +1104,47 @@ button:hover {
   }
 }
 
-.contact-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+.contact-container{
+  max-width: 80vw;
+  margin: 0 auto 100px auto;
+  padding: 25px 20px;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+}
+
+.contact-container p{
+  font-size: 1.75rem;
+  margin: 0;
 }
 
 .contact-title {
-  font-size: 2rem;
-  margin-top: 40px;
+  font-size: 4rem;
+  margin-top: 0;
   margin-bottom: 20px;
-}
-
-.contact-title {
-  font-size: 2rem;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  color:#00be4f
 }
 
 .contact-social {
-  margin-bottom: 20px;
+  width: max-content;
+  margin: 20px auto;
+  padding: 0;
 }
 
 .contact-social ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .contact-social li {
-  margin-right: 10px;
+  display: flex;
+  font-size: 25px;
+}
+
+.contact-social img{
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px 0 0
 }
 
 .contact-social a:hover {
@@ -1104,12 +1156,138 @@ button:hover {
 }
 
 .contact-info ul {
+  width: max-content;
   list-style: none;
-  margin: 0;
+  margin: 10px auto;
   padding: 0;
 }
 
 .contact-info li {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
+  display: flex;
+}
+
+.disclaimer h5{
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  color:#0092bb;
+  margin-bottom: 10px;
+}
+
+.disclaimer p{
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1280px){
+  #pages-bar{
+    width: 100vw;
+  }
+  #pages-list{
+    width: 70vw
+  }
+  #pages-list ul li a{
+    font-size: 17px
+  }
+  #splash-text-cont div{
+    width: 100%
+  }
+  #splash-text-cont h1{
+    font-size: 50px;
+  }
+  #cards-div{
+    width: 80vw
+  }
+  .landing-info{
+    width: 100vw
+  }
+  .landing-info-text-div h3{
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  .landing-info-text-div p{
+    font-size: 15px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1028px){
+  #pages-bar{
+    width: 100vw;
+    justify-content: center;
+  }
+  #splash-text-cont{
+    background-position: 0%;
+  }
+}
+
+@media screen and (max-width: 780px){
+  #pages-bar{
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #pages-list{
+    width: 100vw;
+    padding: 10px 0;
+  }
+  #logo-div{
+    height: 50px;
+  }
+  #social-bar{
+    width: 150px
+  }
+  #pages-list ul li a{
+    font-size: 10px;
+  }
+  #contact-div{
+    width: auto;
+  }
+  #phone-info p{
+    font-size: 12px;
+  }
+  #email-info p{
+    font-size: 12px;
+  }
+  #contact-div img{
+    width: 15px;
+    height: 15px;
+    margin: 11px 5px 0 5px ;
+  }
+  #social-bar{
+    width: auto
+  }
+  #social-bar img{
+    margin: 0 5px
+  }
+  #splash-text-cont h1{
+    font-size: 40px;
+  }
+  #splash-text-cont button{
+    width: 150px;
+    margin-top: 25px;
+  }
+  .landing-info-text-div h3{
+    font-size: 25px;
+  }
+  .landing-info-text-div p{
+    font-size: 10px;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .landing-info-text-div p{
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-height: 750px){
+  #splash-text-cont div{
+    top: 10%;
+  }
+  #splash-text-cont h1{
+    font-size: 30px;
+  }
 }
