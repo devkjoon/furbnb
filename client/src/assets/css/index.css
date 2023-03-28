@@ -999,6 +999,11 @@ button:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+  background: url(../images/pet-boarding-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .pricing-title {
@@ -1008,10 +1013,22 @@ button:hover {
 }
 
 .pricing-tier {
+  color: white;
   margin-bottom: 20px;
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
+}
+
+.pricing-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing-section img {
+  width: 250px;
 }
 
 .tier-title {
@@ -1031,7 +1048,7 @@ button:hover {
 
 .tier-pricing a {
   color: #fff;
-  background-color: #007bff;
+  background-color: #00b2a8;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
