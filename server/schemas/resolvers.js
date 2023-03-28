@@ -1,5 +1,7 @@
 // const { AuthenticationError } = require('apollo-server-express');
+const { AuthenticationError } = require('apollo-server-express');
 const { User, Pet } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -25,12 +27,21 @@ const resolvers = {
   },
 
   Mutation: {
-    createUser: async (parent, { name, email, password }) => {
+    addUser: async (parent, {name,id,email}) => {
       // Creates a new user
-      const user = new User({ name, email, password });
-      await user.save();
+      const user = await User.create({name,id,email});
+      const token = signToken(user)
 
-      return user;
+      return {token,user};
+    },
+
+    login: async(parent,{email,password},context) => {
+      const user = await User.findOne({email})
+      const passwordCheck = await user.isCorrectPassword(password)
+      if(!passwordCheck){throw new AuthenticationError("Invalid Password")}
+      const token = signToken(user)
+
+      return {token,user};
     },
 
     createPet: async (parent, { name, species, breed, age, ownerId }) => {
