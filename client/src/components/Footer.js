@@ -44,7 +44,7 @@ function Footer() {
               Available Jobs: <a href="/jobs">Click Here</a>
             </li>
             <li>
-              Meet Our Staff: <a href="/staff">Click Here</a>
+              Meet Our Staff: <a href="/about">Click Here</a>
             </li>
           </ul>
         </div>

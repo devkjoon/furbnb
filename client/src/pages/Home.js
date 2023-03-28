@@ -2,7 +2,7 @@ import React from "react";
 import dog1 from "../assets/images/about-1.jpg";
 import cat from "../assets/images/pexels-fabricio-trujillo-62640.jpg";
 import corgi from "../assets/images/corgi-bath.jpg";
-// import '../assets/css/index.css';
+import "../assets/css/index.css"
 
 function Home() {
   return (
@@ -69,7 +69,7 @@ function Home() {
             <img src={dog1} alt="dog1" />
           </div>
           <div className="landing-info-text-div">
-            <h3>Living In Luxury</h3>
+            <h3>Living<span className="black-span">In</span><span className="blue-span">Luxury</span></h3>
             <p>
               We make your best friend feel like they never left home. Whether
               it's extra treats, cuddle time, or even watching cartoons. Your
@@ -81,7 +81,7 @@ function Home() {
         </div>
         <div className="landing-info" id="landing-info2">
           <div className="landing-info-text-div">
-            <h3>Flexible Pace</h3>
+            <h3>Flexible <span className="blue-span">Pace</span></h3>
             <p>
               We understand that not all animals are made the same. At furbnb,
               we take every precaution to make sure no one feels stressed, or
@@ -99,7 +99,7 @@ function Home() {
             <img src={corgi} alt="corgi" />
           </div>
           <div className="landing-info-text-div">
-            <h3>Grooming Service</h3>
+            <h3>Grooming <span className="blue-span">Service</span></h3>
             <p>
               Hey, sometimes things get messy! We offer bathing, and grooming
               services for your pet. If a mess occurs on our watch, we'll clean
