@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import * as MUTATION from '../../utils/mutations'
 
-const CreateUserForm = ({ createUser }) => {
+
+const CreateUserForm = () => {
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -8,6 +11,7 @@ const CreateUserForm = ({ createUser }) => {
   });
 
   const { name, email, password } = user;
+  const [createUser, {loading}] = useMutation(MUTATION.ADD_USER)
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -16,7 +20,9 @@ const CreateUserForm = ({ createUser }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    createUser(user);
+    createUser({
+      variables: {name: user.name, email: user.email, password: user.password}
+    });
     setUser({ name: '', email: '', password: '' });
   };
 
