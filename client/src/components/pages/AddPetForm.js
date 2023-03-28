@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_PET } from '../../utils/mutations.js';
 
-
-const AddPetForm = ({ history }) => {
+// Using the navigate hook 
+const AddPetForm = () => {
+    let navigate = useNavigate();
+    console.log(navigate)
     const [petFormData, setPetFormData] = useState({
         name: '',
         species: '',
@@ -40,7 +43,7 @@ const AddPetForm = ({ history }) => {
             });
 
             // Navigate back to homepage
-            history.push('/');
+            navigate('/');
         } catch (err) {
             console.error(err);
         }
