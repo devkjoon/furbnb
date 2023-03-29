@@ -54,6 +54,7 @@
 //     </div>
 //   );
 // }
+// two sign ups
 
 // export default SignUpPage;
 import React, { useState } from 'react';
@@ -68,7 +69,7 @@ const CreateUserForm = () => {
     password: ''
   });
 
-  const { name, email, password } = user;
+  // const { name, email, password } = user;
   const [createUser, {loading}] = useMutation(MUTATION.ADD_USER)
 
   const handleInputChange = e => {
@@ -78,10 +79,11 @@ const CreateUserForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(user)
    const {data} = await createUser({
-      variables: {name: user.name, email: user.email, password: user.password}
+      variables: {...user}
     });
-    Auth.login(data.createUser.token)
+    Auth.login(data.addUser.token)
     setUser({ name: '', email: '', password: '' });
   };
 
@@ -92,7 +94,7 @@ const CreateUserForm = () => {
         <input
           type="text"
           name="name"
-          value={name}
+          value={user.name}
           onChange={handleInputChange}
           required
         />
@@ -102,7 +104,7 @@ const CreateUserForm = () => {
         <input
           type="email"
           name="email"
-          value={email}
+          value={user.email}
           onChange={handleInputChange}
           required
         />
@@ -112,7 +114,7 @@ const CreateUserForm = () => {
         <input
           type="password"
           name="password"
-          value={password}
+          value={user.password}
           onChange={handleInputChange}
           required
         />
