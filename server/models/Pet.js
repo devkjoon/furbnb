@@ -34,6 +34,9 @@ const petSchema = new Schema({
   feedingSchedule: {
     type: String,
   },
+  image: {
+    type: String,
+  },
   owner: {
     type: String,
   },
