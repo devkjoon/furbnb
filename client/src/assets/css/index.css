@@ -1179,6 +1179,32 @@ button:hover {
   font-size: 1.1rem;
 }
 
+.login-page-cont{
+  background-color: white;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+}
+
+.login-page img{
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 100%;
+}
+
+
+
 @media screen and (max-width: 1280px){
   #pages-bar{
     width: 100vw;
@@ -1240,6 +1266,10 @@ button:hover {
   }
   #pages-list ul li a{
     font-size: 10px;
+  }
+  #pages-list ul li a:hover{
+    text-decoration-thickness: 2px;
+    text-underline-offset: 15px;
   }
   #contact-div{
     width: auto;

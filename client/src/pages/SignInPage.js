@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import { useMutation } from '@apollo/client';
 import * as MUTATION from '../utils/mutations';
 import Auth from '../utils/auth';
+
+
+import BoneLogo from "../assets/images/big-boner.png"
+import "../assets/css/index.css"
 
 
 function SignInPage() {
@@ -29,12 +34,14 @@ function SignInPage() {
 
 
   return (
-    <div className="Login-page">
+  <div className="login-page-cont">
+    <div className="login-page">
+      <img src={BoneLogo} alt="Bone Logo"/>
       <h1>Sign In</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email:</label>
           <input
+            placeholder="Enter Email"
             type="email"
             name ="email"
             value={user.email}
@@ -43,8 +50,8 @@ function SignInPage() {
           />
         </div>
         <div className="form-group">
-          <label>Password:</label>
           <input
+            placeholder="Enter Password"
             type="password"
             name="password"
             value={user.password}
@@ -58,6 +65,7 @@ function SignInPage() {
         Don't have an account? <Link to="/signup">Sign up</Link>
       </p>
     </div>
+  </div>
   );
 }
 
