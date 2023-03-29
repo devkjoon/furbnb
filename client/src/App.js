@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
 import AddPetForm from './components/pages/AddPetForm';
+import PetDashboard from './components/pages/PetDashboard';
 import CreateUserForm from "./components/pages/CreateUserForm";
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
@@ -65,6 +66,7 @@ function App() {
           <Route path="/petlist" element={<AddPetForm />} />
           <Route path="/createuserform" element={<CreateUserForm />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/PetDashboard" element={<PetDashboard />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />

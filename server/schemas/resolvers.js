@@ -44,9 +44,9 @@ const resolvers = {
       return {token,user};
     },
 
-    createPet: async (parent, { name, species, breed, age, ownerId }) => {
+    createPet: async (parent, { name, species, breed, age, weight, allergies, medications, feedingSchedule, image, ownerId }) => {
       // Creates a new pet
-      const pet = new Pet({ name, species, breed, age, owner: ownerId });
+      const pet = new Pet({ name, species, breed, age, weight, allergies, medications, feedingSchedule, image, owner: ownerId });
       await pet.save();
 
       // Adds the new pet's ID to the owner's list of pets
@@ -97,7 +97,7 @@ const resolvers = {
 
     addPet: async (
       parent,
-      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule }
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image }
     ) => {
       // Adds a new pet with its information
       const pet = await Pet.create({
@@ -110,6 +110,7 @@ const resolvers = {
         allergies,
         medications,
         feedingSchedule,
+        image,
       });
 
       return pet;
