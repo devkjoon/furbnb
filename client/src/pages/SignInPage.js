@@ -1,16 +1,37 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { useMutation } from '@apollo/client';
+import * as MUTATION from '../utils/mutations';
+import Auth from '../utils/auth';
+
+
 import BoneLogo from "../assets/images/big-boner.png"
 import "../assets/css/index.css"
 
-function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+function SignInPage() {
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  });
+
+  const [login, {loading}] = useMutation(MUTATION.LOGIN_USER)
+  const handleInputChange = e => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // handle login logic
+    const {data} = await login({
+      variables: {...user}
+    });
+    Auth.login(data.login.token)
+    setUser({email: '', password: '' });
   };
+
 
   return (
   <div className="login-page-cont">
@@ -22,8 +43,9 @@ function SignInPage() {
           <input
             placeholder="Enter Email"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name ="email"
+            value={user.email}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -31,8 +53,9 @@ function SignInPage() {
           <input
             placeholder="Enter Password"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            value={user.password}
+            onChange={handleInputChange}
             required
           />
         </div>
