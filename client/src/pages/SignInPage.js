@@ -1,14 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMutation } from '@apollo/client';
+import * as MUTATION from '../utils/mutations';
+import Auth from '../utils/auth';
+
 
 function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  });
 
-  const handleSubmit = (e) => {
+  const [login, {loading}] = useMutation(MUTATION.LOGIN_USER)
+  const handleInputChange = e => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // handle login logic
+    const {data} = await login({
+      variables: {...user}
+    });
+    Auth.login(data.login.token)
+    setUser({email: '', password: '' });
   };
+
 
   return (
     <div className="Login-page">
@@ -18,8 +36,9 @@ function SignInPage() {
           <label>Email:</label>
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name ="email"
+            value={user.email}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -27,8 +46,9 @@ function SignInPage() {
           <label>Password:</label>
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            value={user.password}
+            onChange={handleInputChange}
             required
           />
         </div>

@@ -8,6 +8,7 @@ import InstaIcon from "../assets/images/5296765_camera_instagram_instagram logo_
 import YTIcon from "../assets/images/5305164_play_video_youtube_youtube logo_icon.png";
 import Logo from "../assets/images/big-boner.png";
 import "../assets/css/index.css";
+import Auth from "../utils/auth";
 
 function Header({ currentPage, handlePageChange }) {
   return (
@@ -134,6 +135,11 @@ function Header({ currentPage, handlePageChange }) {
                 }
               >
                 Profile
+              </Link>
+            </li>
+            <li className="nav-item" onClick={Auth.logout}>
+              <Link>
+              Logout
               </Link>
             </li>
           </ul>
