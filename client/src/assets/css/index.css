@@ -1457,6 +1457,18 @@ button:hover {
   bottom: 10px;
 }
 
+@media screen and (max-width: 1660px){
+  .about-cont h3{
+    font-size: 40px;
+  }
+  .about-cont h5{
+    font-size: 15px;
+  }
+  .about-cont p{
+    font-size: 12px;
+  }
+}
+
 
 @media screen and (max-width: 1280px) {
   #pages-bar {
@@ -1499,6 +1511,28 @@ button:hover {
   .profile-div a{
     font-size: 20px;
   }
+  .about-us-div div{
+    height: 250px;
+  }
+  .why-choose-div div{
+    height: 250px;
+  }
+  .about-cont h2{
+    font-size: 12px;
+    margin-left: 25px;
+  }
+  .about-cont h3{
+    font-size: 20px;
+    margin-left: 25px;
+  }
+  .about-cont h5{
+    font-size: 10px;
+    margin-left: 25px;
+  }
+  .about-cont p{
+    font-size: 8px;
+    margin-left: 25px;
+  }
 }
 
 @media screen and (max-width: 1028px) {
@@ -1509,6 +1543,12 @@ button:hover {
 
   #splash-text-cont {
     background-position: 0%;
+  }
+  .about-us-div{
+    width: 80%;
+  }
+  .why-choose-div{
+    width: 80%;
   }
 }
 
@@ -1631,6 +1671,9 @@ button:hover {
   .gallery-cont h3{
     font-size: 15px;
   }
+  .profile-div{
+    width: 90vw;
+  }
   .profile-div aside h6{
     font-size: 12px;
   }
@@ -1677,12 +1720,56 @@ button:hover {
     top: 56%;
     -webkit-transition: top 1s; 
   }
+  .about-us-div div{
+    width: 100%;
+    text-align: center;
+  }
+  .why-choose-div{
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+  .why-choose-div div{
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    text-align: center;
+  }
+  .about-cont h2{
+    font-size: 20px;
+    margin: 0;
+  }
+  .about-cont h3{
+    font-size: 30px;
+    margin: 0;
+  }
+  .about-cont h5{
+    font-size: 15px;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  .about-cont p{
+    font-size: 10px;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  .team-div div h2{
+    font-size: 20px
+  }
+  .team-div div h3{
+    font-size: 30px;
+  }
 
 }
 
 @media screen and (max-width: 550px) {
   .landing-info-text-div p {
     font-size: 8px;
+  }
+  .about-us-div{
+    width: 90%;
+  }
+  .why-choose-div{
+    width: 90%;
   }
 }
 
