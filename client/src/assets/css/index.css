@@ -1353,6 +1353,9 @@ button:hover {
     font-size: 15px;
     max-width: 90%;
   }
+  .profile-div a{
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1028px){
@@ -1468,6 +1471,52 @@ button:hover {
   }
   .gallery-cont h3{
     font-size: 15px;
+  }
+  .profile-div aside h6{
+    font-size: 12px;
+  }
+  .profile-div li{
+    font-size: 8px
+  }
+  .profile-div aside h5{
+    font-size: 12px;
+  }
+  .profile-div aside p{
+    font-size: 8px;
+  }
+  .profile-div a{
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+  .profile-info h1{
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  .profile-card{
+    width: 150px;
+    height: 200px;
+  }
+  .profile-card img{
+    width: 75px;
+    height: 75px;
+  }
+  .profile-card h4{
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+  .profile-card-info p{
+    font-size: 10px;
+    margin: 5px 0
+  }
+  .profile-card-extra-info{
+    height: 45%
+  }
+  .profile-card-extra-info li{
+    font-size: 8px;
+  }
+  .profile-card:hover .profile-card-extra-info{
+    top: 56%;
+    -webkit-transition: top 1s; 
   }
 
 }
