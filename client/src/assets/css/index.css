@@ -40,14 +40,17 @@ code {
   width: 100%;
   display: inline-block;
 }
+
 /* Removing li Underlines */
 li {
   list-style: none;
 }
+
 /* Changes Cursor To Pointer */
 button:hover {
   cursor: pointer;
 }
+
 /* Styling For Gradient Bar In Header */
 #gradient-bar {
   width: 100vw;
@@ -56,6 +59,7 @@ button:hover {
   display: flex;
   justify-content: space-evenly;
 }
+
 /* Styling For Contact Info Div In Header */
 #contact-div {
   display: flex;
@@ -65,33 +69,40 @@ button:hover {
   width: 400px;
   font-family: "Rubik", sans-serif;
 }
+
 /* Styling For Contact Info Icons */
 #contact-div img {
   margin: 15px 0 0 0;
   margin-right: 5px;
 }
+
 /* Styling For Phone Info */
 #phone-info {
   display: flex;
 }
+
 /* Styling For Email Info */
 #email-info {
   display: flex;
 }
+
 /* Changes Cursor To Pointer When Over Contact Info */
 #contact-div div:hover {
   cursor: pointer;
 }
+
 /* Chnages Cursor To Pointer When Over Social Media Icons */
 #social-bar img:hover {
   cursor: pointer;
 }
+
 /* Styling For Contact Icons */
 #contact-div img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
+
 /* Styling For Social Media Bars */
 #social-bar {
   display: flex;
@@ -99,12 +110,14 @@ button:hover {
   justify-content: space-evenly;
   margin-top: 8px
 }
+
 /* Styling For Social Media Icons */
 #social-bar img {
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1)
 }
+
 /* Styling For Pages Bar */
 #pages-bar {
   width: 90vw;
@@ -113,6 +126,7 @@ button:hover {
   height: 100px;
   margin: auto;
 }
+
 /* Styling For Logo Div */
 #logo-div {
   display: flex;
@@ -121,26 +135,31 @@ button:hover {
   width: 160px;
   justify-content: space-between;
 }
+
 /* Changes Cursor To Pointer When Hovering Over Logo */
 #logo-div:hover {
   cursor: pointer;
 }
+
 /* Styling For Bone Logo Image */
 .bone-logo {
   width: 40px;
   height: 40px;
 }
+
 /* Styling For furbnb Logo Text */
 #logo-div h2 {
   font-size: 38px;
   font-family: "Nunito", sans-serif;
 
 }
+
 /* Styling For Pages List */
 #pages-list {
   width: 50vw;
   padding: 38px
 }
+
 /* Styling For Pages List Ul */
 #pages-list ul {
   display: flex;
@@ -148,6 +167,7 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+
 /* Styling For Pages List Test */
 #pages-list ul li a {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -157,6 +177,7 @@ button:hover {
   color: black;
   font-family: "Rubik", sans-serif;
 }
+
 /* Changes Color Of Page Tab */
 #pages-list ul li:hover a {
   color: #00be4f;
@@ -164,11 +185,13 @@ button:hover {
   text-decoration-thickness: 3px;
   text-underline-offset: 40px;
 }
+
 /* Styling For Main Page Container */
 #main-cont {
   width: 100vw;
   position: relative;
 }
+
 /* Styling For Mini Aussie Image Container */
 #splash-text-cont {
   width: 100vw;
@@ -178,6 +201,7 @@ button:hover {
   background-position: -10%;
   background-repeat: no-repeat;
 }
+
 /* Styling For Splash Text Div */
 #splash-text-cont div {
   width: 80%;
@@ -189,6 +213,7 @@ button:hover {
   top: 30%;
   margin: auto;
 }
+
 /* Styling For Splash Text Header */
 #splash-text-cont h1 {
   color: white;
@@ -199,6 +224,7 @@ button:hover {
   width: 60%;
   margin: auto;
 }
+
 /* Styling For Learn More Button */
 #splash-text-cont button {
   width: 200px;
@@ -211,11 +237,13 @@ button:hover {
   font-family: "Rubik", sans-serif;
   margin-top: 50px;
 }
+
 /* Changes Color Of Learn More Button */
 #splash-text-cont button:hover {
   background-image: linear-gradient(to left bottom, white, white);
   color: #08c249;
 }
+
 /* Styling For Info Cards Div */
 #cards-div {
   width: 60vw;
@@ -224,6 +252,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 /* Styling For Individual Info Cards */
 .card {
   width: 250px;
@@ -235,6 +264,7 @@ button:hover {
   text-align: center;
   margin-bottom: 80px;
 }
+
 /* Styling For Card Icon Container */
 .card-icon-div {
   width: 80px;
@@ -247,6 +277,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /* Styling For Card Icon 1 */
 #card-icon1 {
   background-image: url("../images/home.png");
@@ -259,6 +290,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /* Styling For Card Icon 2 */
 #card-icon2 {
   background-image: url("../images/dog-with-belt-walking-with-a-man.png");
@@ -271,6 +303,7 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /* Styling For Card Icon 3 */
 #card-icon3 {
   background-image: url("../images/crown.png");
@@ -283,24 +316,29 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /* Changes Color Of Card When Hovering */
 .card:hover {
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   color: white;
 
 }
+
 /* Changes Color Of Text When Hovered Over */
 .card:hover p {
   color: white
 }
+
 /* Changes Color Of Icon Background When Hovered Over  */
 .card:hover .card-icon-div {
   background-color: white;
 }
+
 /* Changes Background Color Of Card Button When Hovered Over */
 .card:hover .card-button {
   background-image: linear-gradient(to left, white, white);
 }
+
 /* Changes Color Of Card Button Icon When Hovered Over */
 .card:hover .card-button-span {
   color: #04d54e
@@ -311,6 +349,7 @@ button:hover {
   margin: 50px 0 0 0;
   font-family: "Rubik", sans-serif;
 }
+
 /* Styling For Card Text */
 .card p {
   width: 80%;
@@ -318,6 +357,7 @@ button:hover {
   font-family: "Rubik", sans-serif;
   color: rgb(104, 104, 104)
 }
+
 /* Styling For Card Button */
 .card-button {
   width: 40px;
@@ -333,12 +373,14 @@ button:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /* Styling For Card Button Icon */
 .card-button span {
   position: relative;
   left: 1px;
   top: 2px;
 }
+
 /* Styling For Landing Page Information Container */
 #landing-info-div {
   width: 100vw;
@@ -349,6 +391,7 @@ button:hover {
   background-position: 20%;
   margin-bottom: 100px;
 }
+
 /* Styling For Landing Page Information Block */
 .landing-info {
   width: 70vw;
@@ -356,12 +399,14 @@ button:hover {
   display: flex;
   flex-direction: row;
 }
+
 /* Styling For Landing Page Info Block Text Section */
 .landing-info-text-div {
   width: 50%;
   display: inline-block;
   text-align: center;
 }
+
 /* Styling For Landing Page Info Text h3 */
 .landing-info-text-div h3 {
   font-size: 50px;
@@ -369,129 +414,150 @@ button:hover {
   color: #00be4f;
   font-family: "Nunito", sans-serif;
 }
+
 /* Styling For Landing Page Info Text */
 .landing-info-text-div p {
   font-size: 20px;
   max-width: 80%;
   margin: auto;
 }
+
 /* Styling For Landing Page Info Image Div */
 .landing-info-image-div {
   width: 50%;
   display: inline-block;
 }
+
 /* Styling For Landing Page Info Image */
 .landing-info-image-div img {
   height: 100%;
   width: 100%;
 }
+
 /* Styling For About Us Container */
-.about-cont{
+.about-cont {
   width: 100vw;
   margin: auto;
   background-color: rgb(240, 240, 240);
   padding: 50px 0
 }
+
 /* Styling For About Us Div */
-.about-us-div{
+.about-us-div {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 70%;
   margin: auto;
 }
+
 /* Styling For About Us Block Sections */
-.about-us-div div{
+.about-us-div div {
   width: 50%;
   height: 400px;
 }
+
 /* Styling For About Us h2s */
-.about-cont h2{
+.about-cont h2 {
   font-family: "Nunito", sans-serif;
   font-size: 30px;
   margin: 25px 0 0 50px;
 }
+
 /* Styling For About Us h3s */
-.about-cont h3{
+.about-cont h3 {
   font-family: "Nunito", sans-serif;
   font-size: 55px;
   margin: 0 0 0 50px;
-  color:#00be4f
+  color: #00be4f
 }
+
 /* Styling For About Us h5 */
-.about-cont h5{
+.about-cont h5 {
   font-family: "Nunito", sans-serif;
   color: rgb(88, 88, 88);
   font-size: 20px;
   margin: 25px 0 0 50px;
   max-width: 80%;
 }
+
 /* Styling For About Us Text */
-.about-cont p{
+.about-cont p {
   font-family: "Rubik", sans-serif;
   color: grey;
   max-width: 90%;
   margin: 20px 0 0 50px;
 }
+
 /* Styling For Black Text Span */
-.black-span{
+.black-span {
   color: black;
   margin: 10px;
 }
+
 /* Styling For Blue Text Span */
-.blue-span{
+.blue-span {
   color: #0092bb;
 }
+
 /* Styling For About Us Images */
-.about-us-div div img{
+.about-us-div div img {
   width: 100%;
   height: 100%;
 }
+
 /* Styling For Why Choose Us Container */
-.why-choose-div{
+.why-choose-div {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 70%;
   margin: auto;
 }
+
 /* Styling For Why Choose Us Blocks */
-.why-choose-div div{
+.why-choose-div div {
   width: 50%;
   height: 400px;
 }
+
 /* Styling For Why Choose Us Images */
-.why-choose-div img{
+.why-choose-div img {
   width: 100%;
   height: 100%;
 }
+
 /* Styling For Team Info Div */
-.team-div{
+.team-div {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   margin: 50px 0 100px 0;
 }
+
 /* Styling For Team Text Div */
-.team-div div{
+.team-div div {
   width: 100vw;
   text-align: center;
 }
+
 /* Styling For Team h2 */
-.team-div div h2{
+.team-div div h2 {
   font-family: "Nunito", sans-serif;
   font-size: 35px;
   margin-bottom: 0;
 }
+
 /* Styling For Team h3 */
-.team-div div h3{
+.team-div div h3 {
   color: #00be4f;
   font-family: "Nunito", sans-serif;
   font-size: 55px;
   margin-top: 0;
 }
+
 /* Styling For Team Cards Container */
-.team-cards-cont{
+.team-cards-cont {
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -499,8 +565,9 @@ button:hover {
   justify-content: space-evenly;
   margin: 25px 0 25px 0;
 }
+
 /* Styling For Team Card */
-.team-cards-cont .team-card{
+.team-cards-cont .team-card {
   width: 250px;
   height: 350px;
   display: flex;
@@ -508,42 +575,49 @@ button:hover {
   align-items: center;
   margin: 10px;
 }
+
 /* Styling For Team Card Image */
-.team-card img{
+.team-card img {
   width: 250px;
   height: 75%;
   border-radius: 5px 5px 0 0;
 }
+
 /* Styling For Team Card Information Section */
-.team-card .team-card-info{
+.team-card .team-card-info {
   width: 250px;
   height: 25%;
   background-image: linear-gradient(to left, rgb(219, 219, 219), rgb(219, 219, 219));
   border-radius: 0 0 5px 5px;
 }
+
 /* Styling For Team Card Name */
-.team-card-info h5{
+.team-card-info h5 {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
- margin: 10px auto;
- color: black;
+  margin: 10px auto;
+  color: black;
 }
+
 /* Styling For Team Card Position Title */
-.team-card-info p{
+.team-card-info p {
   margin: 10px auto;
   font-family: "Nunito", sans-serif;
   color: rgb(73, 73, 73)
 }
+
 /* Changes Card Info Section To Green Gradient */
-.team-card:hover .team-card-info{
+.team-card:hover .team-card-info {
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
 }
+
 /* Changes Card Info Section Header Color */
-.team-card:hover .team-card-info h5{
+.team-card:hover .team-card-info h5 {
   color: white
 }
+
 /* Changes Card Info Section Text Color */
-.team-card:hover .team-card-info p{
+.team-card:hover .team-card-info p {
   color: white
 }
 
@@ -604,30 +678,33 @@ button:hover {
 }
 
 /* Styling For Main Gallery Container */
-.gallery-cont{
+.gallery-cont {
   width: 100vw;
   background-image: url("../images/paw-trail-grey.jpeg");
   background-size: cover;
   padding-top: 20px;
 }
+
 /* Styling For Gallery Container h1 */
-.gallery-cont h1{
+.gallery-cont h1 {
   text-align: center;
   color: #00be4f;
   font-size: 55px;
   font-family: "Nunito", sans-serif;
   margin: 20px 0 0 0;
 }
+
 /* Styling For Gallery Container h3 */
-.gallery-cont h3{
+.gallery-cont h3 {
   text-align: center;
   margin: 10px 0 55px 0;
   font-family: "Nunito", sans-serif;
-  color:rgb(97, 97, 97);
+  color: rgb(97, 97, 97);
   font-size: 25px;
 }
+
 /* Styling For Gallery */
-.gallery{
+.gallery {
   width: 80vw;
   margin: 0 auto;
   display: flex;
@@ -637,7 +714,7 @@ button:hover {
 }
 
 /* Styling For Individual Gallery Cards */
-.gallery-card{
+.gallery-card {
   width: 400px;
   height: 450px;
   background-color: white;
@@ -646,14 +723,16 @@ button:hover {
   overflow: hidden;
   margin-bottom: 50px;
 }
+
 /* Styling For Gallery Card Image */
-.gallery-card img{
+.gallery-card img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
+
 /* Styling For Gallery Card Information*/
-.gallery-card-info{
+.gallery-card-info {
   width: 100%;
   background-color: rgb(245, 245, 245);
   position: absolute;
@@ -661,101 +740,118 @@ button:hover {
   top: 100%;
   -webkit-transition: top 1s;
 }
+
 /* Styling For Pet Name*/
-.gallery-card h2{
+.gallery-card h2 {
   font-family: "Rubik", sans-serif;
   font-size: 50px;
   margin: 10px 0 0 0;
   text-align: center;
 }
+
 /* Styling For Pet Age */
-.gallery-card p{
+.gallery-card p {
   text-align: center;
   font-family: "Rubik", sans-serif;
   color: #00be4f;
   font-size: 30px;
   margin: 0;
 }
+
 /* Styling For Pet Age Spans*/
-.gallery-card span{
+.gallery-card span {
   margin: 0;
 }
+
 /* Styling For Favorite Activities Text*/
-.gallery-card h5{
+.gallery-card h5 {
   margin: 10px 0 0 45px;
   font-size: 20px;
   font-family: "Rubik", sans-serif;
   color: rgb(90, 90, 90)
 }
+
 /* Styling For Activities Margin*/
-.activities{
+.activities {
   margin-left: 50px;
 }
+
 /* Styling For Activities Items */
-.activities li{
+.activities li {
   font-family: "Rubik", sans-serif;
   color: rgb(112, 112, 112);
 }
+
 /* Makes Pointer Cursor When Hovering Over Card*/
-.gallery-card:hover{
+.gallery-card:hover {
   cursor: pointer;
 }
+
 /* Makes Info Section Slide Up When Hovered Over */
-.gallery-card:hover .gallery-card-info{
+.gallery-card:hover .gallery-card-info {
   top: 54%;
   -webkit-transition: top 1s;
 }
+
 /* Styling For Submission Info*/
-.gallery-submit-info{
+.gallery-submit-info {
   margin: 0 0 75px 0;
 }
+
 /* Styling For Submission Info h4*/
-.gallery-submit-info h4{
+.gallery-submit-info h4 {
   margin: 0;
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 30px;
 }
+
 /* Styling For Submission Info h3*/
-.gallery-submit-info h3{
-  color:#00be4f;
+.gallery-submit-info h3 {
+  color: #00be4f;
   font-size: 55px;
   margin-bottom: 0;
 }
+
 /* Styling For Submission Info Text*/
-.gallery-submit-info p{
+.gallery-submit-info p {
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   margin: 10px 0;
 }
+
 /* Styling For Submission Info Anchor Text*/
-.gallery-submit-info a p{
-  color:#0092bb;
+.gallery-submit-info a p {
+  color: #0092bb;
   font-size: 40px;
   text-decoration: underline;
 }
+
 /* Changes Anchor Text From Blue To Green */
-.gallery-submit-info a p:hover{
-  color:#00be4f;
+.gallery-submit-info a p:hover {
+  color: #00be4f;
   cursor: pointer;
 }
+
 /* Styling For Profile Page Container */
-.profile-cont{
+.profile-cont {
   width: 100vw;
   background-color: rgb(245, 245, 245);
   padding: 50px 0;
   margin-bottom: 50px;
 }
+
 /* Styling For Profile Page Div */
-.profile-div{
+.profile-div {
   width: 70vw;
   margin: auto;
   display: flex;
   align-items: stretch;
 }
+
 /* Styling For User Information Aside */
-.profile-div aside{
+.profile-div aside {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -763,51 +859,58 @@ button:hover {
   border-right: 1px solid grey;
   background-color: white;
   padding: 25px 5px;
-  height:auto
+  height: auto
 }
+
 /* Styling For User Image */
-.profile-div aside img{
+.profile-div aside img {
   width: 70%;
   border-radius: 100%;
 }
+
 /* Styling For User Name */
-.profile-div aside h5{
+.profile-div aside h5 {
   font-size: 25px;
   margin: 5px;
   font-family: "Nunito", sans-serif;
-  color:#00be4f
+  color: #00be4f
 }
+
 /* Styling For User Image */
-.profile-div aside p{
+.profile-div aside p {
   margin: 5px;
   font-family: "Rubik", sans-serif;
 }
+
 /* Styling For Emergency Contact Text */
-.profile-div aside h6{
+.profile-div aside h6 {
   width: 100%;
   text-align: center;
   font-size: 22px;
   margin: 10px;
   padding-top: 10px;
   border-top: 1px solid grey;
-  color:#0092bb;
+  color: #0092bb;
   font-family: "Nunito", sans-serif;
 }
+
 /* Styling For Emergency Contact ul */
-.profile-div ul{
+.profile-div ul {
   padding: 0;
 }
+
 /* Styling For Emergency Contact Info */
-.profile-div li{
+.profile-div li {
   text-align: center;
   margin: 10px 0;
   font-family: "Rubik", sans-serif;
 }
+
 /* Styling for Add Pet Button */
-.profile-div a{
+.profile-div a {
   font-size: 35px;
   font-family: "Nunito", sans-serif;
-  color:#00be4f;
+  color: #00be4f;
   position: relative;
   top: 15px;
   text-decoration: none;
@@ -815,39 +918,43 @@ button:hover {
   padding: 5px 20px;
   border-radius: 30px;
 }
+
 /* Changes Background Color And Text Color Of Add Pet Button */
-.profile-div a:hover{
+.profile-div a:hover {
   cursor: pointer;
   background-image: linear-gradient(to left, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   color: white;
 }
 
 /* Styling For Profile Info Div */
-.profile-info{
+.profile-info {
   width: 75%;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
+
 /* Styling For Pet Information Header */
-.profile-info h1{
-  color:#00be4f;
+.profile-info h1 {
+  color: #00be4f;
   font-family: "Nunito", sans-serif;
   text-align: center;
   font-size: 50px;
   border-bottom: 1px solid grey;
   padding-bottom: 25px;
 }
+
 /* Styling For Profile Cards Container */
-.profile-cards-cont{
+.profile-cards-cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-bottom: 25px;
   flex: 1;
 }
+
 /* Styling For Individual Pet Card */
-.profile-card{
+.profile-card {
   width: 300px;
   height: 400px;
   display: flex;
@@ -860,58 +967,66 @@ button:hover {
   position: relative;
   border-radius: 5px;
 }
+
 /* Styling For Pet Card Image */
-.profile-card img{
+.profile-card img {
   width: 200px;
   height: 200px;
   border-radius: 100%;
 }
+
 /* Styling For Pet Card Name */
-.profile-card h4{
+.profile-card h4 {
   width: 90%;
   text-align: center;
   font-size: 30px;
   margin: 5px;
   padding-bottom: 10px;
   font-family: "Nunito", sans-serif;
-  color:#0092bb;
+  color: #0092bb;
   border-bottom: 1px solid grey;
 }
+
 /* Styling For Pet Card Information */
-.profile-card-info{
+.profile-card-info {
   height: 60%;
   width: 100%;
 }
+
 /* Styling For Pet Card Information Text */
-.profile-card-info p{
+.profile-card-info p {
   font-family: "Rubik", sans-serif;
   text-align: center;
   margin: 10px 0;
 }
+
 /* Styling For Pet Card Extra Info */
-.profile-card-extra-info{
+.profile-card-extra-info {
   position: absolute;
   height: 40%;
   width: 100%;
   background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
   padding: 0;
   top: 100%;
-  -webkit-transition: top 1s; 
+  -webkit-transition: top 1s;
 }
+
 /* Styling For Extra Info ul */
-.profile-card-extra-info ul{
+.profile-card-extra-info ul {
   margin: 0;
 }
+
 /* Styling For Extra Info Text */
-.profile-card-extra-info li{
+.profile-card-extra-info li {
   text-align: left;
   margin: 5px 10px;
   color: white
 }
+
 /* Changes Position Of Extra Info To Show On Card */
-.profile-card:hover .profile-card-extra-info{
+.profile-card:hover .profile-card-extra-info {
   top: 63%;
-  -webkit-transition: top 1s; 
+  -webkit-transition: top 1s;
 }
 
 
@@ -921,6 +1036,7 @@ button:hover {
   width: 100%;
   position: relative;
 }
+
 /* Styling For Footer Gradient */
 .footer-gradient-bar {
   width: 100vw;
@@ -930,6 +1046,7 @@ button:hover {
   justify-content: space-evenly;
   color: white;
 }
+
 /* Styling For Footer Container */
 .footer-cont {
   width: 80vw;
@@ -938,6 +1055,7 @@ button:hover {
   justify-content: space-evenly;
   margin: auto;
 }
+
 /* Styling For Footer h3*/
 .footer-cont h3 {
   text-decoration: underline;
@@ -945,15 +1063,18 @@ button:hover {
   font-family: "Nunito", sans-serif;
   margin-bottom: 0;
 }
+
 /* Styling For Footer ul */
-.footer-cont ul{
+.footer-cont ul {
   padding: 0;
 }
+
 /* Styling For Footer Text*/
 .footer-cont li {
   font-size: 15px;
   margin: 0;
 }
+
 /* Styling for the entire page */
 /* body {
   font-family: Arial, sans-serif;
@@ -977,19 +1098,26 @@ button:hover {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: #e5ecf4;
+  flex-direction: column;
+  background: url(../images/paw-trail-grey.jpeg);
+}
+
+.services-list img {
+  width: 112px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .service-item {
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin: 10px;
   padding: 1rem;
-  width: 300px;
-  height: 300px;
+  width: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1012,6 +1140,14 @@ button:hover {
   font-size: 1.2rem;
   margin: 0;
   line-height: 1.5;
+}
+
+.service-left {
+  align-self: flex-start;
+}
+
+.service-right {
+  align-self: flex-end;
 }
 
 .pricing-container {
@@ -1104,7 +1240,7 @@ button:hover {
   }
 }
 
-.contact-container{
+.contact-container {
   max-width: 80vw;
   margin: 0 auto 100px auto;
   padding: 25px 20px;
@@ -1112,7 +1248,7 @@ button:hover {
   background-color: rgb(245, 245, 245);
 }
 
-.contact-container p{
+.contact-container p {
   font-size: 1.75rem;
   margin: 0;
 }
@@ -1122,7 +1258,7 @@ button:hover {
   margin-top: 0;
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
-  color:#00be4f
+  color: #00be4f
 }
 
 .contact-social {
@@ -1141,7 +1277,7 @@ button:hover {
   font-size: 25px;
 }
 
-.contact-social img{
+.contact-social img {
   width: 30px;
   height: 30px;
   margin: 5px 10px 0 0
@@ -1168,18 +1304,18 @@ button:hover {
   display: flex;
 }
 
-.disclaimer h5{
+.disclaimer h5 {
   font-size: 1.5rem;
   font-family: "Nunito", sans-serif;
-  color:#0092bb;
+  color: #0092bb;
   margin-bottom: 10px;
 }
 
-.disclaimer p{
+.disclaimer p {
   font-size: 1.1rem;
 }
 
-.login-page-cont{
+.login-page-cont {
   background-color: white;
   width: 100vw;
   height: 80vh;
@@ -1188,14 +1324,14 @@ button:hover {
   align-items: center;
 }
 
-.login-page{
+.login-page {
   width: 500px;
   height: 500px;
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
 }
 
-.login-page img{
+.login-page img {
   width: 75px;
   height: 75px;
   background-color: white;
@@ -1205,119 +1341,144 @@ button:hover {
 
 
 
-@media screen and (max-width: 1280px){
-  #pages-bar{
+@media screen and (max-width: 1280px) {
+  #pages-bar {
     width: 100vw;
   }
-  #pages-list{
+
+  #pages-list {
     width: 70vw
   }
-  #pages-list ul li a{
+
+  #pages-list ul li a {
     font-size: 17px
   }
-  #splash-text-cont div{
+
+  #splash-text-cont div {
     width: 100%
   }
-  #splash-text-cont h1{
+
+  #splash-text-cont h1 {
     font-size: 50px;
   }
-  #cards-div{
+
+  #cards-div {
     width: 80vw
   }
-  .landing-info{
+
+  .landing-info {
     width: 100vw
   }
-  .landing-info-text-div h3{
+
+  .landing-info-text-div h3 {
     font-size: 40px;
     margin-top: 50px;
   }
-  .landing-info-text-div p{
+
+  .landing-info-text-div p {
     font-size: 15px;
     max-width: 90%;
   }
 }
 
-@media screen and (max-width: 1028px){
-  #pages-bar{
+@media screen and (max-width: 1028px) {
+  #pages-bar {
     width: 100vw;
     justify-content: center;
   }
-  #splash-text-cont{
+
+  #splash-text-cont {
     background-position: 0%;
   }
 }
 
-@media screen and (max-width: 780px){
-  #pages-bar{
+@media screen and (max-width: 780px) {
+  #pages-bar {
     background-color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  #pages-list{
+
+  #pages-list {
     width: 100vw;
     padding: 10px 0;
   }
-  #logo-div{
+
+  #logo-div {
     height: 50px;
   }
-  #social-bar{
+
+  #social-bar {
     width: 150px
   }
-  #pages-list ul li a{
+
+  #pages-list ul li a {
     font-size: 10px;
   }
-  #pages-list ul li a:hover{
+
+  #pages-list ul li a:hover {
     text-decoration-thickness: 2px;
     text-underline-offset: 15px;
   }
-  #contact-div{
+
+  #contact-div {
     width: auto;
   }
-  #phone-info p{
+
+  #phone-info p {
     font-size: 12px;
   }
-  #email-info p{
+
+  #email-info p {
     font-size: 12px;
   }
-  #contact-div img{
+
+  #contact-div img {
     width: 15px;
     height: 15px;
-    margin: 11px 5px 0 5px ;
+    margin: 11px 5px 0 5px;
   }
-  #social-bar{
+
+  #social-bar {
     width: auto
   }
-  #social-bar img{
+
+  #social-bar img {
     margin: 0 5px
   }
-  #splash-text-cont h1{
+
+  #splash-text-cont h1 {
     font-size: 40px;
   }
-  #splash-text-cont button{
+
+  #splash-text-cont button {
     width: 150px;
     margin-top: 25px;
   }
-  .landing-info-text-div h3{
+
+  .landing-info-text-div h3 {
     font-size: 25px;
   }
-  .landing-info-text-div p{
+
+  .landing-info-text-div p {
     font-size: 10px;
     max-width: 95%;
   }
 }
 
-@media screen and (max-width: 550px){
-  .landing-info-text-div p{
+@media screen and (max-width: 550px) {
+  .landing-info-text-div p {
     font-size: 8px;
   }
 }
 
-@media screen and (max-height: 750px){
-  #splash-text-cont div{
+@media screen and (max-height: 750px) {
+  #splash-text-cont div {
     top: 10%;
   }
-  #splash-text-cont h1{
+
+  #splash-text-cont h1 {
     font-size: 30px;
   }
 }
