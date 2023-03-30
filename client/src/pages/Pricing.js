@@ -18,6 +18,7 @@ export default function PetDayCarePricing() {
       },
       services: ["Grooming", "Boarding"],
       images: petBoarding1,
+      float: "service-left",
     },
     {
       name: "Standard",
@@ -31,6 +32,7 @@ export default function PetDayCarePricing() {
       },
       services: ["Grooming", "Boarding", "Training"],
       images: petBoarding2,
+      float: "service-center",
     },
     {
       name: "Premium",
@@ -44,15 +46,16 @@ export default function PetDayCarePricing() {
       },
       services: ["Grooming", "Boarding", "Training", "Veterinary Services"],
       images: petBoarding3,
+      float: "service-right",
     },
   ];
 
   return (
     <div className="pricing-container">
       <h1 className="pricing-title">Pet Day Care Pricing</h1>
-      <ul>
+      <ul className="pricing-list">
         {tiers.map((tier) => (
-          <li className="pricing-tier" key={tier.name}>
+          <li className={"pricing-tier " + tier.float} key={tier.name}>
             <div className="pricing-section">
               <div>
                 <h2 className="tier-title">{tier.name}</h2>
