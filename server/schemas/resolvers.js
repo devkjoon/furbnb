@@ -15,9 +15,15 @@ const resolvers = {
       return await User.findById(id).populate('pets');
     },
 
-    pets: async () => {
-      // Returns all pets and their owners
-      return await Pet.find().populate('owner');
+    pets: async (parent, { userId }, context, info) => {
+      console.log('hello!!!!!!')
+      if (userId) {
+        // Returns all pets for the specified user
+        return await Pet.find({ owner: userId }).populate('owner');
+      } else {
+        // Returns all pets and their owners
+        return await Pet.find().populate('owner');
+      }
     },
 
     pet: async (parent, { id }) => {

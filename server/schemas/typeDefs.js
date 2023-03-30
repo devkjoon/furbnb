@@ -32,9 +32,9 @@ const typeDefs = gql`
   type Query {
     users: [User!]!
     user(id: ID!): User
-    pets: [Pet!]!
+    pets(userId: ID): [Pet]! 
     pet(id: ID!): Pet
-  }
+  }  
 
   type Mutation {
     addUser(name: String, email: String, password: String): Auth
