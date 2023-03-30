@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
+import * as MUTATION from '../utils/mutations';
+import Auth from '../utils/auth';
 import BoneLogo from "../assets/images/big-boner.png";
 import "../assets/css/index.css";
-import { LOGIN_USER } from "../utils/mutations";
 
 function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  });
 
-  const [loginUser, { error }] = useMutation(LOGIN_USER);
+  const [login, { loading }] = useMutation(MUTATION.LOGIN_USER);
+
+  const handleInputChange = e => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await loginUser({
-        variables: { email, password },
+      const { data } = await login({
+        variables: { ...user },
       });
-      // handle successful login
-      console.log(data.login);
+      Auth.login(data.login.token);
+      setUser({ email: '', password: '' });
     } catch (err) {
       console.log(err);
-      // handle failed login
     }
   };
 
@@ -30,14 +37,14 @@ function SignInPage() {
       <div className="login-page">
         <img src={BoneLogo} alt="Bone Logo" />
         <h1>Sign In</h1>
-        {error && <p className="error-message">{error.message}</p>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               placeholder="Enter Email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={user.email}
+              onChange={handleInputChange}
               required
             />
           </div>
@@ -45,8 +52,9 @@ function SignInPage() {
             <input
               placeholder="Enter Password"
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              value={user.password}
+              onChange={handleInputChange}
               required
             />
           </div>
