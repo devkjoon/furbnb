@@ -36,6 +36,7 @@ const resolvers = {
     },
 
     login: async(parent,{email,password},context) => {
+      console.log(email, password)
       const user = await User.findOne({email})
       const passwordCheck = await user.isCorrectPassword(password)
       if(!passwordCheck){throw new AuthenticationError("Invalid Password")}
