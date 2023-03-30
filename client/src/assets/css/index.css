@@ -1162,6 +1162,11 @@ button:hover {
   align-items: center;
 }
 
+.pricing-banner {
+  width: 70%;
+  margin: auto;
+}
+
 .pricing-list {
     list-style: none;
     padding: 0;
