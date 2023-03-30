@@ -116,7 +116,7 @@ function Header({ currentPage, handlePageChange }) {
                 Sign In
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 to="/petlist"
                 className={
@@ -126,7 +126,7 @@ function Header({ currentPage, handlePageChange }) {
               >
                 PetList
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 to="/profile"

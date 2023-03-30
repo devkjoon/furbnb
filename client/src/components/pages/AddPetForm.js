@@ -25,6 +25,7 @@ const AddPetForm = () => {
         event.preventDefault();
 
         try {
+            console.log(petFormData)
             const { data } = await addPet({
                 variables: { ...petFormData, age: parseInt(petFormData.age), weight: parseInt(petFormData.weight) },
             });
@@ -58,16 +59,16 @@ const AddPetForm = () => {
 
     const handleImageChange = (event) => {
         const file = event.target.files[0];
-        const reader = new FileReader();
-
-        reader.onloadend = () => {
-            setPetFormData({
-                ...petFormData,
-                image: reader.result,
-            });
-        };
-
         if (file) {
+            const reader = new FileReader();
+
+            reader.onloadend = () => {
+                setPetFormData({
+                    ...petFormData,
+                    image: reader.result,
+                });
+            };
+
             reader.readAsDataURL(file);
         } else {
             setPetFormData({
@@ -161,10 +162,22 @@ const AddPetForm = () => {
             </div>
             {/* Add the image input */}
             <div className="form-group">
+                <label htmlFor="image">Image:</label>
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                />
+            </div>
+
+            {/* Image preview */}
+            <div className="form-group">
                 {petFormData.image && (
                     <img src={petFormData.image} alt="preview" style={{ maxWidth: '100%', height: 'auto' }} />
                 )}
             </div>
+
             <button type="submit">Submit</button>
             {error && <div>{error.message}</div>}
         </form>

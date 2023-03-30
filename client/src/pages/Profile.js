@@ -1,53 +1,80 @@
-import React from "react"
-import PHUserImage from "../assets/images/Alexandria-pfp.PNG"
-import PHPetImage from "../assets/images/Ruby.jpg"
-// import User from "../../../server/seeders/userSeeds.json"
-import "../assets/css/index.css"
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import PHUserImage from "../assets/images/Alexandria-pfp.PNG";
+import "../assets/css/index.css";
 
-export default function UserProfile(){
+const GET_PETS = gql`
+  query GetPets($userId: ID!) {
+    pets(userId: $userId) {
+      _id
+      name
+      species
+      breed
+      gender
+      age
+      weight
+      allergies
+      medications
+      feedingSchedule
+      image
+    }
+  }
+`;
 
+const userId = "6424db5a615f7574a32d989e"; // Replace this with the actual user ID once you have implemented authentication
 
-    return(
+export default function UserProfile() {
+  const { loading, error, data } = useQuery(GET_PETS, {
+    variables: { userId }, // Pass the userId variable to the useQuery hook
+  });
+  
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
     <div className="profile-cont">
       <div className="profile-div">
-      <aside>
-        <img src={PHUserImage} alt="User Profile"/>
-        <h5>FirstName LastName</h5>
+        <aside>
+          <img src={PHUserImage} alt="User Profile" />
+          <h5>FirstName LastName</h5>
           <p>1234 Nowheresville Rd, Somewhere USA</p>
           <p>615-420-6969</p>
-        <h6>Emergency Contact</h6>
+          <h6>Emergency Contact</h6>
           <ul>
             <li>FirstName LastName</li>
             <li>1234 Nowheresville Rd, Somewhere USA</li>
             <li>615-420-6969</li>
           </ul>
           <a href="/petlist">Add <span className="blue-span">Pet</span></a>
-      </aside>
-      <div className="profile-info">
-        <h1>Pet <span class="blue-span">Information</span></h1>
-        <div className="profile-cards-cont">
-          <div className="profile-card">
-            <img src={PHPetImage} alt="Pet Profile"/>
-            <h4>Pet Name</h4>
-            <div className="profile-card-info">
-                <p>Species</p>
-                <p>Pet Breed</p>
-                <p>Gender</p>
-                <p>Age In Year(s)</p>
-            </div>
-            <div className="profile-card-extra-info">
-              <ul>
-                <li>Weight: in lbs</li>
-                <li>Allergies: None</li>
-                <li>Medications: None</li>
-                <li>Feeding Schedule:</li>
-                <li>Morning: 1 cup kibble, Evening: 1 cup kibble</li>
-              </ul>
-            </div>
+        </aside>
+        <div className="profile-info">
+          <h1>
+            Pet <span className="blue-span">Information</span>
+          </h1>
+          <div className="profile-cards-cont">
+            {data.pets.map((pet) => (
+              <div key={pet._id} className="profile-card">
+                <img src={pet.image} alt="Pet Profile" />
+                <h4>{pet.name}</h4>
+                <div className="profile-card-info">
+                  <p>{pet.species}</p>
+                  <p>{pet.breed}</p>
+                  <p>{pet.gender}</p>
+                  <p>{pet.age} In Year(s)</p>
+                </div>
+                <div className="profile-card-extra-info">
+                  <ul>
+                    <li>Weight: {pet.weight} lbs</li>
+                    <li>Allergies: {pet.allergies}</li>
+                    <li>Medications: {pet.medications}</li>
+                    <li>Feeding Schedule: {pet.feedingSchedule}</li>
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      </div>
     </div>
-    )
+  );
 }
