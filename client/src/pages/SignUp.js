@@ -1,8 +1,10 @@
-// export default SignUpPage;
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import * as MUTATION from '../utils/mutations';
 import Auth from '../utils/auth';
+import { Link } from "react-router-dom";
+import BoneLogo from "../assets/images/big-boner.png"
+import "../assets/css/index.css"
 
 const CreateUserForm = () => {
   const [user, setUser] = useState({
@@ -30,39 +32,42 @@ const CreateUserForm = () => {
   };
 
   return (
+    <div className="signup-page-cont">
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
+      <div className="signup-page">
+        <img src={BoneLogo} alt="Bone Logo"/>
+        <h1>Sign <span className="blue-span">Up</span></h1>
         <input
+          placeholder="Enter Name"
           type="text"
           name="name"
           value={user.name}
           onChange={handleInputChange}
           required
         />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
         <input
+          placeholder="Enter Email"
           type="email"
           name="email"
           value={user.email}
           onChange={handleInputChange}
           required
         />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
         <input
+          placeholder="Enter Password"
           type="password"
           name="password"
           value={user.password}
           onChange={handleInputChange}
           required
         />
+        <button type="submit">Create User</button>
+        <p>
+        Already have an account? <Link to="/signInPage">Sign In</Link>
+      </p>
       </div>
-      <button type="submit">Create User</button>
     </form>
+  </div>
   );
 };
 

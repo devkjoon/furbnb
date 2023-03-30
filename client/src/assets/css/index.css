@@ -775,12 +775,14 @@ button:hover {
   font-size: 25px;
   margin: 5px;
   font-family: "Nunito", sans-serif;
-  color:#00be4f
+  color:#00be4f;
+  text-align: center;
 }
 /* Styling For User Image */
 .profile-div aside p{
   margin: 5px;
   font-family: "Rubik", sans-serif;
+  text-align: center;
 }
 /* Styling For Emergency Contact Text */
 .profile-div aside h6{
@@ -953,6 +955,12 @@ button:hover {
 .footer-cont li {
   font-size: 15px;
   margin: 0;
+}
+.footer-cont a{
+  color:white;
+}
+.footer-cont a:hover{
+  cursor: pointer;
 }
 /* Styling for the entire page */
 /* body {
@@ -1182,17 +1190,23 @@ button:hover {
 .login-page-cont{
   background-color: white;
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: -10%;
 }
 
 .login-page{
-  width: 500px;
+  width: 450px;
   height: 500px;
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-page img{
@@ -1201,8 +1215,112 @@ button:hover {
   background-color: white;
   padding: 25px;
   border-radius: 100%;
+  position: relative;
+  top: 25px;
 }
 
+.login-page h1{
+  font-family: "Nunito", sans-serif;
+  font-size: 45px;
+  color:#00be4f;
+  margin-bottom: 0;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group input{
+  width: 300px;
+  height: 50px;
+  margin: 7px 0;
+  border-radius: 10px;
+  border: 2px solid #0092bb;
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.login-page button{
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  background-color: #00a4bf;
+  color: white;
+  font-size: 25px;
+}
+
+.login-page a:hover{
+  cursor: pointer;
+}
+
+.signup-page-cont{
+  background-color: white;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: -10%;
+}
+
+.signup-page{
+  width: 450px;
+  height: 500px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-page img{
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 100%;
+  position: relative;
+  top: 25px;
+}
+
+.signup-page h1{
+  font-family: "Nunito", sans-serif;
+  font-size: 45px;
+  color:#00be4f;
+  margin-bottom: 0;
+}
+
+.signup-page input{
+  width: 300px;
+  height: 40px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 2px solid #0092bb;
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.signup-page button{
+  width: 250px;
+  height: 50px;
+  margin: 10px 0 10px 0px;
+  border-radius: 30px;
+  border: none;
+  background-color: #00a4bf;
+  color: white;
+  font-size: 25px;
+}
+
+.signup-page p{
+  position: relative;
+  bottom: 10px;
+}
 
 
 @media screen and (max-width: 1280px){
@@ -1305,6 +1423,53 @@ button:hover {
     font-size: 10px;
     max-width: 95%;
   }
+  .login-page{
+    width: 300px;
+    height: 350px;
+  }
+  .login-page img{
+    width: 35px;
+    height: 35px;
+  }
+  .login-page h1{
+    font-size: 30px;
+  }
+  .form-group input{
+    width: 230px;
+    height: 30px;
+  }
+  .login-page button{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 0
+  }
+  .signup-page{
+    width: 300px;
+    height: 350px;
+  }
+  .signup-page img{
+    width: 35px;
+    height: 35px;
+  }
+  .signup-page h1{
+    font-size: 30px;
+  }
+  .signup-page input{
+    width: 230px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .signup-page button{
+    width: 200px;
+    height: 30px;
+  }
+  .gallery-cont h1{
+    font-size: 35px;
+  }
+  .gallery-cont h3{
+    font-size: 15px;
+  }
+
 }
 
 @media screen and (max-width: 550px){

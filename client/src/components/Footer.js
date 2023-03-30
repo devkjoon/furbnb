@@ -9,17 +9,17 @@ function Footer() {
           <h3>Contact Us</h3>
           <ul>
             <li>Phone: 555-1234</li>
-            <li><a href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
+            <li><a target="_blank" href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
             <li>Address: 123 Main St, Anytown USA</li>
           </ul>
         </div>
         <div>
           <h3>Social Sites</h3>
           <ul>
-            <li> <a href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
-            <li> <a href="https://twitter.com/furbnb">Twitter</a></li>
-            <li> <a href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
-            <li> <a href="">LinkedIn</a></li>
+            <li> <a target="_blank" href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
+            <li> <a target="_blank" href="https://twitter.com/furbnb">Twitter</a></li>
+            <li> <a target="_blank" href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
+            <li> <a target="_blank" href="">LinkedIn</a></li>
           </ul>
         </div>
         <div>
