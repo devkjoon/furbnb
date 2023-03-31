@@ -1169,6 +1169,36 @@ button:hover {
   align-items: center;
 }
 
+.pricing-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  justify-content: space-between; 
+}
+
+.pricing-service {
+  align-self: start;
+}
+
+.pricing-image {
+  width: 250px;
+  border: 2px solid #e2e2e2;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #e2e2e2;
+  align-self: flex-end;
+}
+
+.pricing-banner {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;  
+  align-items: center;
+}
+
 .pricing-list {
     list-style: none;
     padding: 0;
@@ -1198,17 +1228,6 @@ button:hover {
   align-items: center;
   margin-left: 30%;
   margin-right: 25%;
-}
-
-.pricing-section {
-  display: flex;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.pricing-section img {
-  width: 250px;
 }
 
 .tier-title {

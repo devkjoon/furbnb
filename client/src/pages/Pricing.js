@@ -1,7 +1,8 @@
 import React from "react";
-import petBoarding1 from "../assets/images/pet-boarding1.jpg"
-import petBoarding2 from "../assets/images/pet-boarding2.jpg"
-import petBoarding3 from "../assets/images/pet-boarding3.jpg"
+import petBoarding1 from "../assets/images/pet-boarding1.jpg";
+import petBoarding2 from "../assets/images/pet-boarding2.jpg";
+import petBoarding3 from "../assets/images/pet-boarding3.jpg";
+import petBanner from "../assets/images/pets-peeking.jpg";
 // import '../assets/css/index.css';
 
 export default function PetDayCarePricing() {
@@ -53,11 +54,12 @@ export default function PetDayCarePricing() {
   return (
     <div className="pricing-container">
       <h1 className="pricing-title">Pet Day Care Pricing</h1>
+      <img className="pricing-banner" src={petBanner} alt="" />
       <ul className="pricing-list">
         {tiers.map((tier) => (
           <li className={"pricing-tier " + tier.float} key={tier.name}>
             <div className="pricing-section">
-              <div>
+              <div className="pricing-service">
                 <h2 className="tier-title">{tier.name}</h2>
                 <ul className="tier-services">
                   {tier.services.map((service) => (
@@ -67,7 +69,7 @@ export default function PetDayCarePricing() {
                   ))}
                 </ul>
               </div>
-                <img src={tier.images} alt="" />
+              <img className="pricing-image" src={tier.images} alt="" />
             </div>
             <p className="tier-pricing">
               Monthly: ${tier.price.monthly}{" "}
