@@ -11,6 +11,7 @@ import "../assets/css/index.css";
 import Auth from "../utils/auth";
 
 function Header({ currentPage, handlePageChange }) {
+  const loggedIn = Auth.loggedIn();
   return (
     <header className="header-container">
       <div id="gradient-bar">
@@ -106,17 +107,8 @@ function Header({ currentPage, handlePageChange }) {
                 Contact
               </Link>
             </li>
+            
             <li className="nav-item">
-              <Link
-                to="/signInPage"
-                className={
-                  currentPage === "CreateUserform" ? "nav-link active" : "nav-link"
-                }
-              >
-                Sign In
-              </Link>
-            </li>
-            {/* <li className="nav-item">
               <Link
                 to="/petlist"
                 className={
@@ -126,22 +118,40 @@ function Header({ currentPage, handlePageChange }) {
               >
                 PetList
               </Link>
-            </li> */}
-            <li className="nav-item">
-              <Link
-                to="/profile"
-                className={
-                  currentPage === "Profile" ? "nav-link active" : "nav-link"
-                }
-              >
-                Profile
-              </Link>
             </li>
-            <li className="nav-item" onClick={Auth.logout}>
-              <Link>
-                Logout
-              </Link>
-            </li>
+            {loggedIn && (
+              <>
+                <li className="nav-item">
+                  <Link
+                    to="/profile"
+                    className={
+                      currentPage === "Profile"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li className="nav-item" onClick={Auth.logout}>
+                  <Link>Logout</Link>
+                </li>
+              </>
+            )}
+            {!loggedIn && (
+              <li className="nav-item">
+                <Link
+                  to="/signInPage"
+                  className={
+                    currentPage === "CreateUserform"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Sign In
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
