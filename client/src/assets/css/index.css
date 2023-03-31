@@ -873,12 +873,8 @@ button:hover {
   font-size: 25px;
   margin: 5px;
   font-family: "Nunito", sans-serif;
-<<<<<<< HEAD
-  color: #00be4f
-=======
   color:#00be4f;
   text-align: center;
->>>>>>> main
 }
 
 /* Styling For User Image */
