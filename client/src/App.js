@@ -16,9 +16,10 @@ import PetDashboard from './components/pages/PetDashboard';
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 import Profile from "./pages/Profile"
+import Faq from './pages/Faq';
 
 let httpLink = createHttpLink({
-  uri:'/graphql'
+  uri: '/graphql'
 })
 
 // still need to set this up but you'll pull this from local storage
@@ -50,28 +51,29 @@ function App() {
 
 
   return (
-    <ApolloProvider client = { client }>
-    <div className="App">
-      <BrowserRouter>
-        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/login" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/petlist" element={<AddPetForm />} />
-          <Route path="/signInPage" element={<SignInPage />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/PetDashboard" element={<PetDashboard />} />
-           <Route path="/profile" element={<Profile />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <BrowserRouter>
+          <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/login" element={<SignInPage />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/petlist" element={<AddPetForm />} />
+            <Route path="/signInPage" element={<SignInPage />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/PetDashboard" element={<PetDashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/faq" element={<Faq />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
     </ApolloProvider>
   );
 }

@@ -11,6 +11,7 @@ import "../assets/css/index.css";
 import Auth from "../utils/auth";
 
 function Header({ currentPage, handlePageChange }) {
+  const loggedIn = Auth.loggedIn();
   return (
     <header className="header-container">
       <div id="gradient-bar">
@@ -25,13 +26,13 @@ function Header({ currentPage, handlePageChange }) {
           </div>
         </div>
         <div id="social-bar">
-          <a href="https://www.facebook.com/profile.php?id=100090071724908" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100090071724908" target="_blank" rel="noreferrer">
             <img src={FacebookIcon} alt="facebook icon" />
           </a>
-          <a href="https://twitter.com/furbnb" target="_blank">
+          <a href="https://twitter.com/furbnb" target="_blank" rel="noreferrer">
             <img src={TwitterIcon} alt="twitter icon" />
           </a>
-          <a href="https://www.instagram.com/furbnb_pets/" target="_blank">
+          <a href="https://www.instagram.com/furbnb_pets/" target="_blank" rel="noreferrer">
             <img src={InstaIcon} alt="instagram icon" />
           </a>
           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="test">
@@ -106,17 +107,8 @@ function Header({ currentPage, handlePageChange }) {
                 Contact
               </Link>
             </li>
+            
             <li className="nav-item">
-              <Link
-                to="/signInPage"
-                className={
-                  currentPage === "CreateUserform" ? "nav-link active" : "nav-link"
-                }
-              >
-                Sign In
-              </Link>
-            </li>
-            {/* <li className="nav-item">
               <Link
                 to="/petlist"
                 className={
@@ -126,22 +118,40 @@ function Header({ currentPage, handlePageChange }) {
               >
                 PetList
               </Link>
-            </li> */}
-            <li className="nav-item">
-              <Link
-                to="/profile"
-                className={
-                  currentPage === "Profile" ? "nav-link active" : "nav-link"
-                }
-              >
-                Profile
-              </Link>
             </li>
-            <li className="nav-item" onClick={Auth.logout}>
-              <Link>
-              Logout
-              </Link>
-            </li>
+            {loggedIn && (
+              <>
+                <li className="nav-item">
+                  <Link
+                    to="/profile"
+                    className={
+                      currentPage === "Profile"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                  >
+                    Profile
+                  </Link>
+                </li>
+                <li className="nav-item" onClick={Auth.logout}>
+                  <Link>Logout</Link>
+                </li>
+              </>
+            )}
+            {!loggedIn && (
+              <li className="nav-item">
+                <Link
+                  to="/signInPage"
+                  className={
+                    currentPage === "CreateUserform"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Sign In
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
