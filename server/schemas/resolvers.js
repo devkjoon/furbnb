@@ -15,11 +15,10 @@ const resolvers = {
       return await User.findById(id).populate('pets');
     },
 
-    pets: async (parent, { userId }, context, info) => {
-      console.log('hello!!!!!!')
-      if (userId) {
+    pets: async (parent, args , context, info) => {
+      if (context.user._id) {
         // Returns all pets for the specified user
-        return await Pet.find({ owner: userId }).populate('owner');
+        return await Pet.find({ owner: context.user._id }).populate('owner');
       } else {
         // Returns all pets and their owners
         return await Pet.find().populate('owner');
@@ -104,7 +103,8 @@ const resolvers = {
 
     addPet: async (
       parent,
-      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image }
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image }, 
+      context 
     ) => {
       // Adds a new pet with its information
       const pet = await Pet.create({
@@ -118,6 +118,7 @@ const resolvers = {
         medications,
         feedingSchedule,
         image,
+        owner: context.user._id
       });
 
       return pet;

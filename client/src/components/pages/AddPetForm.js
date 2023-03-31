@@ -43,7 +43,7 @@ const AddPetForm = () => {
                 image: '', // Reset image in the state
             });
 
-            navigate('/PetDashboard');
+            navigate('/Profile');
         } catch (err) {
             console.error(err);
         }

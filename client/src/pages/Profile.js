@@ -3,9 +3,10 @@ import { useQuery, gql } from "@apollo/client";
 import PHUserImage from "../assets/images/Alexandria-pfp.PNG";
 import "../assets/css/index.css";
 
+
 const GET_PETS = gql`
-  query GetPets($userId: ID!) {
-    pets(userId: $userId) {
+  query GetPets {
+    pets {
       _id
       name
       species
@@ -21,12 +22,11 @@ const GET_PETS = gql`
   }
 `;
 
-const userId = "642628ecc23974db03c8e9b1"; // Replace this with the actual user ID once you have implemented authentication
 
 export default function UserProfile() {
-  const { loading, error, data } = useQuery(GET_PETS, {
-    variables: { userId }, // Pass the userId variable to the useQuery hook
-  });
+  const { loading, error, data } = useQuery(
+    GET_PETS
+  );
   
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
