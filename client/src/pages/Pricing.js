@@ -73,9 +73,9 @@ export default function PetDayCarePricing() {
             </div>
             <p className="tier-pricing">
               Monthly: ${tier.price.monthly}{" "}
-              <a className="custom-btn btn-4" href={tier.checkout.monthly}>Start Now</a>  <span style={{marginLeft: "10px", marginRight: "5px"}}>|</span> Annually: $
+              <a className="custom-btn btn-16" href={tier.checkout.monthly}>Start Now</a>  <span style={{marginLeft: "10px", marginRight: "5px"}}>|</span> Annually: $
               {tier.price.annually}{" "}
-              <a className="custom-btn btn-4" href={tier.checkout.annually}>Start Now</a>
+              <a className="custom-btn btn-16" href={tier.checkout.annually}>Start Now</a>
             </p>
           </li>
         ))}
