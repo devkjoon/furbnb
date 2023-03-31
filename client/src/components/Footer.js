@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../assets/css/index.css";
+import "../pages/Faq"
 
 function Footer() {
   return (
@@ -16,16 +18,16 @@ function Footer() {
         <div>
           <h3>Social Sites</h3>
           <ul>
-            <li> <a href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
-            <li> <a href="https://twitter.com/furbnb">Twitter</a></li>
-            <li> <a href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
-            <li> <a href="">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
+            <li><a href="https://twitter.com/furbnb">Twitter</a></li>
+            <li><a href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
+            <li><a href="">LinkedIn</a></li>
           </ul>
         </div>
         <div>
           <h3>FAQs and Policies</h3>
           <ul>
-            <li>FAQ</li>
+            <li><Link to="/Faq">FAQ</Link></li> 
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
           </ul>
