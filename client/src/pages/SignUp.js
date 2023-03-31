@@ -23,7 +23,6 @@ const CreateUserForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user)
    const {data} = await createUser({
       variables: {...user}
     });

@@ -48,8 +48,6 @@ function App() {
     setCurrentPage(page);
   };
 
-
-
   return (
     <ApolloProvider client={client}>
       <div className="App">

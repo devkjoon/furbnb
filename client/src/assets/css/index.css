@@ -1944,3 +1944,8 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
     font-size: 30px;
   }
 }
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

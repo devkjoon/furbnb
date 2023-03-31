@@ -11,6 +11,8 @@ function SignInPage() {
     email: '',
     password: ''
   });
+  
+  const [errorMessage, setErrorMessage] = useState('');
 
   const [login, { loading }] = useMutation(MUTATION.LOGIN_USER);
 
@@ -27,8 +29,10 @@ function SignInPage() {
       });
       Auth.login(data.login.token);
       setUser({ email: '', password: '' });
+      setErrorMessage('');
     } catch (err) {
       console.log(err);
+      setErrorMessage('Username or password is incorrect.');
     }
   };
 
@@ -37,6 +41,7 @@ function SignInPage() {
       <div className="login-page">
         <img src={BoneLogo} alt="Bone Logo"/>
         <h1>Sign <span className="blue-span">In</span></h1>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
