@@ -35,8 +35,8 @@ function SignInPage() {
   return (
     <div className="login-page-cont">
       <div className="login-page">
-        <img src={BoneLogo} alt="Bone Logo" />
-        <h1>Sign In</h1>
+        <img src={BoneLogo} alt="Bone Logo"/>
+        <h1>Sign <span className="blue-span">In</span></h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -47,8 +47,6 @@ function SignInPage() {
               onChange={handleInputChange}
               required
             />
-          </div>
-          <div className="form-group">
             <input
               placeholder="Enter Password"
               type="password"
@@ -57,8 +55,8 @@ function SignInPage() {
               onChange={handleInputChange}
               required
             />
+            <button type="submit">Sign In</button>
           </div>
-          <button type="submit">Sign In</button>
         </form>
         <p>
           Don't have an account? <Link to="/signup">Sign up</Link>

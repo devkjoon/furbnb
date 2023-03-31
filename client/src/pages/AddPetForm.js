@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { ADD_PET } from '../../utils/mutations.js';
+import { ADD_PET } from '../utils/mutations';
 
-const AddPetForm = () => {
-    let navigate = useNavigate();
-
+const AddPetForm = ({ history }) => {
     const [petFormData, setPetFormData] = useState({
         name: '',
         species: '',
@@ -16,7 +13,6 @@ const AddPetForm = () => {
         allergies: '',
         medications: '',
         feedingSchedule: '',
-        image: '', // Add image to the state
     });
 
     const [addPet, { error }] = useMutation(ADD_PET);
@@ -25,11 +21,21 @@ const AddPetForm = () => {
         event.preventDefault();
 
         try {
-            console.log(petFormData)
-            const { data } = await addPet({
-                variables: { ...petFormData, age: parseInt(petFormData.age), weight: parseInt(petFormData.weight) },
+            await addPet({
+                variables: {
+                    name: petFormData.name,
+                    species: petFormData.species,
+                    breed: petFormData.breed,
+                    age: parseInt(petFormData.age),
+                    gender: petFormData.gender,
+                    weight: parseInt(petFormData.weight),
+                    allergies: petFormData.allergies,
+                    medications: petFormData.medications,
+                    feedingSchedule: petFormData.feedingSchedule,
+                },
             });
 
+            // Reset form values
             setPetFormData({
                 name: '',
                 species: '',
@@ -40,10 +46,10 @@ const AddPetForm = () => {
                 allergies: '',
                 medications: '',
                 feedingSchedule: '',
-                image: '', // Reset image in the state
             });
 
-            navigate('/PetDashboard');
+            // Navigate back to homepage
+            history.push('/');
         } catch (err) {
             console.error(err);
         }
@@ -55,27 +61,6 @@ const AddPetForm = () => {
             ...petFormData,
             [name]: value,
         });
-    };
-
-    const handleImageChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-
-            reader.onloadend = () => {
-                setPetFormData({
-                    ...petFormData,
-                    image: reader.result,
-                });
-            };
-
-            reader.readAsDataURL(file);
-        } else {
-            setPetFormData({
-                ...petFormData,
-                image: '',
-            });
-        }
     };
 
     return (
@@ -144,14 +129,6 @@ const AddPetForm = () => {
                 />
             </div>
             <div className="form-group">
-                <label htmlFor="medications">Medications:</label>
-                <textarea
-                    name="medications"
-                    value={petFormData.medications}
-                    onChange={handleChange}
-                />
-            </div>
-            <div className="form-group">
                 <label htmlFor="feedingSchedule">Feeding Schedule:</label>
                 <input
                     type="text"
@@ -160,26 +137,16 @@ const AddPetForm = () => {
                     onChange={handleChange}
                 />
             </div>
-            {/* Add the image input */}
+
             <div className="form-group">
-                <label htmlFor="image">Image:</label>
-                <input
-                    type="file"
-                    name="image"
-                    accept="image/*"
-                    onChange={handleImageChange}
+                <label htmlFor="medications">Medications:</label>
+                <textarea
+                    name="medications"
+                    value={petFormData.medications}
+                    onChange={handleChange}
                 />
             </div>
-
-            {/* Image preview */}
-            <div className="form-group">
-                {petFormData.image && (
-                    <img src={petFormData.image} alt="preview" style={{ maxWidth: '100%', height: 'auto' }} />
-                )}
-            </div>
-
-            <button type="submit">Submit</button>
-            {error && <div>{error.message}</div>}
+            <button type="submit">Add Pet</button>
         </form>
     );
 };

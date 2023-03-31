@@ -35,6 +35,7 @@ export const ADD_PET = gql`
     $allergies: String
     $medications: String
     $feedingSchedule: String
+    $image: String
   ) {
     addPet(
       name: $name
@@ -46,6 +47,7 @@ export const ADD_PET = gql`
       allergies: $allergies
       medications: $medications
       feedingSchedule: $feedingSchedule
+      image: $image
     ) {
       _id
       name

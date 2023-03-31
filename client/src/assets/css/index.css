@@ -873,13 +873,19 @@ button:hover {
   font-size: 25px;
   margin: 5px;
   font-family: "Nunito", sans-serif;
+<<<<<<< HEAD
   color: #00be4f
+=======
+  color:#00be4f;
+  text-align: center;
+>>>>>>> main
 }
 
 /* Styling For User Image */
 .profile-div aside p {
   margin: 5px;
   font-family: "Rubik", sans-serif;
+  text-align: center;
 }
 
 /* Styling For Emergency Contact Text */
@@ -1074,7 +1080,12 @@ button:hover {
   font-size: 15px;
   margin: 0;
 }
-
+.footer-cont a{
+  color:white;
+}
+.footer-cont a:hover{
+  cursor: pointer;
+}
 /* Styling for the entire page */
 /* body {
   font-family: Arial, sans-serif;
@@ -1098,19 +1109,26 @@ button:hover {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: #e5ecf4;
+  flex-direction: column;
+  background: url(../images/paw-trail-grey.jpeg);
+}
+
+.services-list img {
+  width: 112px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .service-item {
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin: 10px;
   padding: 1rem;
-  width: 300px;
-  height: 300px;
+  width: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1135,40 +1153,85 @@ button:hover {
   line-height: 1.5;
 }
 
+.service-left {
+  align-self: flex-start;
+}
+
+.service-right {
+  align-self: flex-end;
+}
+
 .pricing-container {
-  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
-  background: url(../images/pet-boarding-background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .pricing-title {
   font-size: 2rem;
   margin-top: 40px;
   margin-bottom: 20px;
-}
-
-.pricing-tier {
-  color: white;
-  margin-bottom: 20px;
-  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
+  align-items: center;
 }
 
 .pricing-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  justify-content: space-between; 
 }
 
-.pricing-section img {
+.pricing-service {
+  align-self: start;
+}
+
+.pricing-image {
   width: 250px;
+  border: 2px solid #e2e2e2;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #e2e2e2;
+  align-self: flex-end;
+}
+
+.pricing-banner {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;  
+  align-items: center;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/paw-trail-grey.jpeg);
+}
+
+.pricing-tier {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 1rem;
+  width: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.service-center {
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 25%;
 }
 
 .tier-title {
@@ -1303,17 +1366,23 @@ button:hover {
 .login-page-cont {
   background-color: white;
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: -10%;
 }
 
-.login-page {
-  width: 500px;
+.login-page{
+  width: 450px;
   height: 500px;
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-page img {
@@ -1322,6 +1391,123 @@ button:hover {
   background-color: white;
   padding: 25px;
   border-radius: 100%;
+  position: relative;
+  top: 25px;
+}
+
+.login-page h1{
+  font-family: "Nunito", sans-serif;
+  font-size: 45px;
+  color:#00be4f;
+  margin-bottom: 0;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group input{
+  width: 300px;
+  height: 50px;
+  margin: 7px 0;
+  border-radius: 10px;
+  border: 2px solid #0092bb;
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.login-page button{
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  background-color: #00a4bf;
+  color: white;
+  font-size: 25px;
+}
+
+.login-page a:hover{
+  cursor: pointer;
+}
+
+.signup-page-cont{
+  background-color: white;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: -10%;
+}
+
+.signup-page{
+  width: 450px;
+  height: 500px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-page img{
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 100%;
+  position: relative;
+  top: 25px;
+}
+
+.signup-page h1{
+  font-family: "Nunito", sans-serif;
+  font-size: 45px;
+  color:#00be4f;
+  margin-bottom: 0;
+}
+
+.signup-page input{
+  width: 300px;
+  height: 40px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 2px solid #0092bb;
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.signup-page button{
+  width: 250px;
+  height: 50px;
+  margin: 10px 0 10px 0px;
+  border-radius: 30px;
+  border: none;
+  background-color: #00a4bf;
+  color: white;
+  font-size: 25px;
+}
+
+.signup-page p{
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 1660px){
+  .about-cont h3{
+    font-size: 40px;
+  }
+  .about-cont h5{
+    font-size: 15px;
+  }
+  .about-cont p{
+    font-size: 12px;
+  }
 }
 
 .text-breakFaq hr {
@@ -1345,8 +1531,6 @@ button:hover {
   padding-bottom: 20px;
   margin-top: 10px;
 }
-
-
 
 @media screen and (max-width: 1280px) {
   #pages-bar {
@@ -1386,6 +1570,31 @@ button:hover {
     font-size: 15px;
     max-width: 90%;
   }
+  .profile-div a{
+    font-size: 20px;
+  }
+  .about-us-div div{
+    height: 250px;
+  }
+  .why-choose-div div{
+    height: 250px;
+  }
+  .about-cont h2{
+    font-size: 12px;
+    margin-left: 25px;
+  }
+  .about-cont h3{
+    font-size: 20px;
+    margin-left: 25px;
+  }
+  .about-cont h5{
+    font-size: 10px;
+    margin-left: 25px;
+  }
+  .about-cont p{
+    font-size: 8px;
+    margin-left: 25px;
+  }
 }
 
 @media screen and (max-width: 1028px) {
@@ -1396,6 +1605,12 @@ button:hover {
 
   #splash-text-cont {
     background-position: 0%;
+  }
+  .about-us-div{
+    width: 80%;
+  }
+  .why-choose-div{
+    width: 80%;
   }
 }
 
@@ -1472,11 +1687,151 @@ button:hover {
     font-size: 10px;
     max-width: 95%;
   }
+  .login-page{
+    width: 300px;
+    height: 350px;
+  }
+  .login-page img{
+    width: 35px;
+    height: 35px;
+  }
+  .login-page h1{
+    font-size: 30px;
+  }
+  .form-group input{
+    width: 230px;
+    height: 30px;
+  }
+  .login-page button{
+    width: 200px;
+    height: 35px;
+    margin-bottom: 0
+  }
+  .signup-page{
+    width: 300px;
+    height: 350px;
+  }
+  .signup-page img{
+    width: 35px;
+    height: 35px;
+  }
+  .signup-page h1{
+    font-size: 30px;
+  }
+  .signup-page input{
+    width: 230px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .signup-page button{
+    width: 200px;
+    height: 30px;
+  }
+  .gallery-cont h1{
+    font-size: 35px;
+  }
+  .gallery-cont h3{
+    font-size: 15px;
+  }
+  .profile-div{
+    width: 90vw;
+  }
+  .profile-div aside h6{
+    font-size: 12px;
+  }
+  .profile-div li{
+    font-size: 8px
+  }
+  .profile-div aside h5{
+    font-size: 12px;
+  }
+  .profile-div aside p{
+    font-size: 8px;
+  }
+  .profile-div a{
+    font-size: 8px;
+    padding: 5px 5px;
+  }
+  .profile-info h1{
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  .profile-card{
+    width: 150px;
+    height: 200px;
+  }
+  .profile-card img{
+    width: 75px;
+    height: 75px;
+  }
+  .profile-card h4{
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+  .profile-card-info p{
+    font-size: 10px;
+    margin: 5px 0
+  }
+  .profile-card-extra-info{
+    height: 45%
+  }
+  .profile-card-extra-info li{
+    font-size: 8px;
+  }
+  .profile-card:hover .profile-card-extra-info{
+    top: 56%;
+    -webkit-transition: top 1s; 
+  }
+  .about-us-div div{
+    width: 100%;
+    text-align: center;
+  }
+  .why-choose-div{
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+  .why-choose-div div{
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    text-align: center;
+  }
+  .about-cont h2{
+    font-size: 20px;
+    margin: 0;
+  }
+  .about-cont h3{
+    font-size: 30px;
+    margin: 0;
+  }
+  .about-cont h5{
+    font-size: 15px;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  .about-cont p{
+    font-size: 10px;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  .team-div div h2{
+    font-size: 20px
+  }
+  .team-div div h3{
+    font-size: 30px;
+  }
+
 }
 
 @media screen and (max-width: 550px) {
   .landing-info-text-div p {
     font-size: 8px;
+  }
+  .about-us-div{
+    width: 90%;
+  }
+  .why-choose-div{
+    width: 90%;
   }
 }
 
