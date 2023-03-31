@@ -33,34 +33,36 @@ function SignInPage() {
   };
 
   return (
-  <div className="login-page-cont">
-    <div className="login-page">
-      <img src={BoneLogo} alt="Bone Logo"/>
-      <h1>Sign <span className="blue-span">In</span></h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <input
-            placeholder="Enter Email"
-            type="email"
-            value={user.email}
-            onChange={(e) => handleInputChange(e.target.value)}
-            required
-          />
-          <input
-            placeholder="Enter Password"
-            type="password"
-            value={user.password}
-            onChange={(e) => handleInputChange(e.target.value)}
-            required
-          />
-          <button type="submit">Sign In</button>
-        </div>
-      </form>
-      <p>
-        Don't have an account? <Link to="/signup">Sign up</Link>
-      </p>
+    <div className="login-page-cont">
+      <div className="login-page">
+        <img src={BoneLogo} alt="Bone Logo"/>
+        <h1>Sign <span className="blue-span">In</span></h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <input
+              placeholder="Enter Email"
+              type="email"
+              name="email"
+              value={user.email}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              placeholder="Enter Password"
+              type="password"
+              name="password"
+              value={user.password}
+              onChange={handleInputChange}
+              required
+            />
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+        <p>
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </p>
+      </div>
     </div>
-  </div>
   );
 }
 

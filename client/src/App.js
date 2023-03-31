@@ -15,7 +15,7 @@ import PetDashboard from './components/pages/PetDashboard';
 // import CreateUserForm from "./components/pages/CreateUserForm";
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
-import Profile from "./pages/Profile"
+// import Profile from "./pages/Profile"
 
 let httpLink = createHttpLink({
   uri:'/graphql'
@@ -67,7 +67,7 @@ function App() {
           <Route path="/signInPage" element={<SignInPage />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/PetDashboard" element={<PetDashboard />} />
-          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/profile" element={<Profile />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
