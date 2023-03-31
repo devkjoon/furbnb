@@ -21,7 +21,7 @@ const GET_PETS = gql`
   }
 `;
 
-const userId = "6424db5a615f7574a32d989e"; // Replace this with the actual user ID once you have implemented authentication
+const userId = "642628ecc23974db03c8e9b1"; // Replace this with the actual user ID once you have implemented authentication
 
 export default function UserProfile() {
   const { loading, error, data } = useQuery(GET_PETS, {
