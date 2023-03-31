@@ -4,9 +4,6 @@ import TwitterIcon from "../assets/images/5296514_bird_tweet_twitter_twitter log
 import InstaIcon from "../assets/images/5296765_camera_instagram_instagram logo_icon.png";
 import YelpIcon from "../assets/images/1298777_yelp_icon.png";
 import RoverIcon from "../assets/images/Rover2.png";
-// import DogPhone from "../assets/images/dog-on-phone.jpg";
-// import DogPeek from "../assets/images/dog-peeking-in-camera.jpg";
-// import '../assets/css/index.css';
 
 export default function ContactPage() {
   return (
