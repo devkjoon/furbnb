@@ -1610,6 +1610,27 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   }
 }
 
+.text-breakFaq hr {
+  width: 75%;
+  margin: 0;
+}
+
+.text-breakFaq {
+  padding-left: 20px;
+}
+
+.faq-header {
+  padding: 15px;
+}
+
+.faq-finalQuestion{
+  padding-bottom: 40px;
+}
+
+.faq-text {
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
 
 @media screen and (max-width: 1280px) {
   #pages-bar {

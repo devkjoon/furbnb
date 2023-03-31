@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "../assets/css/index.css";
+import "../pages/Faq"
 
 function Footer() {
   return (
@@ -25,7 +27,7 @@ function Footer() {
         <div>
           <h3>FAQs and Policies</h3>
           <ul>
-            <li>FAQ</li>
+            <li><Link to="/Faq">FAQ</Link></li> 
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
           </ul>
