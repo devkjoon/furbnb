@@ -19,16 +19,3 @@ db.once('open', () => {
 
 module.exports = db;
 
-
-// ignore this its for working on local machine
-// const { connect, connection } = require('mongoose');
-
-// const connectionString =
-//   process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/furbnbdb';
-
-// connect(connectionString, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// module.exports = connection;
