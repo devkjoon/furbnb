@@ -17,6 +17,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@ap
 import { setContext } from '@apollo/client/link/context';
 import Profile from "./pages/Profile"
 import Faq from './pages/Faq';
+import OpenJobs from './pages/OpenJobs';
 
 let httpLink = createHttpLink({
   uri: '/graphql'
@@ -70,6 +71,7 @@ function App() {
             <Route path="/PetDashboard" element={<PetDashboard />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/openjobs" element={<OpenJobs />} />
           </Routes>
           <Footer />
         </BrowserRouter>
