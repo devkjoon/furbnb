@@ -79,108 +79,91 @@ const AddPetForm = () => {
     };
 
     return (
+    <div className="add-pet-cont">
+        <h2>Add <span className="blue-span">Pet</span></h2>
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor="name">Name:</label>
                 <input
+                    placeholder='Enter Pet Name'
                     type="text"
                     name="name"
                     value={petFormData.name}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="species">Species:</label>
                 <input
+                    placeholder='Enter Species'
                     type="text"
                     name="species"
                     value={petFormData.species}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="breed">Breed:</label>
                 <input
+                    placeholder='Enter Breed'
                     type="text"
                     name="breed"
                     value={petFormData.breed}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="gender">Gender:</label>
                 <input
+                    placeholder='Enter Gender'
                     type="text"
                     name="gender"
                     value={petFormData.gender}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="age">Age:</label>
                 <input
+                    placeholder='Enter Age (Years)'
                     type="number"
                     name="age"
                     value={petFormData.age}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="weight">Weight:</label>
                 <input
+                    placeholder='Enter Weight (lbs)'
                     type="number"
                     name="weight"
                     value={petFormData.weight}
                     onChange={handleChange}
                 />
-            </div>
-            <div className="form-group">
-                <label htmlFor="allergies">Allergies:</label>
-                <input
+                <textarea
+                    placeholder='Enter Allergies'
                     type="text"
                     name="allergies"
                     value={petFormData.allergies}
                     onChange={handleChange}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="medications">Medications:</label>
+                ></textarea>
                 <textarea
+                    placeholder='Enter Medications'
                     name="medications"
                     value={petFormData.medications}
                     onChange={handleChange}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="feedingSchedule">Feeding Schedule:</label>
-                <input
+                ></textarea>
+                <textarea
+                    placeholder='Enter Feeding Schedule'
                     type="text"
                     name="feedingSchedule"
                     value={petFormData.feedingSchedule}
                     onChange={handleChange}
-                />
-            </div>
+                ></textarea>
             {/* Add the image input */}
-            <div className="form-group">
-                <label htmlFor="image">Image:</label>
                 <input
+                placeholder='Pet Image'
                     type="file"
                     name="image"
                     accept="image/*"
                     onChange={handleImageChange}
                 />
-            </div>
 
             {/* Image preview */}
-            <div className="form-group">
                 {petFormData.image && (
                     <img src={petFormData.image} alt="preview" style={{ maxWidth: '100%', height: 'auto' }} />
                 )}
+                <button type="submit">Submit</button>
             </div>
 
-            <button type="submit">Submit</button>
             {error && <div>{error.message}</div>}
         </form>
+    </div>
     );
 };
 

@@ -18,7 +18,7 @@ function Header({ currentPage, handlePageChange }) {
         <div id="contact-div">
           <div id="phone-info">
             <img src={PhoneIcon} alt="phone icon" />
-            <p>+1-615-420-6969</p>
+            <p>+1-615-123-4567</p>
           </div>
           <div id="email-info">
             <img src={EmailIcon} alt="email icon" />
@@ -107,6 +107,18 @@ function Header({ currentPage, handlePageChange }) {
                 Contact
               </Link>
             </li>
+            
+            {/* <li className="nav-item">
+              <Link
+                to="/petlist"
+                className={
+                  currentPage === "PetList" ? "nav-link active" : "nav-link"
+                }
+                onClick={() => handlePageChange("Pet List")}
+              >
+                PetList
+              </Link>
+            </li> */}
             {loggedIn && (
               <>
                 <li className="nav-item">

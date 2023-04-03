@@ -35,9 +35,9 @@ export default function ContactPage() {
       <p>Or contact us directly:</p>
       <div className="contact-info">
       <ul>
-        <li>Phone: 555-555-5555</li>
+        <li>Phone: 615-123-4567</li>
         <li>Email: <a href="mailto:furbnbcare@gmail.com">furbnbcare@gmail.com</a></li>
-        <li>Address: 123 Main St, Anytown USA</li>
+        <li>Address: 1234 Furbnb Rd Nashville, TN</li>
       </ul>
       </div>
       <div className="disclaimer">

@@ -1,6 +1,6 @@
 // const { AuthenticationError } = require('apollo-server-express');
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Pet } = require('../models');
+const { User, Pet, Bookings } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -24,7 +24,17 @@ const resolvers = {
         return await Pet.find().populate('owner');
       }
     },
+ bookings: async (parent, args, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Not authenticated');
+      }
 
+      const bookings = await Bookings.find({ user: context.user._id })
+        .populate('user')
+        .populate('pet');
+
+      return bookings;
+    },
     pet: async (parent, { id }) => {
       // Returns a pet and its owner by the pet's ID
       return await Pet.findById(id).populate('owner');
@@ -123,6 +133,71 @@ const resolvers = {
 
       return pet;
     },
+
+    createBooking: async (parent, { input }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Not authenticated');
+      }
+
+      const newBooking = new Bookings({
+        user: context.user._id,
+        pet: input.pet,
+        serviceType: input.serviceType,
+        date: input.date,
+        startTime: input.startTime,
+        endTime: input.endTime,
+        notes: input.notes,
+      });
+
+      const savedBooking = await newBooking.save();
+
+      return savedBooking;
+    },
+    updateBooking: async (parent, { id, input }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Not authenticated');
+      }
+
+      const bookingToUpdate = await Bookings.findById(id);
+
+      if (!bookingToUpdate) {
+        throw new Error('Booking not found');
+      }
+
+      if (bookingToUpdate.user.toString() !== context.user._id.toString()) {
+        throw new AuthenticationError('Not authorized');
+      }
+
+      bookingToUpdate.pet = input.pet || bookingToUpdate.pet;
+      bookingToUpdate.serviceType = input.serviceType || bookingToUpdate.serviceType;
+      bookingToUpdate.date = input.date || bookingToUpdate.date;
+      bookingToUpdate.startTime = input.startTime || bookingToUpdate.startTime;
+      bookingToUpdate.endTime = input.endTime || bookingToUpdate.endTime;
+      bookingToUpdate.notes = input.notes || bookingToUpdate.notes;
+
+      const updatedBooking = await bookingToUpdate.save();
+
+      return updatedBooking;
+    },
+    deleteBooking: async (parent, { id }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Not authenticated');
+      }
+    
+      const bookingToDelete = await Bookings.findById(id);
+    
+      if (!bookingToDelete) {
+        throw new Error('Booking not found');
+      }
+    
+      if (bookingToDelete.user.toString() !== context.user._id.toString()) {
+        throw new AuthenticationError('Not authorized');
+      }
+    
+      const deletedBooking = await bookingToDelete.delete();
+    
+      return deletedBooking;
+    },    
   },
 };
 

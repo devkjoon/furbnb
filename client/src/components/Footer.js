@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import "../assets/css/index.css";
 import "../pages/Faq"
+import "../pages/OpenJobs"
 
 function Footer() {
   return (
@@ -10,9 +11,10 @@ function Footer() {
         <div>
           <h3>Contact Us</h3>
           <ul>
-            <li>Phone: 555-1234</li>
+            <li>Phone: 615-123-4567</li>
             <li><a target="_blank" href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
-            <li>Address: 123 Main St, Anytown USA</li>
+            <li>Hours: Weekdays:	7 AM–6 PM</li>
+              <li>Weekends:	8 AM–5 PM</li>
           </ul>
         </div>
         <div>
@@ -27,7 +29,7 @@ function Footer() {
         <div>
           <h3>FAQs and Policies</h3>
           <ul>
-            <li><Link to="/Faq">FAQ</Link></li> 
+            <li><Link to="/Faq">FAQ</Link></li>
             <li>Privacy Policy</li>
             <li>Terms and Conditions</li>
           </ul>
@@ -35,18 +37,19 @@ function Footer() {
         <div>
           <h3>Locations</h3>
           <ul>
-            <li>Main Store: 123 Main St, Anytown USA</li>
-            <li>Branch Store: 456 Second St, Othertown USA</li>
+            <li>Address: 1234 Furbnb Rd</li>
+            <li>Nashville, TN 37205</li>
           </ul>
         </div>
         <div>
           <h3>About Us</h3>
           <ul>
             <li>
-              Available Jobs: <a href="/jobs">Click Here</a>
+              Available Jobs: <a href="/OpenJobs">Click Here</a>
+              {/* <li><Link to="/openJobs">Available Jobs</Link></li> */}
             </li>
             <li>
-              Meet Our Staff: <a href="/about">Click Here</a>
+            Meet Our Staff: <a href="/about#team-members">Click Here</a>
             </li>
           </ul>
         </div>

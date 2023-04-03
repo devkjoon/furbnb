@@ -35,6 +35,8 @@ code {
     monospace;
 }
 
+
+
 #root {
   height: 100%;
   width: 100%;
@@ -1204,7 +1206,7 @@ button:hover {
 }
 
 .pricing-tier {
-  background-color: lightgray;
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -1269,7 +1271,7 @@ button:hover {
 
 .custom-btn {
   width: 130px;
-  height: 40px;
+  height: 23px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -1287,74 +1289,36 @@ button:hover {
   outline: none;
 }
 
-.btn-4 {
-  background-color: #4dccc6;
-background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
-  line-height: 42px;
-  padding: 0;
+.btn-16 {
   border: none;
+  color: #000;
 }
-.btn-4:hover{
-  background-color: #89d8d3;
-background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-}
-.btn-4 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.btn-4:before,
-.btn-4:after {
+.btn-16:after {
   position: absolute;
   content: "";
-  right: 0;
+  width: 0;
+  height: 100%;
   top: 0;
-   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.9),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  transition: all 0.3s ease;
-}
-.btn-4:before {
-  height: 0%;
-  width: .1px;
-}
-.btn-4:after {
-  width: 0%;
-  height: .1px;
-}
-.btn-4:hover:before {
-  height: 100%;
-}
-.btn-4:hover:after {
-  width: 100%;
-}
-.btn-4 span:before,
-.btn-4 span:after {
-  position: absolute;
-  content: "";
   left: 0;
-  bottom: 0;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.9),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
-.btn-4 span:before {
-  width: .1px;
-  height: 0%;
+.btn-16:hover {
+  color: #000;
 }
-.btn-4 span:after {
-  width: 0%;
-  height: .1px;
-}
-.btn-4 span:hover:before {
-  height: 100%;
-}
-.btn-4 span:hover:after {
+.btn-16:hover:after {
+  left: auto;
+  right: 0;
   width: 100%;
+}
+.btn-16:active {
+  top: 2px;
 }
 
 .tier-pricing a {
@@ -1597,6 +1561,68 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   position: relative;
   bottom: 10px;
 }
+
+.add-pet-cont{
+  width: 100vw;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  margin-bottom: 100px;
+  padding: 25px 0;
+}
+
+.add-pet-cont h2{
+  color:#00be4f;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+.add-pet-cont .form-group{
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.add-pet-cont .form-group textarea{
+  resize: none;
+  border: 2px solid #00a4bf;
+  width: 500px;
+  height: 75px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.add-pet-cont button{
+  width: 300px;
+  height: 60px;
+  background-color: #00a4bf;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 30px;
+  margin: 0 100px;
+}
+
+.add-pet-cont button:hover{
+  background-color: #00be4f;
+}
+
+.form-group input:focus{
+  outline: none;
+  border: 2px solid #00be4f;
+}
+
+.form-group textarea:focus{
+  outline: none;
+  border: 2px solid #00be4f;
+}
+
 
 @media screen and (max-width: 1660px){
   .about-cont h3{
@@ -1920,6 +1946,28 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   .team-div div h3{
     font-size: 30px;
   }
+  .add-pet-cont{
+    margin-bottom: 25px;
+  }
+  .add-pet-cont .form-group{
+    width: 80vw;
+    margin: auto;
+    flex-direction: column;
+  }
+  .add-pet-cont .form-group input{
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .add-pet-cont .form-group textarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+  }
+  .add-pet-cont .form-group button{
+    margin: auto;
+  }
 
 }
 
@@ -1933,6 +1981,7 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
   .why-choose-div{
     width: 90%;
   }
+
 }
 
 @media screen and (max-height: 750px) {
