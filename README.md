@@ -1,6 +1,6 @@
 # Furbnb
 ## Description
-### Furbnb is a web application that allows pet owners to find and book pet care services such as grooming, boarding, training, and veterinary services. The application is built with React, Node.js, Express, and MongoDB, and it uses GraphQL for the communication between the client and the server.
+#### Furbnb is a web application that allows pet owners to find and book pet care services such as grooming, boarding, training, and veterinary services. The application is built with React, Node.js, Express, and MongoDB, and it uses GraphQL for the communication between the client and the server.
 ## Table of Contents
 - [Installation](#installation)
 - [Features](#features)
@@ -51,6 +51,6 @@ npm run dev
 ## Preview
 
 ## Contributing
-### Furbnb is a group project created by Liam Allen, Joon Kim, Trenton Kirchner, Coulson Porter, and Alexandria White. Contributions to Furbnb are welcome! If you find a bug, have an idea for a new feature, or want to improve the code, feel free to open an issue or a pull request. Please follow the existing code style and conventions and make sure to add tests for any new functionality.
+#### Furbnb is a group project created by Liam Allen, Joon Kim, Trenton Kirchner, Coulson Porter, and Alexandria White. Contributions to Furbnb are welcome! If you find a bug, have an idea for a new feature, or want to improve the code, feel free to open an issue or a pull request. Please follow the existing code style and conventions and make sure to add tests for any new functionality.
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
