@@ -23,7 +23,33 @@ const typeDefs = gql`
     image: String
     owner: User
   }
-
+  input BookingInput {
+    pet: ID!
+    serviceType: String!
+    date: String!
+    startTime: String!
+    endTime: String!
+    notes: String
+  }
+  
+  type Booking {
+    _id: ID!
+    user: User!
+    pet: Pet!
+    serviceType: String!
+    date: String!
+    startTime: String!
+    endTime: String!
+    notes: String
+  }
+  
+  type Mutation {
+    createBooking(input: BookingInput!): Booking!
+    updateBooking(id: ID!, input: BookingInput!): Booking!
+    deleteBooking(id: ID!): Booking!
+  }
+  
+  
   type Auth {
     token: ID
     user: User
@@ -34,6 +60,7 @@ const typeDefs = gql`
     user(id: ID!): User
     pets: [Pet]! 
     pet(id: ID!): Pet
+    bookings: [Booking]
   }  
 
   type Mutation {
