@@ -3,7 +3,6 @@ import { useQuery, gql } from "@apollo/client";
 import PHUserImage from "../assets/images/Alexandria-pfp.PNG";
 import "../assets/css/index.css";
 
-
 const GET_PETS = gql`
   query GetPets {
     pets {
@@ -22,7 +21,6 @@ const GET_PETS = gql`
   }
 `;
 
-
 export default function UserProfile() {
   const { loading, error, data } = useQuery(
     GET_PETS
@@ -37,13 +35,15 @@ export default function UserProfile() {
         <aside>
           <img src={PHUserImage} alt="User Profile" />
           <h5>FirstName LastName</h5>
-          <p>1234 Nowheresville Rd, Somewhere USA</p>
-          <p>615-420-6969</p>
+          <p>1234 Furbnb Rd</p>
+          <p>Nashville, TN 37205</p>
+          <p>615-123-4567</p>
           <h6>Emergency Contact</h6>
           <ul>
-            <li>FirstName LastName</li>
-            <li>1234 Nowheresville Rd, Somewhere USA</li>
-            <li>615-420-6969</li>
+            <li>Nashville Veterinary Specialists + Animal Emergency</li>
+            <li>2971 Sidco Dr, Nashville, TN 37204</li>
+            <li>Hours: Open 24 hours</li>
+            <li>(615) 386-0107</li>
           </ul>
           <a href="/petlist">Add <span className="blue-span">Pet</span></a>
         </aside>

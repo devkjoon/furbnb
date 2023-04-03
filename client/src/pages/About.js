@@ -36,7 +36,7 @@ export default function AboutPage() {
           </div>
         </div>
         </div>
-        <div className="team-div">
+        <div className="team-div" id="team-members">
           <div>
             <h2>Team Members</h2>
             <h3>Meet Our <span className="blue-span">Team Members</span></h3>
@@ -46,35 +46,35 @@ export default function AboutPage() {
               <img src={LiamPic} alt="Liam Profile"/>
               <div className="team-card-info">
                 <h5>Liam Allen</h5>
-                <p>Antisocial</p>
+                <p>CMO</p>
               </div>
             </div>
             <div className="team-card">
               <img src={AlexandriaPic}  alt="Alexandria Profile"/>
               <div className="team-card-info">
                 <h5>Alexandria White</h5>
-                <p>Ex Cheerleader</p>
+                <p>CIO</p>
               </div>
             </div>
             <div className="team-card">
               <img src={JoonPic} alt="Joon Profile"/>
               <div className="team-card-info">
                 <h5>Joon Kim</h5>
-                <p>Yellow Man</p>
+                <p>CFO</p>
               </div>
             </div>
             <div className="team-card">
               <img src={TrentPic} alt="Trent Profile"/>
               <div className="team-card-info">
                 <h5>Trenton Kirchner</h5>
-                <p>Mirror Head</p>
+                <p>CSO</p>
               </div>
             </div>
             <div className="team-card">
               <img src={CoulsonPic} alt="Coulson Profile"/>
               <div className="team-card-info">
                 <h5>Coulson Porter</h5>
-                <p>Lifted Truckless</p>
+                <p>COO</p>
               </div>
             </div>
           </div>

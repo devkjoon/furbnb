@@ -1,10 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import service1 from "../assets/images/service_icon1.png";
 import service2 from "../assets/images/service_icon2.png";
 import service3 from "../assets/images/service_icon3.png";
 import service4 from "../assets/images/service_icon4.png";
-
-// import '../assets/css/index.css';
 
 export default function PetDayCareServices() {
   const services = [
@@ -14,6 +13,7 @@ export default function PetDayCareServices() {
         "We offer a variety of grooming services to help your pet look and feel their best. From baths to haircuts, we have everything your furry friend needs to stay clean and healthy.",
       images: service1,
       float: "service-left",
+      link: "/bookings",
     },
     {
       name: "Boarding",
@@ -21,6 +21,7 @@ export default function PetDayCareServices() {
         "When you need to be away from home, you can trust us to take care of your pet. Our comfortable and safe boarding facilities are the perfect place for your pet to stay while you are away.",
       images: service2,
       float: "service-right",
+      link: "/bookings",
     },
     {
       name: "Training",
@@ -28,6 +29,7 @@ export default function PetDayCareServices() {
         "Every pet can benefit from training. We offer a variety of classes to help your pet learn new skills and behaviors. From obedience training to agility classes, we have something for every pet.",
       images: service3,
       float: "service-left",
+      link: "/bookings",
     },
     {
       name: "Veterinary Services",
@@ -35,6 +37,7 @@ export default function PetDayCareServices() {
         "We know how important it is to keep your pet healthy, which is why we offer a range of veterinary services. From routine check-ups to emergency care, our experienced veterinarians are here to help.",
       images: service4,
       float: "service-right",
+      link: "/bookings",
     },
   ];
 
@@ -45,7 +48,9 @@ export default function PetDayCareServices() {
         {services.map((service) => (
           <li className={"service-item " + service.float} key={service.name}>
             <h2 className="service-name">{service.name}</h2>
-            <img src={service.images} alt="" />
+            <Link to={service.link}>
+              <img src={service.images} alt="" />
+            </Link>
             <p className="service-description">{service.description}</p>
           </li>
         ))}
