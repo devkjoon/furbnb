@@ -953,7 +953,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-bottom: 25px;
+  padding: 0 10px 25px 10px;
   flex: 1;
 }
 
@@ -970,10 +970,17 @@ button:hover {
   overflow: hidden;
   position: relative;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.profile-card:hover{
+  cursor: pointer;
 }
 
 /* Styling For Pet Card Image */
 .profile-card img {
+  min-width: 200px;
+  min-height: 200px;
   width: 200px;
   height: 200px;
   border-radius: 100%;
@@ -1915,6 +1922,8 @@ button:hover {
     height: 200px;
   }
   .profile-card img{
+    min-width: 75px;
+    min-height: 75px;
     width: 75px;
     height: 75px;
   }
