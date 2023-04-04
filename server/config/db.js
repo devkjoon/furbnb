@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-require('dotenv').config();
+
 
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
@@ -11,6 +11,7 @@ const uri = `mongodb+srv://${username}:${password}@${cluster}.uwnpucz.mongodb.ne
 // FOR COULSON DONT TOUCH
 // const uri = 'mongodb://127.0.0.1:27017/furbnbdb';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.set('strictQuery', false);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
