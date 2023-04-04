@@ -24,7 +24,7 @@ const typeDefs = gql`
     owner: User
   }
   input BookingInput {
-    pet: ID!
+    pet: String
     serviceType: String!
     date: String!
     startTime: String!
@@ -35,7 +35,7 @@ const typeDefs = gql`
   type Booking {
     _id: ID!
     user: User!
-    pet: Pet!
+    pet: String
     serviceType: String!
     date: String!
     startTime: String!
