@@ -55,6 +55,9 @@ export default function UserProfile() {
           <a href="/petlist">
             Add <span className="blue-span">Pet</span>
           </a>
+          <a href="/schedule">
+            Check <span className="blue-span">Schedule</span>
+          </a>
         </aside>
         <div className="profile-info">
           <h1>
