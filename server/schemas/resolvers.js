@@ -138,19 +138,23 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
-
-      const newBooking = new Bookings({
-        user: context.user._id,
-        pet: input.pet,
-        serviceType: input.serviceType,
-        date: input.date,
-        startTime: input.startTime,
-        endTime: input.endTime,
-        notes: input.notes,
+    
+      const { pet, serviceType, date, startTime, endTime, notes } = input;
+      const { user } = context;
+      console.log(pet)
+      // const petId = mongoose.Types.ObjectId(pet); // Convert pet to an ObjectId
+      const booking = new Bookings({
+        user,
+        pet, // Use the converted ObjectId value for pet
+        serviceType,
+        date,
+        startTime,
+        endTime,
+        notes,
       });
-
-      const savedBooking = await newBooking.save();
-
+    
+      const savedBooking = await booking.save();
+    
       return savedBooking;
     },
     updateBooking: async (parent, { id, input }, context) => {
@@ -197,7 +201,8 @@ const resolvers = {
       const deletedBooking = await bookingToDelete.delete();
     
       return deletedBooking;
-    },    
+    },
+    
   },
 };
 
