@@ -1662,6 +1662,28 @@ button:hover {
   border-top: 2px solid #00a4bf;
 }
 
+.schedule-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Style for the h2 element */
+.sched-h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00a4bf;
+}
+
+.sched-h3{
+  font-size: 1.5rem;
+}
+
+/* Style for the p element */
+.sched-p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 1660px){
   .about-cont h3{
     font-size: 40px;
