@@ -1684,6 +1684,85 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
+.booking-cont{
+  width: 100vw;
+  height: 70vh;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: -10%;
+  padding-top: 25px
+}
+
+.booking-cont h1{
+  text-align: center;
+  color:#00be4f;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  margin: 0 0 50px 0;
+}
+
+.booking-div{
+  width: 600px; 
+  height: 300px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding-top: 50px;
+  border: 2px solid #424242;
+}
+
+.booking-div label{
+  font-size: 20px;
+  margin-left: 40px;
+  font-family: "Nunito", sans-serif;
+}
+
+.booking-div input{
+  margin-left: 10px;
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #00a4bf;
+}
+
+.booking-div select{
+  margin-left: 10px;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #00a4bf;
+}
+
+.booking-div button{ 
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  background-image: linear-gradient(to left bottom, #02e952, #03df50, #04d54e, #06cc4b, #08c249);
+  border: none;
+  border-radius: 20px;
+  margin: 10px auto;
+  color: white;
+  font-size: 25px;
+}
+
+.booking-div select:focus{
+  outline: none;
+  border: 2px solid #00be4f;
+}
+
+.booking-div input:focus{
+  outline: none;
+  border: 2px solid #00be4f;
+}
+
+
+
 @media screen and (max-width: 1660px){
   .about-cont h3{
     font-size: 40px;
@@ -2050,6 +2129,30 @@ button:hover {
   .job-entry li{
     font-size: 10px;;
   }
+  .booking-div{
+    width: 500px;
+    height: 200px;
+    padding: 20px 0
+  }
+  .booking-div label{
+    font-size: 15px;
+    margin-left: 25px;
+  }
+  .booking-div input{
+    height: 20px;
+    border-radius: 5px;
+  }
+  .booking-div select{
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .booking-div button{
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
 
 }
 
@@ -2065,6 +2168,26 @@ button:hover {
   }
   .job-entry ul{
     padding: 0;
+  }
+  .booking-cont h1{
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+  .booking-div{
+    width: 300px;
+    height: 330px;
+  }
+  .booking-div label{
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  .booking-div input{
+    margin: 0;
+    height: 25px;
+  }
+  .booking-div select{
+    margin: 0;
+    height: 25px;
   }
 
 
