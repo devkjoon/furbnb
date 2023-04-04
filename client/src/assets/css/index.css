@@ -1263,6 +1263,7 @@ button:hover {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .start-now-button:hover {
