@@ -37,10 +37,12 @@ const CreateUserForm = () => {
       return;
     }
 
-    const {data} = await createUser({
-      variables: {...user}
+    const name = `${user.firstName} ${user.lastName}`;
+    const { data } = await createUser({
+      variables: { ...user, name }
     });
-    console.log(data)
+
+    console.log(data);
     Auth.login(data.addUser.token)
     setUser({ firstName: '', lastName: '', email: '', address: '', phoneNumber: '', password: '', confirmPassword: '' });
   };

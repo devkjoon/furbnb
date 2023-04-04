@@ -6,51 +6,46 @@ const userSchema = new Schema({
   firstName: {
     type: String,
     required: true,
-    unique: true, // username should be unique
     trim: true,
   },
   lastName: {
     type: String,
     required: true,
-    unique: true, // username should be unique
+    trim: true,
+  },
+  name: {
+    type: String,
     trim: true,
   },
   email: {
     type: String,
     required: true,
-    unique: true, // email should be unique
-    match: [/.+@.+..+/, 'Must match an email address!'], // validate email format
+    unique: true,
+    match: [/.+@.+..+/, 'Must match an email address!'],
   },
   password: {
     type: String,
     required: true,
-    minlength: 5, // password should be at least 5 characters
+    minlength: 5,
   },
   pets: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Pet', // reference to Pet model
+      ref: 'Pet',
     },
   ],
 });
 
-// Hash the password before saving the user to the database
 userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+  if (this.isNew || this.isModified('password') || this.isModified('firstName') || this.isModified('lastName')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
+    this.name = `${this.firstName} ${this.lastName}`;
   }
 
   next();
 });
 
-// Method to validate user's password
-userSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password);
-};
-
-// Create a User model using the userSchema
 const User = model('User', userSchema);
 
-// Export the User model
 module.exports = User;
