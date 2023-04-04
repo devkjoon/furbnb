@@ -10,6 +10,7 @@ const database = process.env.MONGODB_DATABASE;
 const uri = `mongodb+srv://${username}:${password}@${cluster}.uwnpucz.mongodb.net/${database}?retryWrites=true&w=majority`;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.set('strictQuery', false);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
