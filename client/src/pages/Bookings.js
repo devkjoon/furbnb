@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { gql } from '@apollo/client'; // Remove the useQuery import
+import { useMutation, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 
 const CREATE_BOOKING = gql`
   mutation CreateBooking($input: BookingInput!) {
     createBooking(input: $input) {
       _id
-      pet 
+      pet {
+        _id
+        name
+      }
       serviceType
       date
       startTime
       endTime
+    }
+  }
+`;
+
+const GET_PETS = gql`
+  query GetPets {
+    pets {
+      _id
+      name
     }
   }
 `;
@@ -39,6 +51,8 @@ function BookingPage() {
     setPet(event.target.value);
   };
 
+  const { loading, error, data } = useQuery(GET_PETS);
+
   const [createBooking] = useMutation(CREATE_BOOKING);
 
   const handleSubmit = async (event) => {
@@ -64,6 +78,11 @@ function BookingPage() {
     }
     navigate('/schedule');
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
 
   return (
     <div className="booking-cont">
@@ -91,13 +110,18 @@ function BookingPage() {
         <br />
         <label>
           Choose a Pet: 
-          <input type="text" value={pet} onChange={handlePetChange} />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
-}
-
-export default BookingPage;
+          <select value={pet} onChange={handlePetChange}>
+            <option value=''>-- Select a Pet --</option>
+            {data.pets.map(({ _id, name }) => (
+              <option key={_id} value={_id}>{name}</option>
+              ))}
+              </select>
+            </label>
+            <br />
+            <button type="submit">Submit</button>
+            </form>
+            </div>
+            );
+            }
+            
+            export default BookingPage;
