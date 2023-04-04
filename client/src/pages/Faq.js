@@ -2,7 +2,7 @@ import React from 'react';
 
 function Faq() {
   return (
-    <div>
+    <div className='faq-cont'>
       <h1 className='faq-header'>Frequently Asked Questions</h1>
       <ul>
         <li>

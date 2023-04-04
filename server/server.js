@@ -5,6 +5,7 @@ require('dotenv').config({ path: '../.env' });
 const db = require('./config/db');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
+const bodyParser = require("body-parser")
 
 const server = new ApolloServer({
   typeDefs, // GraphQL type definitions
@@ -15,8 +16,10 @@ const server = new ApolloServer({
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(bodyParser.json({limit: '200mb'}));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 
 
 if (process.env.NODE_ENV === 'production') {
