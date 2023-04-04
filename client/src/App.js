@@ -11,7 +11,7 @@ import Gallery from "./pages/Gallery";
 import SignInPage from "./pages/SignInPage";
 import SignUp from "./pages/SignUp";
 import AddPetForm from './components/pages/AddPetForm';
-import PetDashboard from './components/pages/PetDashboard';
+// import PetDashboard from './components/pages/PetDashboard';
 // import CreateUserForm from "./components/pages/CreateUserForm";
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
@@ -52,8 +52,6 @@ function App() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
-
 
   return (
     <ApolloProvider client={client}>
