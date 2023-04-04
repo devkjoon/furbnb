@@ -1395,12 +1395,12 @@ button:hover {
 
 .login-page{
   width: 450px;
-  height: 500px;
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 .login-page img {
