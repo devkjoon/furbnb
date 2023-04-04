@@ -6,6 +6,7 @@ const db = require('./config/db');
 const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schemas');
 const bodyParser = require("body-parser")
+const path = require("path")
 
 const server = new ApolloServer({
   typeDefs, // GraphQL type definitions
