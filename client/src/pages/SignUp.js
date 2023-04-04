@@ -8,12 +8,15 @@ import "../assets/css/index.css"
 
 const CreateUserForm = () => {
   const [user, setUser] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    password: ''
+    address: '',
+    phoneNumber: '',
+    password: '',
+    confirmPassword: ''
   });
 
-  // const { name, email, password } = user;
   const [createUser, {loading}] = useMutation(MUTATION.ADD_USER)
 
   const handleInputChange = e => {
@@ -23,50 +26,89 @@ const CreateUserForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   const {data} = await createUser({
+
+    // Check that the passwords match
+    if (user.password !== user.confirmPassword) {
+      alert("Passwords do not match. Please try again.");
+      return;
+    }
+
+    const {data} = await createUser({
       variables: {...user}
     });
     Auth.login(data.addUser.token)
-    setUser({ name: '', email: '', password: '' });
+    setUser({ firstName: '', lastName: '', email: '', address: '', phoneNumber: '', password: '', confirmPassword: '' });
   };
 
   return (
     <div className="signup-page-cont">
-    <form onSubmit={handleSubmit}>
-      <div className="signup-page">
-        <img src={BoneLogo} alt="Bone Logo"/>
-        <h1>Sign <span className="blue-span">Up</span></h1>
-        <input
-          placeholder="Enter Name"
-          type="text"
-          name="name"
-          value={user.name}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          placeholder="Enter Email"
-          type="email"
-          name="email"
-          value={user.email}
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          placeholder="Enter Password"
-          type="password"
-          name="password"
-          value={user.password}
-          onChange={handleInputChange}
-          required
-        />
-        <button type="submit">Create User</button>
-        <p>
-        Already have an account? <Link to="/signInPage">Sign In</Link>
-      </p>
-      </div>
-    </form>
-  </div>
+      <form onSubmit={handleSubmit}>
+        <div className="signup-page">
+          <img src={BoneLogo} alt="Bone Logo"/>
+          <h1>Sign <span className="blue-span">Up</span></h1>
+          <input
+            placeholder="First Name"
+            type="text"
+            name="firstName"
+            value={user.firstName}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Last Name"
+            type="text"
+            name="lastName"
+            value={user.lastName}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Address"
+            type="text"
+            name="address"
+            value={user.address}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Phone Number"
+            type="text"
+            name="phoneNumber"
+            value={user.phone}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+            value={user.password}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Confirm Password"
+            type="password"
+            name="confirmPassword"
+            value={user.confirmPassword}
+            onChange={handleInputChange}
+            required
+          />
+          <button type="submit">Create User</button>
+          <p>
+            Already have an account? <Link to="/signInPage">Sign In</Link>
+          </p>
+        </div>
+      </form>
+    </div>
   );
 };
 

@@ -42,22 +42,28 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, {name,email,password}) => {
+    addUser: async (parent, {firstName, lastName, password, email}) => {
       // Creates a new user
-      const user = await User.create({name,password,email});
-      const token = signToken(user)
-
-      return {token,user};
+      const user = await User.create({firstName, lastName, password, email});
+      const token = signToken(user);
+      console.log(token)
+  
+      return { token, user };
     },
-
-    login: async(parent,{email,password},context) => {
-      console.log(email, password)
-      const user = await User.findOne({email})
-      const passwordCheck = await user.isCorrectPassword(password)
-      if(!passwordCheck){throw new AuthenticationError("Invalid Password")}
-      const token = signToken(user)
-
-      return {token,user};
+  
+    login: async (parent, {email, password}) => {
+      const user = await User.findOne({email});
+      if (!user) {
+        throw new AuthenticationError("Invalid Email");
+      }
+      const passwordCheck = await user.isCorrectPassword(password);
+      if (!passwordCheck) {
+        throw new AuthenticationError("Invalid Password");
+      }
+      console.log(user)
+      const token = signToken(user);
+  
+      return { token, user };
     },
 
     createPet: async (parent, { name, species, breed, age, weight, allergies, medications, feedingSchedule, image, ownerId }) => {
@@ -71,11 +77,11 @@ const resolvers = {
       return pet;
     },
 
-    updateUser: async (parent, { id, name, email, password }) => {
+    updateUser: async (parent, { id, firstName, lastName, email, password }) => {
       // Updates a user's information by their ID
       const user = await User.findByIdAndUpdate(
         id,
-        { name, email, password },
+        { firstName, lastName, email, password },
         { new: true }
       ).populate('pets');
 

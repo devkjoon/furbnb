@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import PHUserImage from "../assets/images/Alexandria-pfp.PNG";
 import "../assets/css/index.css";
+import Auth from "../utils/auth";
 
 const GET_PETS = gql`
   query GetPets {
@@ -22,19 +23,25 @@ const GET_PETS = gql`
 `;
 
 export default function UserProfile() {
-  const { loading, error, data } = useQuery(
-    GET_PETS
-  );
-  
+  const { loading, error, data } = useQuery(GET_PETS);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+  console.log(Auth.getProfile().data)
 
   return (
     <div className="profile-cont">
       <div className="profile-div">
         <aside>
           <img src={PHUserImage} alt="User Profile" />
-          <h5>FirstName LastName</h5>
+          <div className="user-info">
+            <h5>
+            {Auth.getProfile().data.firstName}{Auth.getProfile().data.lastName}
+            </h5>
+            
+            <p>{Auth.getProfile().data.email}</p>
+          </div>
           <p>1234 Furbnb Rd</p>
           <p>Nashville, TN 37205</p>
           <p>615-123-4567</p>
@@ -45,7 +52,9 @@ export default function UserProfile() {
             <li>Hours: Open 24 hours</li>
             <li>(615) 386-0107</li>
           </ul>
-          <a href="/petlist">Add <span className="blue-span">Pet</span></a>
+          <a href="/petlist">
+            Add <span className="blue-span">Pet</span>
+          </a>
         </aside>
         <div className="profile-info">
           <h1>
