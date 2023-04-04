@@ -1624,6 +1624,33 @@ button:hover {
   font-family: "Rubik", sans-serif;
   line-height: 20px;
 }
+/* privacy page */
+.privacy-page{
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+.hr-privacy {
+  margin-top: -2px;
+  border: none;
+  height: 10px;
+  border-top: 2px solid #848484;
+}
+
+.subCat-privacy {
+  margin: 20px;
+  color: #00be4f;
+}
+
+.h1-privacy{
+  color: #00a4bf;
+}
+
+
+.subCat-privacy + hr {
+  border: none; 
+  border-top: 2px solid #00a4bf;
+}
 
 @media screen and (max-width: 1660px){
   .about-cont h3{
