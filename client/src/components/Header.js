@@ -21,7 +21,9 @@ function Header({ currentPage, handlePageChange }) {
             <p>+1-615-123-4567</p>
           </div>
           <div id="email-info">
-            <img src={EmailIcon} alt="email icon" />
+            <a href="mailto:furbnbcare@gmail.com">
+              <img src={EmailIcon} alt="email icon" />
+            </a>
             <p>furbnbcare@gmail.com</p>
           </div>
         </div>
@@ -107,7 +109,7 @@ function Header({ currentPage, handlePageChange }) {
                 Contact
               </Link>
             </li>
-            
+
             {/* <li className="nav-item">
               <Link
                 to="/petlist"

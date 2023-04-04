@@ -19,7 +19,9 @@ import Profile from "./pages/Profile"
 import Faq from './pages/Faq';
 import OpenJobs from './pages/OpenJobs';
 import Bookings from './pages/Bookings';
+import Schedule from './pages/Schedule';
 import Privacy from './pages/Privacy';
+
 
 let httpLink = createHttpLink({
   uri: '/graphql'
@@ -75,6 +77,7 @@ function App() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/openjobs" element={<OpenJobs />} />
             <Route path="/bookings" element={<Bookings />} />
+            <Route path="/schedule" element={<Schedule />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
           <Footer />
