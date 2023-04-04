@@ -18,7 +18,6 @@ const options = { dateStyle: 'short', timeStyle: 'short' };
 function Schedule() {
     const { loading, error, data } = useQuery(GET_BOOKINGS);
     const bookings = data?.bookings || {};
-    console.log(bookings)
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
