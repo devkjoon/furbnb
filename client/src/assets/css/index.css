@@ -1635,6 +1635,8 @@ button:hover {
 .privacy-page{
   margin-left: 30px;
   margin-bottom: 50px;
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
 }
 
 .hr-privacy {
@@ -1669,6 +1671,11 @@ button:hover {
   .about-cont p{
     font-size: 12px;
   }
+}
+
+.faq-cont {
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
 }
 
 .text-breakFaq hr {
