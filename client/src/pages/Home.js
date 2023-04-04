@@ -10,7 +10,9 @@ function Home() {
       <div id="splash-text-cont">
         <div>
           <h1>The Highest Grade Of Care For Your Loyal Friend</h1>
-          <button>Learn More</button>
+          <a href="/about">
+            <button>Learn More</button>
+          </a>
         </div>
       </div>
       <div id="cards-div">
