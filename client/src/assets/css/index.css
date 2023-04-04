@@ -923,6 +923,11 @@ button:hover {
   border-radius: 30px;
 }
 
+.profile-div .schedule-button{
+  font-size: 25px;
+  margin-top: 15px;
+}
+
 /* Changes Background Color And Text Color Of Add Pet Button */
 .profile-div a:hover {
   cursor: pointer;
@@ -1865,6 +1870,10 @@ button:hover {
     font-size: 8px;
     margin-left: 25px;
   }
+  .profile-div .schedule-button{
+    font-size: 10px;
+    margin-top: 15px;
+  }
 }
 
 @media screen and (max-width: 1028px) {
@@ -2021,6 +2030,10 @@ button:hover {
   .profile-div a{
     font-size: 8px;
     padding: 5px 5px;
+  }
+  .profile-div .schedule-button{
+    font-size: 10px;
+    margin-top: 15px;
   }
   .profile-info h1{
     font-size: 20px;
@@ -2188,6 +2201,10 @@ button:hover {
   .booking-div select{
     margin: 0;
     height: 25px;
+  }
+  .profile-div .schedule-button{
+    font-size: 8px;
+    margin-top: 15px;
   }
 
 
