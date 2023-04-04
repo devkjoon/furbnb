@@ -24,7 +24,7 @@ function Schedule() {
     return (
       <div className="schedule-container">
         {data.bookings.map((booking) => (
-          <div key={booking._id}>
+          <div key={bookings._id}>
             <h2 className='sched-h2'>Your Pets Schedule</h2>
             <h3 className='sched-h3'>{booking.pet}</h3>
             <p className="sched-p">Service Type: {booking.serviceType}</p>
