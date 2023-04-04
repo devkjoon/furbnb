@@ -21,7 +21,11 @@ const CreateUserForm = () => {
 
   const handleInputChange = e => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    if (name === "firstName" || name === "lastName") {
+      setUser({ ...user, [name]: value, name: user.firstName + " " + user.lastName });
+    } else {
+      setUser({ ...user, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -36,6 +40,7 @@ const CreateUserForm = () => {
     const {data} = await createUser({
       variables: {...user}
     });
+    console.log(data)
     Auth.login(data.addUser.token)
     setUser({ firstName: '', lastName: '', email: '', address: '', phoneNumber: '', password: '', confirmPassword: '' });
   };

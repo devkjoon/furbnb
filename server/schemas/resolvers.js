@@ -1,4 +1,3 @@
-// const { AuthenticationError } = require('apollo-server-express');
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Pet, Bookings } = require('../models');
 const { signToken } = require('../utils/auth');
@@ -15,7 +14,7 @@ const resolvers = {
       return await User.findById(id).populate('pets');
     },
 
-    pets: async (parent, args , context, info) => {
+    pets: async (parent, args, context, info) => {
       if (context.user._id) {
         // Returns all pets for the specified user
         return await Pet.find({ owner: context.user._id }).populate('owner');
@@ -24,7 +23,7 @@ const resolvers = {
         return await Pet.find().populate('owner');
       }
     },
- bookings: async (parent, args, context) => {
+    bookings: async (parent, args, context) => {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
@@ -42,17 +41,21 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, {firstName, lastName, password, email}) => {
+    addUser: async (parent, { firstName, lastName, password, email }) => {
       // Creates a new user
-      const user = await User.create({firstName, lastName, password, email});
+      const user = await User.create({ firstName, lastName, password, email });
       const token = signToken(user);
       console.log(token)
-  
+
       return { token, user };
     },
-  
-    login: async (parent, {email, password}) => {
-      const user = await User.findOne({email});
+
+    login: async (parent, { email, password }) => {
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email)) {
+        throw new AuthenticationError("Invalid Email Format");
+      }
+      const user = await User.findOne({ email });
       if (!user) {
         throw new AuthenticationError("Invalid Email");
       }
@@ -60,9 +63,9 @@ const resolvers = {
       if (!passwordCheck) {
         throw new AuthenticationError("Invalid Password");
       }
-      console.log(user)
+      // console.log(user)
       const token = signToken(user);
-  
+
       return { token, user };
     },
 
@@ -119,8 +122,8 @@ const resolvers = {
 
     addPet: async (
       parent,
-      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image }, 
-      context 
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image },
+      context
     ) => {
       // Adds a new pet with its information
       const pet = await Pet.create({
@@ -144,7 +147,7 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
-    
+
       const { pet, serviceType, date, startTime, endTime, notes } = input;
       const { user } = context;
       console.log(pet)
@@ -158,9 +161,9 @@ const resolvers = {
         endTime,
         notes,
       });
-    
+
       const savedBooking = await booking.save();
-    
+
       return savedBooking;
     },
     updateBooking: async (parent, { id, input }, context) => {
@@ -193,22 +196,22 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
-    
+
       const bookingToDelete = await Bookings.findById(id);
-    
+
       if (!bookingToDelete) {
         throw new Error('Booking not found');
       }
-    
+
       if (bookingToDelete.user.toString() !== context.user._id.toString()) {
         throw new AuthenticationError('Not authorized');
       }
-    
+
       const deletedBooking = await bookingToDelete.delete();
-    
+
       return deletedBooking;
     },
-    
+
   },
 };
 

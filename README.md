@@ -28,7 +28,7 @@ JWT_SECRET=mysecret
 npm run dev
 ```
 
-- This will start the server on port 3001 and the client on port 3000. You can access the application by visiting http://localhost:3000 in your web browser.
+- This will start the server on port 4000 and the client on port 3000. You can access the application by visiting http://localhost:3000 in your web browser.
 
 ## Features
 ### Furbnb allows users to:

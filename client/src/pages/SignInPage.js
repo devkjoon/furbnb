@@ -25,9 +25,14 @@ function SignInPage() {
     e.preventDefault();
     try {
       const { data } = await login({
-        variables: { ...user },
+        variables: {
+          email: user.email,
+          password: user.password
+        },
       });
-      Auth.login(data.login.token);
+      const { firstName, lastName, token } = data.login.user;
+      const name = `${firstName} ${lastName}`;
+      Auth.login(token, name);
       setUser({ email: '', password: '' });
       setErrorMessage('');
     } catch (err) {
@@ -35,6 +40,7 @@ function SignInPage() {
       setErrorMessage('Username or password is incorrect.');
     }
   };
+  
 
   return (
     <div className="login-page-cont">
