@@ -66,11 +66,11 @@ function BookingPage() {
   };
 
   return (
-    <div>
-      <h1>Book a Service</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="booking-cont">
+      <h1>Book<span className="black-span">a</span><span className="blue-span">Service</span></h1>
+      <form className='booking-div' onSubmit={handleSubmit}>
         <label>
-          Select a Service:
+          Select a Service: 
           <select value={service} onChange={handleServiceChange}>
             <option value="grooming">Grooming</option>
             <option value="boarding">Boarding</option>
@@ -80,17 +80,17 @@ function BookingPage() {
         </label>
         <br />
         <label>
-          Choose a Start Date and Time:
+          Choose a Start Date and Time: 
           <input type="datetime-local" value={dateTime} onChange={handleDateTimeChange} />
         </label>
         <br />
         <label>
-          Choose an End Date and Time:
+          Choose an End Date and Time: 
           <input type="datetime-local" value={endDate} onChange={handleEndDateChange} />
         </label>
         <br />
         <label>
-          Choose a Pet:
+          Choose a Pet: 
           <input type="text" value={pet} onChange={handlePetChange} />
         </label>
         <br />
