@@ -38,6 +38,11 @@ const resolvers = {
       // Returns a pet and its owner by the pet's ID
       return await Pet.findById(id).populate('owner');
     },
+    Booking: {
+      pet: async (booking) => {
+        return await Pet.findById(booking.pet);
+      },
+    },
   },
 
   Mutation: {
