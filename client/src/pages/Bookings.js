@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client'; // Remove the useQuery import
+import { useNavigate } from 'react-router-dom';
 
 const CREATE_BOOKING = gql`
   mutation CreateBooking($input: BookingInput!) {
@@ -16,6 +17,7 @@ const CREATE_BOOKING = gql`
 `;
 
 function BookingPage() {
+  const navigate = useNavigate();
   const [service, setService] = useState('grooming');
   const [dateTime, setDateTime] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -55,10 +57,12 @@ function BookingPage() {
       });
       console.log(result);
       alert(`Booking request submitted for ${service} from ${dateTime} to ${endDate}`);
+      navigate('/schedule');
     } catch (error) {
       console.error(error);
       alert('Failed to create booking');
     }
+    navigate('/schedule');
   };
 
   return (
