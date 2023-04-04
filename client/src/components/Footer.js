@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import "../assets/css/index.css";
-import "../pages/Faq"
-import "../pages/OpenJobs"
+import "../pages/Faq";
+import "../pages/OpenJobs";
+import "../pages/Privacy";
 
 function Footer() {
   return (
@@ -30,7 +31,7 @@ function Footer() {
           <h3>FAQs and Policies</h3>
           <ul>
             <li><Link to="/Faq">FAQ</Link></li>
-            <li>Privacy Policy</li>
+            <li><Link to="/privacy">Privacy Policy</Link></li>
             <li>Terms and Conditions</li>
           </ul>
         </div>
