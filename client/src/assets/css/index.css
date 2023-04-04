@@ -1254,75 +1254,21 @@ button:hover {
   margin-bottom: 5px;
 }
 
-/* .tier-pricing a {
+.start-now-button {
+  background-color: #b2e2b1;
+  background-image: linear-gradient(to bottom, #b2e2b1, #86c98e);
   color: #fff;
-  background-color: #00b2a8;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 5px;
-} */
-/* 
-.tier-pricing a:hover {
-  background-color: #0069d9;
-} */
-
-.custom-btn {
-  width: 130px;
-  height: 23px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  text-shadow: 1px 1px #555;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
-
-.btn-16 {
   border: none;
-  color: #000;
-}
-.btn-16:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
-  transition: all 0.3s ease;
-}
-.btn-16:hover {
-  color: #000;
-}
-.btn-16:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-.btn-16:active {
-  top: 2px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.tier-pricing a {
-  margin-left: 10px;
+.start-now-button:hover {
+  background-color: #86c98e;
+  background-image: linear-gradient(to bottom, #86c98e, #5ca46e);
 }
 
 @media (max-width: 767px) {
@@ -1623,33 +1569,61 @@ button:hover {
   border: 2px solid #00be4f;
 }
 
-.privacy-page{
-  margin-left: 30px;
-  margin-bottom: 50px;
+
+.jobs-cont{
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: 35%;
+  width: 100vw;
+  align-items: center;
+  padding: 25px 0
 }
 
-.hr-privacy {
-  margin-top: -2px;
-  border: none;
-  height: 10px;
-  border-top: 2px solid #848484;
+.jobs-cont h1{
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  margin: 0 0 25px 0;
+  color:#00be4f
 }
 
-.subCat-privacy {
-  margin: 20px;
-  color: #00be4f;
+.jobs-cont h2{
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color:#00a4bf;
+  font-size: 30px;
+  margin: 0;
 }
 
-.h1-privacy{
-  color: #00a4bf;
+.jobs-list{
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: auto;
+  padding: 0;
 }
 
-
-.subCat-privacy + hr {
-  border: none; 
-  border-top: 2px solid #00a4bf;
+.job-entry{
+  border: 2px solid #00be4f;
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
+.job-entry p{
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.job-entry h5{
+  font-size: 20px;
+}
+
+.job-entry li{
+  font-family: "Rubik", sans-serif;
+  line-height: 20px;
+}
 
 @media screen and (max-width: 1660px){
   .about-cont h3{
@@ -1995,6 +1969,21 @@ button:hover {
   .add-pet-cont .form-group button{
     margin: auto;
   }
+  .jobs-list{
+    width: 90vw;
+  }
+  .job-entry{
+    margin: 10px 0;
+  }
+  .job-entry p{
+    font-size: 10px;
+  }
+  .job-entry h5{
+    font-size: 15px;
+  }
+  .job-entry li{
+    font-size: 10px;;
+  }
 
 }
 
@@ -2008,6 +1997,10 @@ button:hover {
   .why-choose-div{
     width: 90%;
   }
+  .job-entry ul{
+    padding: 0;
+  }
+
 
 }
 
