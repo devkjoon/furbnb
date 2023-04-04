@@ -1569,6 +1569,61 @@ button:hover {
   border: 2px solid #00be4f;
 }
 
+.jobs-cont{
+  background-image: url("../images/paw-trail-grey.jpeg");
+  background-size: cover;
+  background-position: 35%;
+  width: 100vw;
+  align-items: center;
+  padding: 25px 0
+}
+
+.jobs-cont h1{
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  margin: 0 0 25px 0;
+  color:#00be4f
+}
+
+.jobs-cont h2{
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  color:#00a4bf;
+  font-size: 30px;
+  margin: 0;
+}
+
+.jobs-list{
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: auto;
+  padding: 0;
+}
+
+.job-entry{
+  border: 2px solid #00be4f;
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.job-entry p{
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.job-entry h5{
+  font-size: 20px;
+}
+
+.job-entry li{
+  font-family: "Rubik", sans-serif;
+  line-height: 20px;
+}
+
 @media screen and (max-width: 1660px){
   .about-cont h3{
     font-size: 40px;
@@ -1913,6 +1968,21 @@ button:hover {
   .add-pet-cont .form-group button{
     margin: auto;
   }
+  .jobs-list{
+    width: 90vw;
+  }
+  .job-entry{
+    margin: 10px 0;
+  }
+  .job-entry p{
+    font-size: 10px;
+  }
+  .job-entry h5{
+    font-size: 15px;
+  }
+  .job-entry li{
+    font-size: 10px;;
+  }
 
 }
 
@@ -1926,6 +1996,10 @@ button:hover {
   .why-choose-div{
     width: 90%;
   }
+  .job-entry ul{
+    padding: 0;
+  }
+
 
 }
 
