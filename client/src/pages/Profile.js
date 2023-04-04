@@ -60,7 +60,7 @@ export default function UserProfile() {
                   <p>{pet.species}</p>
                   <p>{pet.breed}</p>
                   <p>{pet.gender}</p>
-                  <p>{pet.age} In Year(s)</p>
+                  <p>{pet.age} Year(s)</p>
                 </div>
                 <div className="profile-card-extra-info">
                   <ul>
