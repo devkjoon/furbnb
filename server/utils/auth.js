@@ -10,7 +10,7 @@ module.exports = {
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
-
+console.log("hi")
     if (!token) {
       return req;
     }
@@ -21,11 +21,12 @@ module.exports = {
     } catch {
       console.log('Invalid token');
     }
-
+console.log("helloworld")
     return req;
   },
-  signToken: function ({ email, name, _id }) {
-    const payload = { email, name, _id };
+
+  signToken: function ({ email, firstName, lastName, _id }) {
+    const payload = { email, firstName, lastName, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
