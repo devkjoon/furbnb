@@ -46,6 +46,5 @@ class AuthService {
     window.location.assign('/login');
   }
 }
-export default new AuthService();
-
-  
+const authService = new AuthService();
+export default authService;

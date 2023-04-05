@@ -10,7 +10,6 @@ module.exports = {
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
-console.log("hi")
     if (!token) {
       return req;
     }
@@ -21,7 +20,6 @@ console.log("hi")
     } catch {
       console.log('Invalid token');
     }
-console.log("helloworld")
     return req;
   },
 

@@ -23,13 +23,12 @@ const AddPetForm = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-
+    
         try {
-            console.log(petFormData)
-            const { data } = await addPet({
+            await addPet({
                 variables: { ...petFormData, age: parseInt(petFormData.age), weight: parseInt(petFormData.weight) },
             });
-
+    
             setPetFormData({
                 name: '',
                 species: '',
@@ -42,7 +41,7 @@ const AddPetForm = () => {
                 feedingSchedule: '',
                 image: '', // Reset image in the state
             });
-
+    
             navigate('/Profile');
         } catch (err) {
             console.error(err);

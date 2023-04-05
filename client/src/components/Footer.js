@@ -13,7 +13,7 @@ function Footer() {
           <h3>Contact Us</h3>
           <ul>
             <li>Phone: 615-123-4567</li>
-            <li><a target="_blank" href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
+            <li><a target= "blank" href="mailto:furbnbcare@gmail.com">Email: furbnbcare@gmail.com</a></li>
             <li>Hours: Weekdays:	7 AM–6 PM</li>
               <li>Weekends:	8 AM–5 PM</li>
           </ul>
@@ -21,10 +21,9 @@ function Footer() {
         <div>
           <h3>Social Sites</h3>
           <ul>
-            <li> <a target="_blank" href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
-            <li> <a target="_blank" href="https://twitter.com/furbnb">Twitter</a></li>
-            <li> <a target="_blank" href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
-            <li> <a target="_blank" href="">LinkedIn</a></li>
+            <li> <a target= "blank" href="https://www.facebook.com/profile.php?id=100090071724908">Facebook</a></li>
+            <li> <a target= "blank" href="https://twitter.com/furbnb">Twitter</a></li>
+            <li> <a target= "blank" href="https://www.instagram.com/furbnb_pets/">Instagram</a></li>
           </ul>
         </div>
         <div>
@@ -47,7 +46,6 @@ function Footer() {
           <ul>
             <li>
               Available Jobs: <a href="/OpenJobs">Click Here</a>
-              {/* <li><Link to="/openJobs">Available Jobs</Link></li> */}
             </li>
             <li>
             Meet Our Staff: <a href="/about#team-members">Click Here</a>

@@ -110,17 +110,6 @@ function Header({ currentPage, handlePageChange }) {
               </Link>
             </li>
 
-            {/* <li className="nav-item">
-              <Link
-                to="/petlist"
-                className={
-                  currentPage === "PetList" ? "nav-link active" : "nav-link"
-                }
-                onClick={() => handlePageChange("Pet List")}
-              >
-                PetList
-              </Link>
-            </li> */}
             {loggedIn && (
               <>
                 <li className="nav-item">

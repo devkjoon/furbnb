@@ -14,7 +14,7 @@ function SignInPage() {
   
   const [errorMessage, setErrorMessage] = useState('');
 
-  const [login, { loading }] = useMutation(MUTATION.LOGIN_USER);
+  const [login] = useMutation(MUTATION.LOGIN_USER);
 
   const handleInputChange = e => {
     const { name, value } = e.target;

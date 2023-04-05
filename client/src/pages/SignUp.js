@@ -17,7 +17,7 @@ const CreateUserForm = () => {
     confirmPassword: ''
   });
 
-  const [createUser, {loading}] = useMutation(MUTATION.ADD_USER)
+  const [createUser] = useMutation(MUTATION.ADD_USER)
 
   const handleInputChange = e => {
     const { name, value } = e.target;
