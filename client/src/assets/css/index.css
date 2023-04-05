@@ -1195,27 +1195,27 @@ button:hover {
   .services {
     margin: 30px;
   }
-  
+
   .services-title {
     font-size: 2rem;
   }
-  
+
   .services-list img {
     width: 80px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  
+
   .service-item {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
   }
-  
+
   .service-name {
     font-size: 1.2rem;
   }
-  
+
   .service-description {
     font-size: 1rem;
   }
@@ -1297,7 +1297,7 @@ button:hover {
 }
 
 .tier-title {
-  font-size: 1.5rem;
+  font-size: 20px;
   margin-top: 0;
   margin-bottom: 10px;
   text-decoration: underline;
@@ -1321,6 +1321,7 @@ button:hover {
   background-color: #b2e2b1;
   background-image: linear-gradient(to bottom, #b2e2b1, #86c98e);
   color: #fff;
+  height: 50px;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -1334,71 +1335,71 @@ button:hover {
   background-image: linear-gradient(to bottom, #86c98e, #5ca46e);
 }
 
-@media (min-width: 768px) and (max-width: 1223px) {
-  .pricing-section {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-  }
-
-  .pricing-image {
-    width: 200px;
-  }
-
-  .pricing-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing-tier {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .tier-pricing {
-    width: 80%;
-    text-align: center;
-  }
-
-  .start-now-button {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .pricing-section {
-    flex-direction: column;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-  }
-
-  .pricing-image {
-    align-self: center;
-    margin-bottom: 20px;
-  }
-
+@media screen and (max-width: 1024px) {
   .pricing-banner {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
 
-  .pricing-tier {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .tier-pricing {
+  .pricing-section {
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
   }
 
-  .start-now-button {
-    margin-top: 10px;
+  .pricing-image {
+    width: 200px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .pricing-tier {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .pricing-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .pricing-banner {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pricing-image {
+    width: 150px;
+  }
+
+  .pricing-section {
+    margin: auto;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .pricing-tier {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .tier-title {
+    font-size: 1.2rem;
+  }
+
+  .tier-service {
+    font-size: 1rem;
   }
 }
 
