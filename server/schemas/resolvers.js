@@ -79,6 +79,29 @@ const resolvers = {
 
       return { token, user };
     },
+    
+    addPet: async (
+      parent,
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image },
+      context
+    ) => {
+      // Adds a new pet with its information
+      const pet = await Pet.create({
+        name,
+        species,
+        breed,
+        gender,
+        age,
+        weight,
+        allergies,
+        medications,
+        feedingSchedule,
+        image,
+        owner: context.user._id
+      });
+
+      return pet;
+    },
 
     createPet: async (parent, { name, species, breed, age, weight, allergies, medications, feedingSchedule, image, ownerId }) => {
       // Creates a new pet

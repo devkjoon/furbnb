@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
-
 const CREATE_BOOKING = gql`
   mutation CreateBooking($input: BookingInput!) {
     createBooking(input: $input) {
@@ -14,7 +13,6 @@ const CREATE_BOOKING = gql`
     }
   }
 `;
-
 const GET_PETS = gql`
   query GetPets {
     pets {
@@ -23,6 +21,7 @@ const GET_PETS = gql`
     }
   }
 `;
+
 
 const GET_BOOKINGS = gql`
 query GetBookings {
@@ -40,44 +39,34 @@ query GetBookings {
   }
 }
 `;
+
 function BookingPage() {
   const navigate = useNavigate();
   const [service, setService] = useState('grooming');
   const [dateTime, setDateTime] = useState('');
   const [endDate, setEndDate] = useState('');
   const [pet, setPet] = useState('');
-
   const handleServiceChange = (event) => {
     setService(event.target.value);
   };
-
   const handleDateTimeChange = (event) => {
     setDateTime(event.target.value);
   };
-
   const handleEndDateChange = (event) => {
     setEndDate(event.target.value);
   };
-
   const handlePetChange = (event) => {
     const selectedPetId = event.target.value;
     const selectedPet = data.pets.find(pet => pet._id === selectedPetId);
-    setPet(selectedPetId);
+    setPet(selectedPet);
   };
+  
  
 
   const { loading, error, data } = useQuery(GET_PETS);
 
-  const [createBooking] = useMutation(CREATE_BOOKING, {
-    onCompleted: () => {
-      // Refetch the bookings query after the booking has been created
-      refetch();
-      alert(`Booking request submitted for ${service} from ${dateTime} to ${endDate}`);
-      navigate('/schedule');
-    }
-  });
+  const [createBooking] = useMutation(CREATE_BOOKING);
 
-  const { loading: loadingBookings, error: errorBookings, data: dataBookings, refetch } = useQuery(GET_BOOKINGS);
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -88,22 +77,25 @@ function BookingPage() {
             serviceType: service,
             date: dateTime,
             startTime: dateTime,
-            endTime: endDate,
+            endTime: endDate
           },
         },
       });      
       console.log(result);
+      alert(`Booking request submitted for ${service} from ${dateTime} to ${endDate}`);
+      navigate('/schedule');
     } catch (error) {
       console.error(error);
       alert('Failed to create booking');
     }
+    navigate('/schedule');
   };
-  
 
-  if (loading || loadingBookings) return <p>Loading...</p>;
-  if (error || errorBookings) return <p>Error :(</p>;
 
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error</p>;
+
+  // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
 
   return (
     <div className="booking-cont">
@@ -144,5 +136,4 @@ function BookingPage() {
     </div>
   );
 }
-
 export default BookingPage;

@@ -1,13 +1,4 @@
 import { gql } from '@apollo/client';
-const GET_PETS = gql`
-  query GetPets {
-    pets {
-      ...PetFields
-    }
-  }
-  ${PET_FIELDS}
-`;
-
 export const PET_FIELDS = gql`
   fragment PetFields on Pet {
     _id
@@ -19,6 +10,19 @@ export const PET_FIELDS = gql`
     weight
     allergies
     medications
-    feedingSchedule
+    feedingSchedule {
+      type
+      description
+    }
+    owner {
+      _id
+      name
+      email
+    }
+    vet {
+      _id
+      name
+      phone
+    }
   }
 `;

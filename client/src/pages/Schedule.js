@@ -1,15 +1,19 @@
 import { gql, useQuery } from '@apollo/client';
 
 const GET_BOOKINGS = gql`
-  query GetBookings {
+  query {
     bookings {
       _id
-      pet 
       serviceType
       date
       startTime
       endTime
       notes
+      petInfo {
+        name
+        age
+        breed
+      }
     }
   }
 `;
