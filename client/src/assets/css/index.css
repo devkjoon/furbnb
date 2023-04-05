@@ -1285,31 +1285,42 @@ button:hover {
 }
 
 @media (max-width: 767px) {
+  .pricing-section {
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  .pricing-image {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .pricing-banner {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
   .pricing-tier {
-    margin-left: -20px;
-    margin-right: -20px;
-    border-radius: 0;
-    padding: 10px;
-  }
-
-  .tier-title {
-    font-size: 1.2rem;
-  }
-
-  .tier-service {
-    font-size: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    margin-bottom: 20px;
   }
 
   .tier-pricing {
-    width: 80%;
-    font-size: 1rem;
-    font-family: 'Brush Script MT', 'Times New Roman', san-serif;
+    width: 100%;
   }
 
-  .tier-pricing a {
-    font-size: 1rem;
+  .start-now-button {
+    margin-top: 10px;
   }
 }
+
 
 .contact-container {
   max-width: 80vw;
