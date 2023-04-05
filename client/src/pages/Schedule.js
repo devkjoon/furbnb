@@ -13,20 +13,34 @@ const GET_BOOKINGS = gql`
     }
   }
 `;
+const GET_PETS = gql`
+  query GetPets {
+    pets {
+      _id
+      name
+    }
+  }
+`;
 
 const options = { dateStyle: 'short', timeStyle: 'short' };
 function Schedule() {
-    const { loading, error, data } = useQuery(GET_BOOKINGS);
-    const bookings = data?.bookings || {};
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
-
+    const { loading: loadingBookings, error: errorBookings, data: dataBookings } = useQuery(GET_BOOKINGS);
+    const { loading: loadingPets, error: errorPets, data: dataPets } = useQuery(GET_PETS);
+  
+    if (loadingBookings || loadingPets) return <p>Loading...</p>;
+    if (errorBookings || errorPets) return <p>Error :(</p>;
+  
+    const pets = {};
+    dataPets.pets.forEach((pet) => {
+      pets[pet._id] = pet.name;
+    });
+  
     return (
       <div className="schedule-container">
-        {data.bookings.map((booking) => (
-          <div key={bookings._id}>
-            <h2 className='sched-h2'>Your Pets Schedule</h2>
-            <h3 className='sched-h3'>{booking.pet}</h3>
+        <h2 className='sched-h2'>Your Pets Schedule</h2>
+        {dataBookings.bookings.map((booking) => (
+          <div key={booking._id}>
+            <h3 className='sched-h3'>{pets[booking.pet]}</h3>
             <p className="sched-p">Service Type: {booking.serviceType}</p>
             <p className="sched-p">Start Time: {new Date(booking.startTime).toLocaleString('en-US', options)}</p>
             <p className="sched-p">End Time: {new Date(booking.endTime).toLocaleString('en-US', options)}</p>
@@ -35,12 +49,6 @@ function Schedule() {
         ))}
       </div>
     );
-    
-}
-
-export default Schedule;
-
-
-
-
-
+  }
+  
+  export default Schedule;
