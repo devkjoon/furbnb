@@ -7,10 +7,6 @@ const CREATE_BOOKING = gql`
   mutation CreateBooking($input: BookingInput!) {
     createBooking(input: $input) {
       _id
-      pet {
-        _id
-        name
-      }
       serviceType
       date
       startTime
@@ -48,8 +44,11 @@ function BookingPage() {
   };
 
   const handlePetChange = (event) => {
-    setPet(event.target.value);
+    const selectedPetId = event.target.value;
+    const selectedPet = data.pets.find(pet => pet._id === selectedPetId);
+    setPet(selectedPetId);
   };
+ 
 
   const { loading, error, data } = useQuery(GET_PETS);
 
@@ -61,14 +60,14 @@ function BookingPage() {
       const result = await createBooking({
         variables: {
           input: {
-            pet,
+            pet: pet,
             serviceType: service,
             date: dateTime,
             startTime: dateTime,
             endTime: endDate
           },
         },
-      });
+      });      
       console.log(result);
       alert(`Booking request submitted for ${service} from ${dateTime} to ${endDate}`);
       navigate('/schedule');
@@ -78,6 +77,7 @@ function BookingPage() {
     }
     navigate('/schedule');
   };
+  
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -89,7 +89,7 @@ function BookingPage() {
       <h1>Book<span className="black-span">a</span><span className="blue-span">Service</span></h1>
       <form className='booking-div' onSubmit={handleSubmit}>
         <label>
-          Select a Service: 
+          Select a Service:
           <select value={service} onChange={handleServiceChange}>
             <option value="grooming">Grooming</option>
             <option value="boarding">Boarding</option>
@@ -99,29 +99,29 @@ function BookingPage() {
         </label>
         <br />
         <label>
-          Choose a Start Date and Time: 
+          Choose a Start Date and Time:
           <input type="datetime-local" value={dateTime} onChange={handleDateTimeChange} />
         </label>
         <br />
         <label>
-          Choose an End Date and Time: 
+          Choose an End Date and Time:
           <input type="datetime-local" value={endDate} onChange={handleEndDateChange} />
         </label>
         <br />
         <label>
-          Choose a Pet: 
+          Choose a Pet:
           <select value={pet} onChange={handlePetChange}>
             <option value=''>-- Select a Pet --</option>
-            {data.pets.map(({ _id, name }) => (
-              <option key={_id} value={_id}>{name}</option>
-              ))}
-              </select>
-            </label>
-            <br />
-            <button type="submit">Submit</button>
-            </form>
-            </div>
-            );
-            }
-            
-            export default BookingPage;
+            {data && data.pets.map(pet => (
+              <option key={pet._id} value={pet._id}>{pet.name}</option>
+            ))}
+          </select>
+        </label>
+        <br />
+        <button type='submit'>Book Service</button>
+      </form>
+    </div>
+  );
+}
+
+export default BookingPage;
