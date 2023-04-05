@@ -25,19 +25,21 @@ const GET_PETS = gql`
 `;
 
 const GET_BOOKINGS = gql`
-  query GetBookings {
-    bookings {
+query GetBookings {
+  bookings {
+    _id
+    pet {
       _id
-      pet
-      serviceType
-      date
-      startTime
-      endTime
-      notes
+      name
     }
+    serviceType
+    date
+    startTime
+    endTime
+    notes
   }
+}
 `;
-
 function BookingPage() {
   const navigate = useNavigate();
   const [service, setService] = useState('grooming');
