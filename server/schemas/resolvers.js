@@ -1,5 +1,5 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Pet, Bookings } = require('../models');
+const { AuthenticationError, UserInputError } = require('apollo-server-express');
+const { User, Pet, Booking } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -23,6 +23,7 @@ const resolvers = {
         return await Pet.find().populate('owner');
       }
     },
+
     bookings: async () => {
       const bookings = await Booking.find();
       return bookings.map((booking) => {
@@ -33,24 +34,20 @@ const resolvers = {
           date: booking.date,
           startTime: booking.startTime,
           endTime: booking.endTime,
-          notes: booking.notes,
-          async petInfo() {
-            const pet = await Pet.findById(booking.pet);
-            return pet;
-          }
+          notes: booking.notes
         };
       });
     },
 
-    Booking: {
-      petInfo: async (booking) => {
-        const pet = await Pet.findById(booking.pet);
-        return pet;
-      },
-    },
     pet: async (parent, { id }) => {
       // Returns a pet and its owner by the pet's ID
       return await Pet.findById(id).populate('owner');
+    },
+  },
+  Booking: {
+    petInfo: async (booking) => {
+      const pet = await Pet.findById(booking.pet);
+      return pet;
     },
   },
   Mutation: {
