@@ -1,3 +1,4 @@
 const User = require('./User');
 const Pet = require('./Pet');
-module.exports = { User, Pet };
+const Bookings = require('./Bookings');
+module.exports = { User, Pet, Bookings };

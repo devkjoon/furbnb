@@ -1,6 +1,5 @@
-// const { AuthenticationError } = require('apollo-server-express');
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Pet, Bookings } = require('../models');
+const { AuthenticationError, UserInputError } = require('apollo-server-express');
+const { User, Pet, Booking } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -15,7 +14,7 @@ const resolvers = {
       return await User.findById(id).populate('pets');
     },
 
-    pets: async (parent, args , context, info) => {
+    pets: async (parent, args, context, info) => {
       if (context.user._id) {
         // Returns all pets for the specified user
         return await Pet.find({ owner: context.user._id }).populate('owner');
@@ -24,35 +23,49 @@ const resolvers = {
         return await Pet.find().populate('owner');
       }
     },
- bookings: async (parent, args, context) => {
-      if (!context.user) {
-        throw new AuthenticationError('Not authenticated');
-      }
 
-      const bookings = await Bookings.find({ user: context.user._id })
-        .populate('user')
-        .populate('pet');
-
-      return bookings;
+    bookings: async () => {
+      const bookings = await Booking.find();
+      return bookings.map((booking) => {
+        return {
+          _id: booking._id.toString(),
+          pet: booking.pet.toString(),
+          serviceType: booking.serviceType,
+          date: booking.date,
+          startTime: booking.startTime,
+          endTime: booking.endTime,
+          notes: booking.notes
+        };
+      });
     },
+
     pet: async (parent, { id }) => {
       // Returns a pet and its owner by the pet's ID
       return await Pet.findById(id).populate('owner');
     },
   },
-
+  Booking: {
+    petInfo: async (booking) => {
+      const pet = await Pet.findById(booking.pet);
+      return pet;
+    },
+  },
   Mutation: {
-    addUser: async (parent, {firstName, lastName, password, email}) => {
+    addUser: async (parent, { firstName, lastName, password, email }) => {
       // Creates a new user
-      const user = await User.create({firstName, lastName, password, email});
+      const user = await User.create({ firstName, lastName, password, email });
       const token = signToken(user);
       console.log(token)
-  
+
       return { token, user };
     },
-  
-    login: async (parent, {email, password}) => {
-      const user = await User.findOne({email});
+
+    login: async (parent, { email, password }) => {
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email)) {
+        throw new AuthenticationError("Invalid Email Format");
+      }
+      const user = await User.findOne({ email });
       if (!user) {
         throw new AuthenticationError("Invalid Email");
       }
@@ -60,9 +73,9 @@ const resolvers = {
       if (!passwordCheck) {
         throw new AuthenticationError("Invalid Password");
       }
-      console.log(user)
+      // console.log(user)
       const token = signToken(user);
-  
+
       return { token, user };
     },
 
@@ -99,111 +112,55 @@ const resolvers = {
       return pet;
     },
 
-    deleteUser: async (parent, { id }) => {
-      // Deletes a user by their ID
-      const user = await User.findByIdAndDelete(id);
-
-      return user;
-    },
-
     deletePet: async (parent, { id }) => {
-      // Deletes a pet by its ID and removes its ID from the owner's list of pets
+      // Deletes a pet by its ID
       const pet = await Pet.findByIdAndDelete(id);
 
-      await User.findByIdAndUpdate(pet.owner, {
-        $pull: { pets: pet._id },
-      });
+      // Removes the pet's ID from the owner's list of pets
+      await User.findByIdAndUpdate(pet.owner, { $pull: { pets: id } });
 
       return pet;
     },
 
-    addPet: async (
-      parent,
-      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image }, 
-      context 
-    ) => {
-      // Adds a new pet with its information
-      const pet = await Pet.create({
-        name,
-        species,
-        breed,
-        gender,
-        age,
-        weight,
-        allergies,
-        medications,
-        feedingSchedule,
-        image,
-        owner: context.user._id
+    createBooking: async (parent, args, context) => {
+      const { petName, serviceType, date, startTime, endTime, notes } = args.input;
+      const pet = await Pet.findOne({ name: petName });
+
+      if (!pet) {
+        throw new UserInputError('Invalid input', {
+          invalidArgs: ['petName'],
+        });
+      }
+
+      const booking = new Booking({
+        pet,
+        serviceType,
+        date,
+        startTime,
+        endTime,
+        notes,
       });
 
-      return pet;
-    },
-
-    createBooking: async (parent, { input }, context) => {
-      if (!context.user) {
-        throw new AuthenticationError('Not authenticated');
-      }
-
-      const newBooking = new Bookings({
-        user: context.user._id,
-        pet: input.pet,
-        serviceType: input.serviceType,
-        date: input.date,
-        startTime: input.startTime,
-        endTime: input.endTime,
-        notes: input.notes,
-      });
-
-      const savedBooking = await newBooking.save();
-
-      return savedBooking;
-    },
-    updateBooking: async (parent, { id, input }, context) => {
-      if (!context.user) {
-        throw new AuthenticationError('Not authenticated');
-      }
-
-      const bookingToUpdate = await Bookings.findById(id);
-
-      if (!bookingToUpdate) {
-        throw new Error('Booking not found');
-      }
-
-      if (bookingToUpdate.user.toString() !== context.user._id.toString()) {
-        throw new AuthenticationError('Not authorized');
-      }
-
-      bookingToUpdate.pet = input.pet || bookingToUpdate.pet;
-      bookingToUpdate.serviceType = input.serviceType || bookingToUpdate.serviceType;
-      bookingToUpdate.date = input.date || bookingToUpdate.date;
-      bookingToUpdate.startTime = input.startTime || bookingToUpdate.startTime;
-      bookingToUpdate.endTime = input.endTime || bookingToUpdate.endTime;
-      bookingToUpdate.notes = input.notes || bookingToUpdate.notes;
-
-      const updatedBooking = await bookingToUpdate.save();
-
-      return updatedBooking;
+      try {
+        const savedBooking = await booking.save();
+        await pet.bookings.push(savedBooking);
+        await pet.save();
+        return savedBooking;
+      } catch (err) {
+        throw new UserInputError(err.message, {
+          invalidArgs: args.input,
+        });
+      };
     },
     deleteBooking: async (parent, { id }, context) => {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
-    
-      const bookingToDelete = await Bookings.findById(id);
-    
-      if (!bookingToDelete) {
-        throw new Error('Booking not found');
-      }
-    
-      if (bookingToDelete.user.toString() !== context.user._id.toString()) {
-        throw new AuthenticationError('Not authorized');
-      }
-    
-      const deletedBooking = await bookingToDelete.delete();
-    
-      return deletedBooking;
-    },    
+
+      const booking = await Bookings.findByIdAndDelete(id);
+
+      return booking;
+    },
   },
 };
 

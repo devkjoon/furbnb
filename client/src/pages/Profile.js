@@ -55,6 +55,9 @@ export default function UserProfile() {
           <a href="/petlist">
             Add <span className="blue-span">Pet</span>
           </a>
+          <a className="schedule-button" href="/schedule">
+            Check <span className="blue-span">Schedule</span>
+          </a>
         </aside>
         <div className="profile-info">
           <h1>
@@ -69,7 +72,7 @@ export default function UserProfile() {
                   <p>{pet.species}</p>
                   <p>{pet.breed}</p>
                   <p>{pet.gender}</p>
-                  <p>{pet.age} In Year(s)</p>
+                  <p>{pet.age} Year(s)</p>
                 </div>
                 <div className="profile-card-extra-info">
                   <ul>
