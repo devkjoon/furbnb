@@ -1175,6 +1175,13 @@ button:hover {
   align-self: flex-end;
 }
 
+@media screen and (max-width: 1220px) {
+  .service-item {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .service-item {
