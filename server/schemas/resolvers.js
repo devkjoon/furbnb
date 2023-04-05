@@ -1,6 +1,8 @@
 const { AuthenticationError, UserInputError } = require('apollo-server-express');
-const { User, Pet, Booking } = require('../models');
+const { User, Pet, Bookings } = require('../models');
 const { signToken } = require('../utils/auth');
+const bcrypt = require('bcrypt');
+
 
 const resolvers = {
   Query: {
@@ -25,7 +27,7 @@ const resolvers = {
     },
 
     bookings: async () => {
-      const bookings = await Booking.find();
+      const bookings = await Bookings.find();
       return bookings.map((booking) => {
         return {
           _id: booking._id.toString(),
@@ -69,15 +71,15 @@ const resolvers = {
       if (!user) {
         throw new AuthenticationError("Invalid Email");
       }
-      const passwordCheck = await user.isCorrectPassword(password);
-      if (!passwordCheck) {
+      const hashedPassword = user.password;
+      const passwordMatch = await bcrypt.compare(password, hashedPassword);
+      if (!passwordMatch) {
         throw new AuthenticationError("Invalid Password");
       }
-      // console.log(user)
       const token = signToken(user);
-
       return { token, user };
     },
+    
     
     addPet: async (
       parent,
