@@ -875,7 +875,7 @@ button:hover {
   font-size: 25px;
   margin: 5px;
   font-family: "Nunito", sans-serif;
-  color:#00be4f;
+  color: #00be4f;
   text-align: center;
 }
 
@@ -923,7 +923,7 @@ button:hover {
   border-radius: 30px;
 }
 
-.profile-div .schedule-button{
+.profile-div .schedule-button {
   font-size: 25px;
   margin-top: 15px;
 }
@@ -979,7 +979,7 @@ button:hover {
 }
 
 
-.profile-card:hover{
+.profile-card:hover {
   cursor: pointer;
 }
 
@@ -1091,12 +1091,15 @@ button:hover {
   font-size: 15px;
   margin: 0;
 }
-.footer-cont a{
-  color:white;
+
+.footer-cont a {
+  color: white;
 }
-.footer-cont a:hover{
+
+.footer-cont a:hover {
   cursor: pointer;
 }
+
 /* Styling for the entire page */
 /* body {
   font-family: Arial, sans-serif;
@@ -1192,7 +1195,7 @@ button:hover {
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .pricing-image {
@@ -1206,16 +1209,16 @@ button:hover {
 .pricing-banner {
   width: 60%;
   margin-left: 20%;
-  margin-right: 20%;  
+  margin-right: 20%;
   align-items: center;
 }
 
 .pricing-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background: url(../images/paw-trail-grey.jpeg);
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/paw-trail-grey.jpeg);
 }
 
 .pricing-tier {
@@ -1284,6 +1287,37 @@ button:hover {
   background-image: linear-gradient(to bottom, #86c98e, #5ca46e);
 }
 
+@media (min-width: 768px) and (max-width: 1223px) {
+  .pricing-section {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  .pricing-image {
+    width: 200px;
+  }
+
+  .pricing-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-tier {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .tier-pricing {
+    width: 80%;
+    text-align: center;
+  }
+
+  .start-now-button {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 767px) {
   .pricing-section {
     flex-direction: column;
@@ -1320,7 +1354,6 @@ button:hover {
     margin-top: 10px;
   }
 }
-
 
 .contact-container {
   max-width: 80vw;
@@ -1409,7 +1442,7 @@ button:hover {
   background-position: -10%;
 }
 
-.login-page{
+.login-page {
   width: 450px;
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
@@ -1429,20 +1462,20 @@ button:hover {
   top: 25px;
 }
 
-.login-page h1{
+.login-page h1 {
   font-family: "Nunito", sans-serif;
   font-size: 45px;
-  color:#00be4f;
+  color: #00be4f;
   margin-bottom: 0;
 }
 
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form-group input{
+.form-group input {
   width: 300px;
   height: 50px;
   margin: 7px 0;
@@ -1452,7 +1485,7 @@ button:hover {
   padding-left: 10px;
 }
 
-.login-page button{
+.login-page button {
   width: 250px;
   height: 50px;
   margin: 10px 0;
@@ -1463,11 +1496,11 @@ button:hover {
   font-size: 25px;
 }
 
-.login-page a:hover{
+.login-page a:hover {
   cursor: pointer;
 }
 
-.signup-page-cont{
+.signup-page-cont {
   background-color: white;
   width: 100vw;
   height: 85vh;
@@ -1478,7 +1511,7 @@ button:hover {
   background-position: -10%;
 }
 
-.signup-page{
+.signup-page {
   width: 450px;
   height: 600px;
   background-color: rgb(235, 235, 235);
@@ -1489,7 +1522,7 @@ button:hover {
   margin-top: 50px;
 }
 
-.signup-page img{
+.signup-page img {
   width: 75px;
   height: 75px;
   background-color: white;
@@ -1499,14 +1532,14 @@ button:hover {
   top: 25px;
 }
 
-.signup-page h1{
+.signup-page h1 {
   font-family: "Nunito", sans-serif;
   font-size: 45px;
-  color:#00be4f;
+  color: #00be4f;
   margin-bottom: 0;
 }
 
-.signup-page input{
+.signup-page input {
   width: 300px;
   height: 40px;
   margin: 5px 0;
@@ -1516,7 +1549,7 @@ button:hover {
   padding-left: 10px;
 }
 
-.signup-page button{
+.signup-page button {
   width: 250px;
   height: 50px;
   margin: 10px 0 10px 0px;
@@ -1527,12 +1560,12 @@ button:hover {
   font-size: 25px;
 }
 
-.signup-page p{
+.signup-page p {
   position: relative;
   bottom: 10px;
 }
 
-.add-pet-cont{
+.add-pet-cont {
   width: 100vw;
   background-image: url("../images/paw-trail-grey.jpeg");
   background-size: cover;
@@ -1540,15 +1573,15 @@ button:hover {
   padding: 25px 0;
 }
 
-.add-pet-cont h2{
-  color:#00be4f;
+.add-pet-cont h2 {
+  color: #00be4f;
   font-family: "Nunito", sans-serif;
   font-size: 50px;
   text-align: center;
   margin: 0;
 }
 
-.add-pet-cont .form-group{
+.add-pet-cont .form-group {
   width: 800px;
   margin: auto;
   display: flex;
@@ -1557,7 +1590,7 @@ button:hover {
   justify-content: space-evenly;
 }
 
-.add-pet-cont .form-group textarea{
+.add-pet-cont .form-group textarea {
   resize: none;
   border: 2px solid #00a4bf;
   width: 500px;
@@ -1568,7 +1601,7 @@ button:hover {
   font-size: 20px;
 }
 
-.add-pet-cont button{
+.add-pet-cont button {
   width: 300px;
   height: 60px;
   background-color: #00a4bf;
@@ -1579,22 +1612,22 @@ button:hover {
   margin: 0 100px;
 }
 
-.add-pet-cont button:hover{
+.add-pet-cont button:hover {
   background-color: #00be4f;
 }
 
-.form-group input:focus{
+.form-group input:focus {
   outline: none;
   border: 2px solid #00be4f;
 }
 
-.form-group textarea:focus{
+.form-group textarea:focus {
   outline: none;
   border: 2px solid #00be4f;
 }
 
 
-.jobs-cont{
+.jobs-cont {
   background-image: url("../images/paw-trail-grey.jpeg");
   background-size: cover;
   background-position: 35%;
@@ -1603,23 +1636,23 @@ button:hover {
   padding: 25px 0
 }
 
-.jobs-cont h1{
+.jobs-cont h1 {
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-size: 50px;
   margin: 0 0 25px 0;
-  color:#00be4f
+  color: #00be4f
 }
 
-.jobs-cont h2{
+.jobs-cont h2 {
   text-align: center;
   font-family: "Nunito", sans-serif;
-  color:#00a4bf;
+  color: #00a4bf;
   font-size: 30px;
   margin: 0;
 }
 
-.jobs-list{
+.jobs-list {
   display: flex;
   flex-direction: column;
   width: 70vw;
@@ -1627,7 +1660,7 @@ button:hover {
   padding: 0;
 }
 
-.job-entry{
+.job-entry {
   border: 2px solid #00be4f;
   margin: 25px 0;
   padding: 25px;
@@ -1635,21 +1668,22 @@ button:hover {
   background-color: rgb(255, 255, 255);
 }
 
-.job-entry p{
+.job-entry p {
   text-align: center;
   font-family: "Rubik", sans-serif;
 }
 
-.job-entry h5{
+.job-entry h5 {
   font-size: 20px;
 }
 
-.job-entry li{
+.job-entry li {
   font-family: "Rubik", sans-serif;
   line-height: 20px;
 }
+
 /* privacy page */
-.privacy-page{
+.privacy-page {
   margin-left: 30px;
   margin-bottom: 50px;
   background-image: url("../images/paw-trail-grey.jpeg");
@@ -1668,13 +1702,13 @@ button:hover {
   color: #00be4f;
 }
 
-.h1-privacy{
+.h1-privacy {
   color: #00a4bf;
 }
 
 
-.subCat-privacy + hr {
-  border: none; 
+.subCat-privacy+hr {
+  border: none;
   border-top: 2px solid #00a4bf;
 }
 
@@ -1690,7 +1724,7 @@ button:hover {
   color: #00a4bf;
 }
 
-.sched-h3{
+.sched-h3 {
   font-size: 1.5rem;
 }
 
@@ -1700,7 +1734,7 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
-.booking-cont{
+.booking-cont {
   width: 100vw;
   height: 70vh;
   background-image: url("../images/paw-trail-grey.jpeg");
@@ -1709,16 +1743,16 @@ button:hover {
   padding-top: 25px
 }
 
-.booking-cont h1{
+.booking-cont h1 {
   text-align: center;
-  color:#00be4f;
+  color: #00be4f;
   font-family: "Nunito", sans-serif;
   font-size: 50px;
   margin: 0 0 50px 0;
 }
 
-.booking-div{
-  width: 600px; 
+.booking-div {
+  width: 600px;
   height: 300px;
   margin: auto;
   background-color: rgb(255, 255, 255);
@@ -1729,13 +1763,13 @@ button:hover {
   border: 2px solid #424242;
 }
 
-.booking-div label{
+.booking-div label {
   font-size: 20px;
   margin-left: 40px;
   font-family: "Nunito", sans-serif;
 }
 
-.booking-div input{
+.booking-div input {
   margin-left: 10px;
   width: 200px;
   height: 30px;
@@ -1745,7 +1779,7 @@ button:hover {
   border: 2px solid #00a4bf;
 }
 
-.booking-div select{
+.booking-div select {
   margin-left: 10px;
   width: 250px;
   height: 30px;
@@ -1755,7 +1789,7 @@ button:hover {
   border: 2px solid #00a4bf;
 }
 
-.booking-div button{ 
+.booking-div button {
   width: 250px;
   height: 50px;
   margin: auto;
@@ -1767,26 +1801,28 @@ button:hover {
   font-size: 25px;
 }
 
-.booking-div select:focus{
+.booking-div select:focus {
   outline: none;
   border: 2px solid #00be4f;
 }
 
-.booking-div input:focus{
+.booking-div input:focus {
   outline: none;
   border: 2px solid #00be4f;
 }
 
 
 
-@media screen and (max-width: 1660px){
-  .about-cont h3{
+@media screen and (max-width: 1660px) {
+  .about-cont h3 {
     font-size: 40px;
   }
-  .about-cont h5{
+
+  .about-cont h5 {
     font-size: 15px;
   }
-  .about-cont p{
+
+  .about-cont p {
     font-size: 12px;
   }
 }
@@ -1809,7 +1845,7 @@ button:hover {
   padding: 15px;
 }
 
-.faq-finalQuestion{
+.faq-finalQuestion {
   padding-bottom: 40px;
 }
 
@@ -1856,32 +1892,40 @@ button:hover {
     font-size: 15px;
     max-width: 90%;
   }
-  .profile-div a{
+
+  .profile-div a {
     font-size: 20px;
   }
-  .about-us-div div{
+
+  .about-us-div div {
     height: 250px;
   }
-  .why-choose-div div{
+
+  .why-choose-div div {
     height: 250px;
   }
-  .about-cont h2{
+
+  .about-cont h2 {
     font-size: 12px;
     margin-left: 25px;
   }
-  .about-cont h3{
+
+  .about-cont h3 {
     font-size: 20px;
     margin-left: 25px;
   }
-  .about-cont h5{
+
+  .about-cont h5 {
     font-size: 10px;
     margin-left: 25px;
   }
-  .about-cont p{
+
+  .about-cont p {
     font-size: 8px;
     margin-left: 25px;
   }
-  .profile-div .schedule-button{
+
+  .profile-div .schedule-button {
     font-size: 10px;
     margin-top: 15px;
   }
@@ -1896,10 +1940,12 @@ button:hover {
   #splash-text-cont {
     background-position: 0%;
   }
-  .about-us-div{
+
+  .about-us-div {
     width: 80%;
   }
-  .why-choose-div{
+
+  .why-choose-div {
     width: 80%;
   }
 }
@@ -1977,202 +2023,254 @@ button:hover {
     font-size: 10px;
     max-width: 95%;
   }
-  .login-page{
+
+  .login-page {
     width: 300px;
     height: 350px;
   }
-  .login-page img{
+
+  .login-page img {
     width: 35px;
     height: 35px;
   }
-  .login-page h1{
+
+  .login-page h1 {
     font-size: 30px;
   }
-  .form-group input{
+
+  .form-group input {
     width: 230px;
     height: 30px;
   }
-  .login-page button{
+
+  .login-page button {
     width: 200px;
     height: 35px;
     margin-bottom: 0
   }
-  .signup-page{
+
+  .signup-page {
     width: 300px;
     height: 550px;
   }
-  .signup-page img{
+
+  .signup-page img {
     width: 35px;
     height: 35px;
   }
-  .signup-page h1{
+
+  .signup-page h1 {
     font-size: 30px;
   }
-  .signup-page input{
+
+  .signup-page input {
     width: 230px;
     height: 35px;
     font-size: 20px;
   }
-  .signup-page button{
+
+  .signup-page button {
     width: 200px;
     height: 30px;
   }
-  .gallery-cont h1{
+
+  .gallery-cont h1 {
     font-size: 35px;
   }
-  .gallery-cont h3{
+
+  .gallery-cont h3 {
     font-size: 15px;
   }
-  .profile-div{
+
+  .profile-div {
     width: 90vw;
   }
-  .profile-div aside h6{
+
+  .profile-div aside h6 {
     font-size: 12px;
   }
-  .profile-div li{
+
+  .profile-div li {
     font-size: 8px
   }
-  .profile-div aside h5{
+
+  .profile-div aside h5 {
     font-size: 12px;
   }
-  .profile-div aside p{
+
+  .profile-div aside p {
     font-size: 8px;
   }
-  .profile-div a{
+
+  .profile-div a {
     font-size: 8px;
     padding: 5px 5px;
   }
-  .profile-div .schedule-button{
+
+  .profile-div .schedule-button {
     font-size: 10px;
     margin-top: 15px;
   }
-  .profile-info h1{
+
+  .profile-info h1 {
     font-size: 20px;
     padding-bottom: 15px;
   }
-  .profile-card{
+
+  .profile-card {
     width: 150px;
     height: 200px;
   }
-  .profile-card img{
+
+  .profile-card img {
     min-width: 75px;
     min-height: 75px;
     width: 75px;
     height: 75px;
   }
-  .profile-card h4{
+
+  .profile-card h4 {
     font-size: 15px;
     padding-bottom: 15px;
   }
-  .profile-card-info p{
+
+  .profile-card-info p {
     font-size: 10px;
     margin: 5px 0
   }
-  .profile-card-extra-info{
+
+  .profile-card-extra-info {
     height: 45%
   }
-  .profile-card-extra-info li{
+
+  .profile-card-extra-info li {
     font-size: 8px;
   }
-  .profile-card:hover .profile-card-extra-info{
+
+  .profile-card:hover .profile-card-extra-info {
     top: 56%;
-    -webkit-transition: top 1s; 
+    -webkit-transition: top 1s;
   }
-  .about-us-div div{
+
+  .about-us-div div {
     width: 100%;
     text-align: center;
   }
-  .why-choose-div{
+
+  .why-choose-div {
     flex-direction: column-reverse;
     margin-top: 50px;
   }
-  .why-choose-div div{
+
+  .why-choose-div div {
     width: 100%;
     height: 200px;
     padding: 0;
     text-align: center;
   }
-  .about-cont h2{
+
+  .about-cont h2 {
     font-size: 20px;
     margin: 0;
   }
-  .about-cont h3{
+
+  .about-cont h3 {
     font-size: 30px;
     margin: 0;
   }
-  .about-cont h5{
+
+  .about-cont h5 {
     font-size: 15px;
     margin: 10px 0;
     max-width: 100%;
   }
-  .about-cont p{
+
+  .about-cont p {
     font-size: 10px;
     margin: 10px 0;
     max-width: 100%;
   }
-  .team-div div h2{
+
+  .team-div div h2 {
     font-size: 20px
   }
-  .team-div div h3{
+
+  .team-div div h3 {
     font-size: 30px;
   }
-  .add-pet-cont{
+
+  .add-pet-cont {
     margin-bottom: 25px;
   }
-  .add-pet-cont .form-group{
+
+  .add-pet-cont .form-group {
     width: 80vw;
     margin: auto;
     flex-direction: column;
   }
-  .add-pet-cont .form-group input{
+
+  .add-pet-cont .form-group input {
     width: 100%;
     height: 50px;
     padding: 5px;
     font-size: 20px;
   }
-  .add-pet-cont .form-group textarea{
+
+  .add-pet-cont .form-group textarea {
     width: 100%;
     font-size: 15px;
     padding: 5px;
   }
-  .add-pet-cont .form-group button{
+
+  .add-pet-cont .form-group button {
     margin: auto;
   }
-  .jobs-list{
+
+  .jobs-list {
     width: 90vw;
   }
-  .job-entry{
+
+  .job-entry {
     margin: 10px 0;
   }
-  .job-entry p{
+
+  .job-entry p {
     font-size: 10px;
   }
-  .job-entry h5{
+
+  .job-entry h5 {
     font-size: 15px;
   }
-  .job-entry li{
-    font-size: 10px;;
+
+  .job-entry li {
+    font-size: 10px;
+    ;
   }
-  .booking-div{
+
+  .booking-div {
     width: 500px;
     height: 200px;
     padding: 20px 0
   }
-  .booking-div label{
+
+  .booking-div label {
     font-size: 15px;
     margin-left: 25px;
   }
-  .booking-div input{
+
+  .booking-div input {
     height: 20px;
     border-radius: 5px;
   }
-  .booking-div select{
+
+  .booking-div select {
     width: 150px;
     height: 20px;
     border-radius: 5px;
     font-size: 12px;
   }
-  .booking-div button{
+
+  .booking-div button {
     width: 200px;
     margin: 0 auto;
     border-radius: 10px;
@@ -2184,36 +2282,45 @@ button:hover {
   .landing-info-text-div p {
     font-size: 8px;
   }
-  .about-us-div{
+
+  .about-us-div {
     width: 90%;
   }
-  .why-choose-div{
+
+  .why-choose-div {
     width: 90%;
   }
-  .job-entry ul{
+
+  .job-entry ul {
     padding: 0;
   }
-  .booking-cont h1{
+
+  .booking-cont h1 {
     font-size: 35px;
     margin-bottom: 25px;
   }
-  .booking-div{
+
+  .booking-div {
     width: 300px;
     height: 330px;
   }
-  .booking-div label{
+
+  .booking-div label {
     font-size: 18px;
     margin-left: 20px;
   }
-  .booking-div input{
+
+  .booking-div input {
     margin: 0;
     height: 25px;
   }
-  .booking-div select{
+
+  .booking-div select {
     margin: 0;
     height: 25px;
   }
-  .profile-div .schedule-button{
+
+  .profile-div .schedule-button {
     font-size: 8px;
     margin-top: 15px;
   }
