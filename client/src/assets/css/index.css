@@ -1317,6 +1317,11 @@ button:hover {
   margin-bottom: 5px;
 }
 
+.tier-pricing {
+  display: flex;
+  flex-direction: row;
+}
+
 .start-now-button {
   background-color: #b2e2b1;
   background-image: linear-gradient(to bottom, #b2e2b1, #86c98e);
@@ -1343,12 +1348,12 @@ button:hover {
   }
 
   .pricing-section {
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    width: 80%;
   }
 
   .pricing-image {
@@ -1358,7 +1363,7 @@ button:hover {
   }
 
   .pricing-tier {
-    width: 70%;
+    width: 60%;
     margin-left: 15%;
     margin-right: 15%;
   }
