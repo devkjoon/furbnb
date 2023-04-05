@@ -27,11 +27,15 @@ const resolvers = {
     },
 
     bookings: async () => {
+<<<<<<< HEAD
       const bookings = await Bookings.find();
+=======
+      const bookings = await Booking.find().populate('pet');
+>>>>>>> eb6d4220a5919e13a468505e23a5104bb23bcd31
       return bookings.map((booking) => {
         return {
           _id: booking._id.toString(),
-          pet: booking.pet.toString(),
+          pet: booking.pet,
           serviceType: booking.serviceType,
           date: booking.date,
           startTime: booking.startTime,
@@ -40,6 +44,7 @@ const resolvers = {
         };
       });
     },
+    
 
     pet: async (parent, { id }) => {
       // Returns a pet and its owner by the pet's ID
@@ -136,7 +141,28 @@ const resolvers = {
 
       return pet;
     },
+    addPet: async (
+      parent,
+      { name, species, breed, gender, age, weight, allergies, medications, feedingSchedule, image },
+      context
+    ) => {
+      // Adds a new pet with its information
+      const pet = await Pet.create({
+        name,
+        species,
+        breed,
+        gender,
+        age,
+        weight,
+        allergies,
+        medications,
+        feedingSchedule,
+        image,
+        owner: context.user._id
+      });
 
+      return pet;
+    },
     deletePet: async (parent, { id }) => {
       // Deletes a pet by its ID
       const pet = await Pet.findByIdAndDelete(id);
@@ -181,11 +207,11 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError('Not authenticated');
       }
-
-      const booking = await Bookings.findByIdAndDelete(id);
-
+    
+      const booking = await Booking.findByIdAndDelete(id);
+    
       return booking;
-    },
+    },    
   },
 };
 
