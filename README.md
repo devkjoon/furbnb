@@ -49,7 +49,7 @@ npm run dev
 - Apollo Client: A GraphQL client for React
 - JWT: JSON Web Tokens for authentication
 ## Preview
-
+[Furbnb.webm](https://user-images.githubusercontent.com/114960634/230257001-33308ebb-a350-450f-8e7a-9b08b8ce3d9c.webm)
 ## Contributing
 #### Furbnb is a group project created by Liam Allen, Joon Kim, Trenton Kirchner, Coulson Porter, and Alexandria White. Contributions to Furbnb are welcome! If you find a bug, have an idea for a new feature, or want to improve the code, feel free to open an issue or a pull request. Please follow the existing code style and conventions and make sure to add tests for any new functionality.
 ## License
