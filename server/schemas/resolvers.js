@@ -1,5 +1,5 @@
 const { AuthenticationError, UserInputError } = require('apollo-server-express');
-const { User, Pet, Bookings } = require('../models');
+const { User, Pet, Booking } = require('../models');
 const { signToken } = require('../utils/auth');
 const bcrypt = require('bcrypt');
 
@@ -27,22 +27,19 @@ const resolvers = {
     },
 
     bookings: async () => {
-<<<<<<< HEAD
-      const bookings = await Bookings.find();
-=======
-      const bookings = await Booking.find().populate('pet');
->>>>>>> eb6d4220a5919e13a468505e23a5104bb23bcd31
-      return bookings.map((booking) => {
-        return {
-          _id: booking._id.toString(),
-          pet: booking.pet,
-          serviceType: booking.serviceType,
-          date: booking.date,
-          startTime: booking.startTime,
-          endTime: booking.endTime,
-          notes: booking.notes
-        };
-      });
+      const bookings = await Booking.find();
+      return bookings
+      // return bookings.map((booking) => {
+      //   return {
+      //     _id: booking._id,
+      //     pet: booking.pet,
+      //     serviceType: booking.serviceType,
+      //     date: booking.date,
+      //     startTime: booking.startTime,
+      //     endTime: booking.endTime,
+      //     notes: booking.notes
+      //   };
+      // });
     },
     
 
@@ -105,7 +102,6 @@ const resolvers = {
         image,
         owner: context.user._id
       });
-
       return pet;
     },
 
@@ -174,28 +170,31 @@ const resolvers = {
     },
 
     createBooking: async (parent, args, context) => {
-      const { petName, serviceType, date, startTime, endTime, notes } = args.input;
-      const pet = await Pet.findOne({ name: petName });
+      const { pet, serviceType, date, startTime, endTime, notes } = args.input;
+      console.log(pet.name)
+      const petOBJ = await Pet.findOne({ name: pet.name });
 
-      if (!pet) {
+      if (!petOBJ) {
         throw new UserInputError('Invalid input', {
           invalidArgs: ['petName'],
         });
       }
 
       const booking = new Booking({
-        pet,
+        user:context.user._id,
+        pet:petOBJ._id,
         serviceType,
         date,
         startTime,
         endTime,
         notes,
       });
+      console.log(booking)
 
       try {
         const savedBooking = await booking.save();
-        await pet.bookings.push(savedBooking);
-        await pet.save();
+        // await petOBJ.bookings.push(savedBooking);
+        // await petOBJ.save();
         return savedBooking;
       } catch (err) {
         throw new UserInputError(err.message, {
