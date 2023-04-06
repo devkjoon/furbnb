@@ -73,7 +73,7 @@ function BookingPage() {
       const result = await createBooking({
         variables: {
           input: {
-            pet: pet,
+            pet: {_id:pet._id, name:pet.name},
             serviceType: service,
             date: dateTime,
             startTime: dateTime,
@@ -123,7 +123,7 @@ function BookingPage() {
         <br />
         <label>
           Choose a Pet:
-          <select value={pet} onChange={handlePetChange}>
+          <select value={pet._id} onChange={handlePetChange}>
             <option value=''>-- Select a Pet --</option>
             {data && data.pets.map(pet => (
               <option key={pet._id} value={pet._id}>{pet.name}</option>

@@ -44,7 +44,7 @@ const typeDefs = gql`
   type Booking {
     _id: ID!
     user: User!
-    pet: Pet!
+    pet: String
     serviceType: String!
     date: String!
     startTime: String!
