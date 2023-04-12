@@ -1,13 +1,16 @@
 # Furbnb
 ## Description
-#### Furbnb is a web application that allows pet owners to find and book pet care services such as grooming, boarding, training, and veterinary services. The application is built with React, Node.js, Express, and MongoDB, and it uses GraphQL for the communication between the client and the server.
+#### Furbnb is a web application that allows pet owners to find and book pet care services such as grooming, boarding, training, and veterinary services. The application is built with React, Node.js, Express, and MongoDB, and it uses GraphQL for the communication between the client and the server. 
 ## Table of Contents
+- [Heroku](#heroku)
 - [Installation](#installation)
 - [Features](#features)
 - [Technologies](#technologies)
 - [Preview](#preview)
 - [Contributing](#contributing)
 - [License](#license)
+## Heroku
+- https://furbnbcare.herokuapp.com/
 ## Installation
 - To get started with Furbnb, you need to have Node.js and MongoDB installed on your machine. Then, you can clone the repository and install the dependencies:
 ```
